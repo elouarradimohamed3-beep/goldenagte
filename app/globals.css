@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #d4a017;
+  --color-gold-dark: #a87c0a;
+  --color-ink: #0f1115;
+  --color-panel: #181b22;
+}
+
+body { background: var(--color-ink); color: #e8e8ea; }
