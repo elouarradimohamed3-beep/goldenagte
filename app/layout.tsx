@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SITE } from '@/lib/site'
 import './globals.css'
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   )

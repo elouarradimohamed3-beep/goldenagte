@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { waLink } from '@/lib/site'
 export const metadata: Metadata = { title: 'Reseller plan', alternates: { canonical: '/reseller' } }
 
 const POINTS = [
@@ -19,7 +19,7 @@ export default function Reseller() {
           <div key={t} className="rounded-xl border border-white/10 bg-panel p-5"><h2 className="font-semibold text-gold">{t}</h2><p className="mt-1 text-white/70">{b}</p></div>
         ))}
       </div>
-      <p className="mt-8"><Link href="/contact?plan=reseller" className="rounded-full bg-gold px-6 py-3 font-semibold text-black">Ask for reseller pricing</Link></p>
+      <p className="mt-8"><a href={waLink('Hi! I want reseller pricing for goldengateiptv.com')} target="_blank" rel="noopener noreferrer" className="rounded-full bg-gold px-6 py-3 font-semibold text-black">Ask for reseller pricing</a></p>
     </div>
   )
 }

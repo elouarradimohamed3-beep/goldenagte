@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Menu, Tv, X } from 'lucide-react'
-import { SITE } from '@/lib/site'
+import { waLink } from '@/lib/site'
 
 const NAV = [['Plans', '/#plans'], ['Reseller', '/reseller'], ['Install', '/install'], ['FAQ', '/#faq'], ['About', '/about'], ['Contact', '/contact']]
 
@@ -26,7 +26,7 @@ export function Header() {
           {NAV.map(([l, h]) => <Link key={h} href={h} className="relative transition hover:text-gold after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full">{l}</Link>)}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="/#plans" className="animate-pulse-ring rounded-full bg-gold px-5 py-2 text-sm font-semibold text-black transition hover:bg-gold-dark">Try now</Link>
+          <a href={waLink('want buy 1 Day')} target="_blank" rel="noopener noreferrer" className="animate-pulse-ring rounded-full bg-gold px-5 py-2 text-sm font-semibold text-black transition hover:bg-gold-dark">Try now</a>
           <button aria-label="Menu" className="grid size-10 place-items-center rounded-lg md:hidden" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
         </div>
       </div>

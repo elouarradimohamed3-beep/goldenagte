@@ -3,8 +3,9 @@ export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goldengateiptv.com',
   tagline: 'Live TV, movies and series on every screen',
   orderUrl: '/contact',
-  whatsapp: '',
+  whatsapp: '212707711512',
   email: 'support@goldengateiptv.com',
+  whatsappDisplay: '+212 707 711 512',
   launched: '2026-10-05',
 }
 
@@ -19,24 +20,43 @@ export const FEATURES = [
 
 export const DEVICES = ['Smart TV', 'Fire TV Stick', 'Android TV box', 'iPhone and iPad', 'Android phone', 'Windows and Mac']
 
-export type Plan = { id: string; label: string; price: number; per: string; connections: number; badge?: string }
+export type Plan = { id: string; label: string; price: number; per: string; connections: number; badge?: string; order: string }
 
-export const PLANS: Plan[] = [
-  { id: '1d', label: '1 Day', price: 7, per: 'one-day pass', connections: 1 },
-  { id: '1m', label: '1 Month', price: 20, per: 'billed monthly', connections: 1 },
-  { id: '3m', label: '3 Months', price: 37, per: '$12.33 / month', connections: 1 },
-  { id: '6m', label: '6 Months', price: 49, per: '$8.17 / month', connections: 1 },
-  { id: '12m', label: '1 Year', price: 77, per: '$6.42 / month', connections: 1, badge: 'Best value' },
-  { id: '24m', label: '2 Years', price: 119, per: '$4.96 / month', connections: 1 },
-]
+export const waLink = (text: string) => `https://api.whatsapp.com/send/?phone=${SITE.whatsapp}&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`
 
-export const MULTI: Plan[] = [
-  { id: '12m-1', label: '1 Year · 1 screen', price: 77, per: 'one screen at a time', connections: 1 },
-  { id: '12m-2', label: '1 Year · 2 screens', price: 119, per: 'two screens at once', connections: 2 , badge: 'World Cup' },
-  { id: '12m-3', label: '1 Year · 3 screens', price: 149, per: 'three screens at once', connections: 3 , badge: 'World Cup' },
-  { id: '12m-4', label: '1 Year · 4 screens', price: 189, per: 'four screens at once', connections: 4 , badge: 'World Cup' },
-  { id: '12m-5', label: '1 Year · 5 screens', price: 229, per: 'five screens at once', connections: 5 , badge: 'World Cup' },
-]
+const DURATIONS = ['1 Day', '1 Month', '3 Months', '6 Months', '1 Year', '2 Years']
+const MONTHS = [0, 1, 3, 6, 12, 24]
+// prices copied from the old site's order buttons: [1 device, 2 devices, 3 devices]
+const PRICES: Record<number, number[]> = {
+  1: [7, 20, 37, 49, 77, 119],
+  2: [9, 29, 64, 84, 109, 199],
+  3: [12, 39, 79, 117, 189, 297],
+}
+
+const perMonth = (price: number, m: number) => (m === 0 ? 'one-day pass' : m === 1 ? 'billed monthly' : `$${(price / m).toFixed(2)} / month`)
+
+export const PLAN_TIERS = [1, 2, 3].map((devices) => ({
+  devices,
+  plans: DURATIONS.map<Plan>((d, i) => ({
+    id: `${MONTHS[i]}m-${devices}`,
+    label: d,
+    price: PRICES[devices][i],
+    per: perMonth(PRICES[devices][i], MONTHS[i]),
+    connections: devices,
+    badge: d === '1 Year' ? 'Best value' : undefined,
+    order: `goldengateiptv.com - ${d} / ${devices} ${devices === 1 ? 'Device' : 'Devices'} - ${PRICES[devices][i]} USD`,
+  })),
+}))
+
+export const MULTI: Plan[] = [[1, 77], [2, 119], [3, 149], [4, 189], [5, 229]].map(([n, price]) => ({
+  id: `premium-${n}`,
+  label: `1 Year · ${n} ${n === 1 ? 'connection' : 'connections'}`,
+  price,
+  per: 'full year',
+  connections: n,
+  badge: n > 1 ? 'World Cup' : undefined,
+  order: `goldengateiptv.com - 1 Year / ${n} Device - ${price} USD`,
+}))
 
 export const PLAN_INCLUDES = [
   'Watch on any device',

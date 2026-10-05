@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Check } from 'lucide-react'
-import { PLAN_INCLUDES, type Plan } from '@/lib/site'
+import { PLAN_INCLUDES, waLink, type Plan } from '@/lib/site'
 
 export function PlanCard({ plan }: { plan: Plan }) {
   const hot = plan.badge === 'Best value'
@@ -14,7 +14,7 @@ export function PlanCard({ plan }: { plan: Plan }) {
         <li className="flex gap-2 font-medium text-white"><Check size={16} className="mt-0.5 shrink-0 text-gold" />{plan.connections} {plan.connections === 1 ? 'connection' : 'connections'}</li>
         {PLAN_INCLUDES.map((i) => <li key={i} className="flex gap-2"><Check size={16} className="mt-0.5 shrink-0 text-gold" />{i}</li>)}
       </ul>
-      <Link href={`/contact?plan=${plan.id}`} className={`mt-auto rounded-full py-3 text-center font-semibold transition ${hot ? 'bg-gold text-black hover:bg-gold-dark' : 'border border-gold/40 text-gold hover:bg-gold hover:text-black'}`}>Order now</Link>
+      <Link href={waLink(plan.order)} target="_blank" rel="noopener noreferrer" className={`mt-auto rounded-full py-3 text-center font-semibold transition ${hot ? 'bg-gold text-black hover:bg-gold-dark' : 'border border-gold/40 text-gold hover:bg-gold hover:text-black'}`}>Order now</Link>
     </div>
   )
 }
