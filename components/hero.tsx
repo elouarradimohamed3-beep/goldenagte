@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Radio, ShieldCheck, Sparkles } from 'lucide-react'
 import { Counter } from './counter'
 import { DEVICES } from '@/lib/site'
@@ -16,6 +16,14 @@ export function Hero() {
     const b = setInterval(() => setG((x) => (x + 1) % GENRES.length), 1800)
     return () => { clearInterval(a); clearInterval(b) }
   }, [])
+  const tilt = useRef<HTMLDivElement>(null)
+  const move = (e: React.PointerEvent) => {
+    const el = tilt.current; if (!el) return
+    const r = el.getBoundingClientRect()
+    const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5
+    el.style.transform = `perspective(900px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`
+  }
+  const reset = () => { if (tilt.current) tilt.current.style.transform = '' }
   return (
     <section className="relative isolate overflow-hidden px-4 pt-36 pb-20">
       <div className="bg-grid absolute inset-0 -z-10" />
@@ -37,7 +45,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-lg">
+        <div className="relative mx-auto w-full max-w-lg" onPointerMove={move} onPointerLeave={reset}><div ref={tilt} className="tilt">
           <div className="animate-float glass relative overflow-hidden rounded-3xl p-3 shadow-2xl shadow-gold/10">
             <div className="relative aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1f2e] via-[#0d1017] to-[#2a1c05]">
               <div className="absolute inset-x-0 h-24 bg-gradient-to-b from-transparent via-gold/10 to-transparent" style={{ animation: 'scan 4s linear infinite' }} />
@@ -52,7 +60,7 @@ export function Hero() {
           </div>
           <div className="glass animate-float absolute -bottom-6 -left-4 rounded-2xl px-4 py-3 text-sm" style={{ animationDelay: '-2s' }}><p className="text-white/50">Activated in</p><p className="text-lg font-bold text-gold">~ 5 minutes</p></div>
           <div className="glass animate-float absolute -top-5 -right-3 rounded-2xl px-4 py-3 text-sm" style={{ animationDelay: '-4s' }}><p className="text-white/50">Screens</p><p className="text-lg font-bold text-gold">up to 5 at once</p></div>
-        </div>
+        </div></div>
       </div>
 
       <div className="mx-auto mt-24 grid max-w-6xl grid-cols-2 gap-4 lg:grid-cols-4">

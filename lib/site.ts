@@ -20,7 +20,7 @@ export const FEATURES = [
 
 export const DEVICES = ['Smart TV', 'Fire TV Stick', 'Android TV box', 'iPhone and iPad', 'Android phone', 'Windows and Mac']
 
-export type Plan = { id: string; label: string; price: number; per: string; connections: number; badge?: string; order: string }
+export type Plan = { save?: number; id: string; label: string; price: number; per: string; connections: number; badge?: string; order: string }
 
 export const waLink = (text: string) => `https://api.whatsapp.com/send/?phone=${SITE.whatsapp}&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`
 
@@ -44,6 +44,7 @@ export const PLAN_TIERS = [1, 2, 3].map((devices) => ({
     per: perMonth(PRICES[devices][i], MONTHS[i]),
     connections: devices,
     badge: d === '1 Year' ? 'Best value' : undefined,
+    save: MONTHS[i] >= 3 ? Math.round((1 - PRICES[devices][i] / (PRICES[devices][1] * MONTHS[i])) * 100) : undefined,
     order: `goldengateiptv.com - ${d} / ${devices} ${devices === 1 ? 'Device' : 'Devices'} - ${PRICES[devices][i]} USD`,
   })),
 }))
@@ -118,4 +119,30 @@ export const LONG_ARTICLES = [
   { title: 'Multi-device and on-the-go streaming', body: ['The biggest everyday advantage of IPTV is that your TV goes where you go. All you need is an internet connection, whether that is the living room Smart TV, a laptop at the office or a tablet in a hotel.', 'Multi-screen plans let a whole household watch at the same time, so one person can follow a game while another catches up on a series, with no arguments over the remote.'] },
   { title: 'HD and 4K quality, explained', body: ['Good IPTV should look as good as it sounds. Expect sharp HD channels, Full HD and 4K Ultra HD options on premium feeds, and surround sound where the broadcast includes it.', 'Picture quality still depends on two things you can check: your internet speed and the strength of the provider\'s servers. A stable 25 Mbps connection comfortably handles 4K on one screen, and fewer compression shortcuts on the server side keep peak-hour viewing smooth.'] },
   { title: 'Interactivity and DVR: control what you watch', body: ['Modern IPTV frees you from the broadcast schedule. Pause a live match when the doorbell rings, rewind a goal you missed, or jump forward through the quiet parts.', 'Catch-up TV keeps recent programmes available after they air, and cloud DVR lets you record shows to watch later. Together they turn television into something you control rather than something that happens to you.'] },
+]
+
+export const STEPS = [
+  { title: 'Choose your plan', body: 'Pick a duration and the number of screens you need. Not sure? Message us and we will help you choose.' },
+  { title: 'Get your login', body: 'Order on WhatsApp, pay, and receive your username, password and setup link within minutes.' },
+  { title: 'Install and watch', body: 'Follow the short guide for your device, sign in, and start streaming live TV and on-demand titles.' },
+]
+
+export const GENRES = [
+  { name: 'Live sports', body: 'Football, basketball, combat sports and more' },
+  { name: '24/7 news', body: 'National, international and local coverage' },
+  { name: 'Movies', body: 'A huge on-demand library, sorted by genre' },
+  { name: 'Series', body: 'Full seasons ready to binge' },
+  { name: 'Kids', body: 'Cartoons and learning shows for every age' },
+  { name: 'Documentaries', body: 'Nature, history, science and travel' },
+  { name: 'Music', body: 'Videos and live music channels' },
+  { name: 'International', body: 'Channels from the US, UK, Canada and Europe' },
+]
+
+export const COMPARE = [
+  ['Contract', 'Long contracts and cancellation fees', 'Cancel any time'],
+  ['Equipment', 'Set-top box and installation visit', 'Any device you already own'],
+  ['Screens', 'Extra boxes for extra rooms', 'Up to 5 screens on one plan'],
+  ['Pricing', 'Bundles and price rises', 'Clear prices from $20 a month'],
+  ['Watching away from home', 'Limited to one location', 'Anywhere with internet'],
+  ['Refund', 'Rarely offered', '7-day refund'],
 ]
