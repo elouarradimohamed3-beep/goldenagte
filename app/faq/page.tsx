@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: 'Frequently asked questions', alterna
 export default function Faq() {
   const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="mx-auto max-w-3xl px-4 pt-36 pb-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <h1 className="text-4xl font-bold">Frequently asked questions</h1>
       <div className="mt-8 space-y-3">

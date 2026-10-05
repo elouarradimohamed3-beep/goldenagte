@@ -11,7 +11,7 @@ const POINTS = [
 
 export default function Reseller() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="mx-auto max-w-3xl px-4 pt-36 pb-16">
       <h1 className="text-4xl font-bold">Reseller plan</h1>
       <p className="mt-3 text-white/70">Start your own IPTV business without owning any servers.</p>
       <div className="mt-8 space-y-4">

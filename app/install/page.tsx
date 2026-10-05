@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: 'Installation guide', alternates: { c
 
 export default function Install() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
+    <div className="mx-auto max-w-3xl px-4 pt-36 pb-16">
       <h1 className="text-4xl font-bold">Installation guide</h1>
       <p className="mt-3 text-white/70">Setup takes a few minutes on any device. Choose yours below.</p>
       {GUIDES.map((g) => (
