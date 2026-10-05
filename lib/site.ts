@@ -22,6 +22,7 @@ export const DEVICES = ['Smart TV', 'Fire TV Stick', 'Android TV box', 'iPhone a
 export type Plan = { id: string; label: string; price: number; per: string; connections: number; badge?: string }
 
 export const PLANS: Plan[] = [
+  { id: '1d', label: '1 Day', price: 7, per: 'one-day pass', connections: 1 },
   { id: '1m', label: '1 Month', price: 20, per: 'billed monthly', connections: 1 },
   { id: '3m', label: '3 Months', price: 37, per: '$12.33 / month', connections: 1 },
   { id: '6m', label: '6 Months', price: 49, per: '$8.17 / month', connections: 1 },
@@ -30,24 +31,38 @@ export const PLANS: Plan[] = [
 ]
 
 export const MULTI: Plan[] = [
-  { id: '12m-2', label: '1 Year · 2 screens', price: 119, per: 'two screens at once', connections: 2 },
-  { id: '12m-3', label: '1 Year · 3 screens', price: 149, per: 'three screens at once', connections: 3 },
-  { id: '12m-4', label: '1 Year · 4 screens', price: 189, per: 'four screens at once', connections: 4 },
-  { id: '12m-5', label: '1 Year · 5 screens', price: 229, per: 'five screens at once', connections: 5 },
+  { id: '12m-1', label: '1 Year · 1 screen', price: 77, per: 'one screen at a time', connections: 1 },
+  { id: '12m-2', label: '1 Year · 2 screens', price: 119, per: 'two screens at once', connections: 2 , badge: 'World Cup' },
+  { id: '12m-3', label: '1 Year · 3 screens', price: 149, per: 'three screens at once', connections: 3 , badge: 'World Cup' },
+  { id: '12m-4', label: '1 Year · 4 screens', price: 189, per: 'four screens at once', connections: 4 , badge: 'World Cup' },
+  { id: '12m-5', label: '1 Year · 5 screens', price: 229, per: 'five screens at once', connections: 5 , badge: 'World Cup' },
 ]
 
-export const PLAN_INCLUDES = ['Live TV in HD and 4K', 'Movies and series on demand', 'TV guide (EPG)', 'Free updates', '24/7 support', '7-day refund']
+export const PLAN_INCLUDES = [
+  'Watch on any device',
+  'Anti-Freeze™ 9.8 technology',
+  '130K+ movies and series (VOD)',
+  '34,000+ live channels',
+  '4K / UHD / FHD / HD quality',
+  'Free automatic updates',
+  'TV guide (EPG) included',
+  '7-day refund',
+  '24/7 free support',
+  'Privacy protection and built-in VPN',
+]
 
 export const FAQ = [
-  { q: 'What is IPTV?', a: 'IPTV delivers television over the internet instead of a cable or satellite box. You install an app on your device, sign in, and watch live channels and on-demand titles.' },
-  { q: 'How do I receive my login?', a: 'After payment you get an email with your username, password and setup instructions, usually within minutes.' },
-  { q: 'Can I watch local sports and news?', a: 'Coverage depends on your region. Contact us before ordering and we will tell you what is available where you live.' },
-  { q: 'How many screens can I use at once?', a: 'Standard plans include one screen. Multi-screen plans cover two to five screens at the same time.' },
-  { q: 'Can I get a refund?', a: 'Yes. Ask within seven days of purchase and we will refund you. See the refund policy for details.' },
-  { q: 'How do I renew?', a: 'Contact support before your plan ends and we will extend it on the same login.' },
-  { q: 'Do I need a VPN?', a: 'No. A VPN is optional. Some people use one for privacy, and the service works with or without it.' },
-  { q: 'How fast is a typical order?', a: 'Most orders are active within minutes. Occasionally it takes longer outside support hours.' },
-  { q: 'Can I become a reseller?', a: 'Yes. Contact us and we will share reseller pricing and how the panel works.' },
+  { q: 'What is IPTV?', a: 'IPTV means Internet Protocol Television. Instead of arriving through a cable or satellite dish, live channels and on-demand titles reach you over your internet connection and play in an app on your own devices.' },
+  { q: 'How will I receive my credentials?', a: 'Right after your payment clears we email your username, password and server details together with a link to the setup guide. Most customers are watching within a few minutes.' },
+  { q: 'Can I watch local sports and news in my area?', a: 'Many regional and national sports and news feeds are included, but coverage varies by location. Message support with your city and we will tell you exactly what you can expect before you buy.' },
+  { q: 'How many simultaneous connections do I get?', a: 'Standard plans allow one screen at a time. Premium plans raise that to two, three, four or five screens streaming together. Need more than five? Contact support for a tailored plan.' },
+  { q: 'Can I get a refund?', a: 'Yes. Every plan carries a 7-day refund. If the service does not work for you, tell us within a week of purchase and we will return your money. Full details are in the refund policy.' },
+  { q: 'Can I renew my IPTV subscription?', a: 'Yes. Reach out before your plan expires and we will extend it on the same login, so you do not have to set anything up again.' },
+  { q: 'Do I need a VPN to use IPTV?', a: 'No. The service works without one. A built-in privacy option is included, and you are free to run your own VPN if you prefer.' },
+  { q: 'What payment methods do you accept?', a: 'We accept major credit and debit cards and a selection of other online payment options. Support will confirm what is available for your country when you place the order.' },
+  { q: 'How long does it take for orders to be processed?', a: 'Orders are normally activated within minutes of payment. Late-night orders can occasionally take a little longer while our team is offline.' },
+  { q: 'How do I pay with Visa or Mastercard?', a: 'Choose your plan, press Order Now, and our team replies with a secure payment link. Enter your card details there, and your login follows as soon as the payment is confirmed.' },
+  { q: 'Can I become a reseller?', a: 'Yes. Our reseller plan lets you buy credits at a discount and sell subscriptions to your own customers. See the reseller page or contact us to get started.' },
 ]
 
 export const GUIDES = [
@@ -55,4 +70,32 @@ export const GUIDES = [
   { device: 'Fire TV Stick', steps: ['Install the Downloader app from the Amazon Appstore.', 'Use it to install your IPTV player of choice.', 'Open the player and enter your login details.', 'Allow the guide to load, then browse by category.'] },
   { device: 'Android and iPhone', steps: ['Install an IPTV player from Google Play or the App Store.', 'Add a new playlist using your login details.', 'Let the list refresh, then pick a channel.'] },
   { device: 'Windows and Mac', steps: ['Install an IPTV player that supports Xtream codes.', 'Add your login details in its settings.', 'Refresh the list and start watching.'] },
+]
+
+export const WHY = [
+  { title: 'Instant activation', body: 'The moment your payment succeeds, your subscription is switched on and ready to use.' },
+  { title: 'Works on every device', body: 'Smart TVs, phones, tablets, laptops and streaming sticks all run the same service, at home or away.' },
+  { title: 'Watch with zero effort', body: 'Over 34,000 live channels and 130K movies and series, sorted into clear categories.' },
+  { title: 'Stable servers', body: 'A large server network spreads the load, so one busy evening does not slow everyone down.' },
+  { title: 'Free installation help', body: 'A complete guide covers each device from first tap to first stream, and support is a message away.' },
+  { title: 'Sharp picture', body: 'HD and 4K streams with smooth playback, and fresh titles added almost every day.' },
+]
+
+export const INFRA = [
+  { title: 'What are headend servers?', body: 'Every IPTV service starts at the headend, the facility that collects live broadcasts and on-demand libraries from satellite, cable and other sources. Equipment there converts each signal into internet packets so it can travel to your screen. The better the headend, the cleaner the stream that leaves it.' },
+  { title: 'Streaming protocols explained', body: 'Protocols such as HLS and RTMP decide how video is chopped up and delivered. HLS splits the stream into short chunks and picks the right quality for your connection moment by moment, which is why a good service keeps playing when your Wi-Fi wobbles. A provider that keeps these protocols current avoids most stalls and sync problems.' },
+  { title: 'The role of content delivery networks', body: 'A content delivery network keeps copies of popular streams on servers in many regions, so your video comes from a machine near you instead of from the other side of the world. Shorter distance means less delay and fewer pauses, especially during big live events when everyone tunes in at once.' },
+  { title: 'Device compatibility and middleware', body: 'Middleware is the software layer between the streams and your device. It manages logins, channel lists, the TV guide and which screens are allowed to connect. Good middleware means the same account works on a Smart TV, an Android box, a phone or a computer without extra effort.' },
+]
+
+export const FEATURE_ARTICLES = [
+  { n: '1', title: 'Sharp 4K and HD picture', body: 'Channels are offered in HD, Full HD and 4K, with HDR where the source supports it. Adaptive streaming adjusts quality automatically, so a slow moment on your connection lowers the resolution briefly instead of freezing the screen.' },
+  { n: '2', title: 'One account, every screen', body: 'Use Smart TVs, Android and iOS phones, Fire TV sticks, MAG boxes, Windows and Mac. Start a match on the living-room TV and finish it on your phone on the train.' },
+  { n: '3', title: 'Live TV and on-demand together', body: 'Browse thousands of live channels from the US, UK, Canada and Europe next to a large on-demand library. Everything is sorted by category and genre so finding something takes seconds.' },
+]
+
+export const LONG_ARTICLES = [
+  { title: 'Multi-device and on-the-go streaming', body: ['The biggest everyday advantage of IPTV is that your TV goes where you go. All you need is an internet connection, whether that is the living room Smart TV, a laptop at the office or a tablet in a hotel.', 'Multi-screen plans let a whole household watch at the same time, so one person can follow a game while another catches up on a series, with no arguments over the remote.'] },
+  { title: 'HD and 4K quality, explained', body: ['Good IPTV should look as good as it sounds. Expect sharp HD channels, Full HD and 4K Ultra HD options on premium feeds, and surround sound where the broadcast includes it.', 'Picture quality still depends on two things you can check: your internet speed and the strength of the provider\'s servers. A stable 25 Mbps connection comfortably handles 4K on one screen, and fewer compression shortcuts on the server side keep peak-hour viewing smooth.'] },
+  { title: 'Interactivity and DVR: control what you watch', body: ['Modern IPTV frees you from the broadcast schedule. Pause a live match when the doorbell rings, rewind a goal you missed, or jump forward through the quiet parts.', 'Catch-up TV keeps recent programmes available after they air, and cloud DVR lets you record shows to watch later. Together they turn television into something you control rather than something that happens to you.'] },
 ]

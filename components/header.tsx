@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { SITE } from '@/lib/site'
 
-const NAV = [['Plans', '/plans'], ['Install', '/install'], ['FAQ', '/faq'], ['About', '/about'], ['Contact', '/contact']]
+const NAV = [['Plans', '/plans'], ['Reseller', '/reseller'], ['Install', '/install'], ['FAQ', '/faq'], ['About', '/about'], ['Contact', '/contact']]
 
 export function Header() {
   return (
