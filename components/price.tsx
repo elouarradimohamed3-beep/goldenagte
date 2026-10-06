@@ -19,7 +19,7 @@ export function OtherCurrencies({ usd }: { usd: number }) {
   return <span className="text-xs text-slate-400">≈ {CURRENCIES.filter((c) => c !== currency).map((c) => money(usd, c)).join(' · ')}</span>
 }
 
-export function PerMonth({ usd }: { usd: number }) {
+export function PerMonth({ usd, suffix = '/ month' }: { usd: number; suffix?: string }) {
   const { currency } = useCurrency()
-  return <>{moneyDecimal(usd, currency)} / month</>
+  return <><span dir="ltr">{moneyDecimal(usd, currency)}</span> {suffix}</>
 }

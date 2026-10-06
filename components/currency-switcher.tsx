@@ -2,7 +2,9 @@
 import { CURRENCIES, RATES, RATES_AS_OF } from '@/lib/currency'
 import { useCurrency } from './currency-provider'
 
-export function CurrencySwitcher({ tone = 'light', note = false }: { tone?: 'light' | 'dark'; note?: boolean }) {
+const EN_NOTE = 'Prices are set in USD. EUR and CAD are converted at 1 USD = €{eur} / C${cad} ({asOf}) and rounded. Your final price is confirmed on WhatsApp.'
+
+export function CurrencySwitcher({ tone = 'light', note = false, asOf = RATES_AS_OF }: { tone?: 'light' | 'dark'; note?: boolean | string; asOf?: string }) {
   const { currency, setCurrency } = useCurrency()
   const dark = tone === 'dark'
   return (
@@ -13,7 +15,7 @@ export function CurrencySwitcher({ tone = 'light', note = false }: { tone?: 'lig
             className={`rounded-md px-3 py-1.5 transition-colors ${currency === c ? (dark ? 'bg-white text-ink' : 'bg-white text-ink shadow-sm') : dark ? 'text-white/80 hover:text-white' : 'text-slate-600 hover:text-ink'}`}>{c}</button>
         ))}
       </div>
-      {note && <p className={`text-xs ${dark ? 'text-white/60' : 'text-slate-500'}`}>Prices are set in USD. EUR and CAD are converted at 1 USD = €{RATES.EUR} / C${RATES.CAD} ({RATES_AS_OF}) and rounded. Your final price is confirmed on WhatsApp.</p>}
+      {note && <p className={`text-center text-xs ${dark ? 'text-white/60' : 'text-slate-500'}`}>{(typeof note === 'string' ? note : EN_NOTE).replace('{eur}', String(RATES.EUR)).replace('{cad}', String(RATES.CAD)).replace('{asOf}', asOf)}</p>}
     </div>
   )
 }

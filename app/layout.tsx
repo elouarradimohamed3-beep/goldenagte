@@ -4,14 +4,16 @@ import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SITE } from '@/lib/site'
 import { FOCUS } from '@/lib/seo'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans_Arabic } from 'next/font/google'
+import { LangRedirect } from '@/components/lang-redirect'
 import { Analytics } from '@vercel/analytics/next'
 import { CookieBanner } from '@/components/cookie-banner'
 import { Effects } from '@/components/effects'
 import { CurrencyProvider } from '@/components/currency-provider'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
+const inter = Inter({ subsets: ['latin', 'latin-ext', 'greek'], variable: '--font-inter', display: 'swap' })
+const arabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-arabic', display: 'swap' })
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -26,9 +28,10 @@ export const viewport: Viewport = { themeColor: '#0b1b3a', width: 'device-width'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en" className={`${inter.variable} ${arabic.variable}`}>
       <body className="antialiased">
         <CurrencyProvider>
+        <LangRedirect />
         <Effects />
         <Header />
         <main>{children}</main>

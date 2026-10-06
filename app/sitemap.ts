@@ -1,13 +1,16 @@
 import type { MetadataRoute } from 'next'
 import { getIndexable } from '@/lib/posts'
 import { PILLARS } from '@/lib/seo'
+import { LOCALES, homePath } from '@/lib/i18n'
 import { SITE } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const last = SITE.launched
   const entry = (path: string, priority: number, changeFrequency: 'weekly' | 'monthly' = 'monthly') => ({ url: `${SITE.url}${path}`, lastModified: last, changeFrequency, priority })
+  const langs = { en: SITE.url, ...Object.fromEntries(LOCALES.map((l) => [l, `${SITE.url}${homePath(l)}`])) }
   return [
-    entry('', 1, 'weekly'),
+    { ...entry('', 1, 'weekly'), alternates: { languages: langs } },
+    ...LOCALES.map((l) => ({ ...entry(homePath(l), 0.9, 'weekly'), alternates: { languages: langs } })),
     ...PILLARS.map((p) => entry(`/${p.slug}`, 0.9, 'weekly')),
     entry('/plans', 0.9),
     ...(['service', 'subscription', 'usa', 'premium'] as const).map((k) => entry(`/blog/topic/${k}`, 0.6, 'weekly')),

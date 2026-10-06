@@ -16,6 +16,7 @@
 - [IPTV USA guide](https://ww1.goldengateiptv.com/iptv-usa): devices, internet speeds, pricing in USD and setup in the United States.
 - [Premium IPTV guide](https://ww1.goldengateiptv.com/iptv-premium): 4K quality, multiple screens and premium plans.
 - [IPTV free trial](https://ww1.goldengateiptv.com/free-trial): how to request a trial.
+- Translated home pages: [French](https://ww1.goldengateiptv.com/fr), [Spanish](https://ww1.goldengateiptv.com/es), [German](https://ww1.goldengateiptv.com/de), [Portuguese](https://ww1.goldengateiptv.com/pt), [Polish](https://ww1.goldengateiptv.com/pl), [Greek](https://ww1.goldengateiptv.com/el), [Arabic](https://ww1.goldengateiptv.com/ar).
 
 ## Other pages
 - [Plans and pricing](https://ww1.goldengateiptv.com/plans)

@@ -12,12 +12,25 @@ import { JsonLd } from '@/components/json-ld'
 import { FaqList } from '@/components/faq'
 import { PillarLinks } from '@/components/pillar-links'
 import { CtaBand } from '@/components/cta-band'
+import { HomeView } from '@/components/home-view'
+import { getDict } from '@/lib/i18n/dicts'
+import { LOCALES, OG_LOCALE, homePath, isLocale } from '@/lib/i18n'
 
 export const dynamicParams = false
-export const generateStaticParams = () => PILLARS.map((p) => ({ pillar: p.slug }))
+export const generateStaticParams = () => [...PILLARS.map((p) => ({ pillar: p.slug })), ...LOCALES.map((l) => ({ pillar: l }))]
 
 export async function generateMetadata({ params }: { params: Promise<{ pillar: string }> }): Promise<Metadata> {
-  const page = getPillarPage((await params).pillar)
+  const slug = (await params).pillar
+  if (isLocale(slug)) {
+    const t = getDict(slug)
+    return {
+      title: { absolute: t.meta.title },
+      description: t.meta.description,
+      alternates: { canonical: homePath(slug), languages: { en: '/', ...Object.fromEntries(LOCALES.map((l) => [l, homePath(l)])), 'x-default': '/' } },
+      openGraph: { type: 'website', title: t.meta.title, description: t.meta.description, locale: OG_LOCALE[slug], images: ['/opengraph-image'] },
+    }
+  }
+  const page = getPillarPage(slug)
   if (!page) return {}
   return {
     title: { absolute: page.title },
@@ -29,6 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pillar: s
 
 export default async function PillarPageRoute({ params }: { params: Promise<{ pillar: string }> }) {
   const slug = (await params).pillar
+  if (isLocale(slug)) return <HomeView lang={slug} t={getDict(slug)} />
   const page = getPillarPage(slug)
   const pillar = pillarBySlug(slug)
   if (!page || !pillar) notFound()
