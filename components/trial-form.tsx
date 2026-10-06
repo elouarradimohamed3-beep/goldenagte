@@ -14,7 +14,7 @@ export function TrialForm() {
     const text = `Hi! I would like a free trial of goldengateiptv.com.\nName: ${name}\nDevice: ${device}${state ? `\nState: ${state}` : ''}`
     window.open(waLink(text), '_blank', 'noopener,noreferrer')
   }
-  const field = 'w-full rounded-xl border border-line bg-panel px-4 py-3 outline-none transition focus:border-gold'
+  const field = 'w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand'
   return (
     <form onSubmit={submit} className="glass mx-auto mt-8 max-w-md space-y-4 rounded-3xl p-7 text-left">
       <label className="block text-sm">Your name<input required value={name} onChange={(e) => setName(e.target.value)} className={`${field} mt-1`} placeholder="Jane" /></label>

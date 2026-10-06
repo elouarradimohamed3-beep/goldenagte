@@ -27,7 +27,7 @@ export function Effects() {
     <>
       <div className="progress" />
       <button aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`glass fixed bottom-5 left-5 z-50 grid size-12 place-items-center rounded-full text-gold transition-all duration-300 hover:bg-gold hover:text-black ${top ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'}`}><ArrowUp size={20} /></button>
+        className={`glass fixed bottom-5 left-5 z-50 grid size-12 place-items-center rounded-full text-brand transition-all duration-300 hover:bg-brand hover:text-white ${top ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'}`}><ArrowUp size={20} /></button>
     </>
   )
 }

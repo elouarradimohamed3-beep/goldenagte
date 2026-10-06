@@ -11,9 +11,9 @@ export default function Faq() {
       <h1 className="text-4xl font-bold">Frequently asked questions</h1>
       <div className="mt-8 space-y-3">
         {FAQ.map((f) => (
-          <details key={f.q} className="rounded-xl border border-white/10 bg-panel p-4">
+          <details key={f.q} className="rounded-xl border border-white/10 bg-white p-4">
             <summary className="cursor-pointer font-semibold">{f.q}</summary>
-            <p className="mt-2 text-white/70">{f.a}</p>
+            <p className="mt-2 text-slate-600">{f.a}</p>
           </details>
         ))}
       </div>
