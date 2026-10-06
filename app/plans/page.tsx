@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { PlansGrid } from '@/components/plans-grid'
+import { PricingSection } from '@/components/pricing-section'
 
-export const metadata: Metadata = { title: 'Plans and pricing', alternates: { canonical: '/plans' } }
+export const metadata: Metadata = {
+  title: 'Plans and pricing',
+  description: 'IPTV plans from $7 a day and $20 a month, with 1 to 5 connections, free updates and a 7-day refund.',
+  alternates: { canonical: '/plans' },
+}
 
 export default function Plans() {
-  return (
-    <div className="mx-auto max-w-6xl px-4 pt-36 pb-16">
-      <h1 className="mb-12 text-center text-4xl font-bold">Choose your IPTV subscription plan</h1>
-      <PlansGrid />
-    </div>
-  )
+  return <PricingSection as="h1" id="pricing" />
 }

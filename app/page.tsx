@@ -4,7 +4,7 @@ import { ArrowRight, Check, X as XIcon, Gauge, Headphones, Layers, Film, Monitor
 import { COMPARE, FAQ, FEATURE_ARTICLES, GENRES, INFRA, PLAN_TIERS, SITE, STEPS, WHY } from '@/lib/site'
 import { POSTS } from '@/lib/posts'
 import { Hero } from '@/components/hero'
-import { PlansGrid } from '@/components/plans-grid'
+import { PricingSection } from '@/components/pricing-section'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { FaqList } from '@/components/faq'
@@ -69,9 +69,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="plans" tone="soft" eyebrow="Pricing" title="Choose your IPTV subscription plan" intro="Every plan includes the full channel and on-demand library, free updates and a 7-day refund.">
-        <PlansGrid />
-      </Section>
+      <PricingSection />
 
       <section className="relative isolate overflow-hidden">
         <Image src="/images/sports-family.webp" alt="A family laughing together on the sofa while watching live sports on a 4K TV" width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />

@@ -57,3 +57,18 @@ section[id] { scroll-margin-top: 90px; }
   html { scroll-behavior: auto; }
 }
 @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+@keyframes gradient-shift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes sweep { from { transform: translateX(-120%) skewX(-20deg); } to { transform: translateX(320%) skewX(-20deg); } }
+@keyframes pop-in { from { opacity: 0; transform: translateX(-10px) scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-4px) rotate(3deg); } }
+
+.grad-anim { background-size: 220% 220%; animation: gradient-shift 8s ease-in-out infinite; }
+.shine { position: relative; overflow: hidden; }
+.shine::after { content: ""; position: absolute; top: 0; left: 0; width: 35%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .45), transparent); transform: translateX(-120%) skewX(-20deg); animation: sweep 3.8s ease-in-out infinite; pointer-events: none; }
+.plan-card:hover .shine::after { animation-duration: 1.4s; }
+.feat { opacity: 0; }
+.reveal.in .feat { animation: pop-in .45s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 55ms + 250ms); }
+.badge-bob { animation: bob 2.4s ease-in-out infinite; }
+.price-up { animation: pop-in .5s cubic-bezier(.2,.8,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .feat { opacity: 1; } }
