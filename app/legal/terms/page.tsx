@@ -8,7 +8,7 @@ export default function Terms() {
   return (
     <LegalDoc
       title="Terms and conditions"
-      effective="October 5, 2026"
+      effective="October 6, 2026"
       intro={`Welcome to Golden Gate IPTV. By accessing or using our website at ${SITE.url}, you agree to comply with and be bound by the following terms and conditions. If you do not agree, please do not use our website.`}
       sections={[
         { h: '1. Use of the website', p: ['You agree to use this website only for lawful purposes. You are prohibited from:'], ul: ['Violating any applicable laws or regulations', 'Interfering with or disrupting the website', 'Attempting unauthorized access to any part of the website or our servers', 'Using the website to distribute spam or malware'] },

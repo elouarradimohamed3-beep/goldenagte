@@ -8,7 +8,7 @@ export default function Refund() {
   return (
     <LegalDoc
       title="Refund and cancellation policy"
-      effective="October 5, 2026"
+      effective="October 6, 2026"
       intro="We aim to give you reliable TV streaming. Please read this refund and cancellation policy before you buy."
       sections={[
         { h: '1. Subscription and billing', p: ['Plans are prepaid for the period you choose, such as a day, a month, three or six months, a year or two years.'] },

@@ -6,7 +6,7 @@ export const SITE = {
   whatsapp: '212707711512',
   email: 'goldengateiptv@gmail.com',
   whatsappDisplay: '+212 707 711 512',
-  launched: '2026-10-05',
+  launched: '2026-10-06',
 }
 
 export const FEATURES = [

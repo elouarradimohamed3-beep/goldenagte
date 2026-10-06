@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Check, X as XIcon, Gauge, Headphones, Layers, Film, MonitorSmartphone, Newspaper, Popcorn, Baby, Clapperboard, Mountain, Music2, Languages, Server, Trophy, Tv2, Zap, Activity, Globe2, Cpu } from 'lucide-react'
 import { COMPARE, FAQ, FEATURE_ARTICLES, GENRES, INFRA, PLAN_TIERS, SITE, STEPS, WHY } from '@/lib/site'
-import { POSTS } from '@/lib/posts'
+import { getPosts } from '@/lib/posts'
 import { Hero } from '@/components/hero'
 import { PricingSection } from '@/components/pricing-section'
 import { Section } from '@/components/section'
@@ -170,7 +170,7 @@ export default function Home() {
 
       <Section eyebrow="Guides" title="Learn more about IPTV">
         <div className="grid gap-5 md:grid-cols-3">
-          {POSTS.slice(0, 3).map((p, i) => (
+          {getPosts().slice(0, 3).map((p, i) => (
             <Reveal key={p.slug} delay={i * 100}>
               <Link href={`/blog/${p.slug}`} className="card-hover glass spot group flex h-full flex-col rounded-2xl p-7">
                 <p className="text-xs text-slate-500">{p.readMinutes} min read</p>
