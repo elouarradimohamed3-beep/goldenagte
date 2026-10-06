@@ -23,7 +23,7 @@ export default function Contact() {
           </div>
           <p className="mt-4 text-sm text-slate-500">{SITE.email}</p>
         </div>
-        <Reveal from="right"><Image src="/images/support.webp" alt="Support agent with a headset helping a customer" width={800} height={800} priority className="animate-float mx-auto w-full max-w-md" /></Reveal>
+        <Reveal from="right"><Image src="/images/support-agent.webp" alt="A smiling support agent wearing a headset at a laptop" width={1408} height={768} priority className="mx-auto w-full max-w-xl rounded-3xl object-cover shadow-2xl" /></Reveal>
       </div>
     </section>
   )

@@ -17,6 +17,7 @@ export default function Install() {
       <section className="bg-gradient-to-b from-brand-soft to-white px-4 pt-36 pb-12 text-center">
         <h1 className="text-4xl font-extrabold sm:text-5xl">How to set up IPTV on your device</h1>
         <p className="mx-auto mt-4 max-w-2xl text-slate-600">Pick your device and follow the steps. Stuck? Message us on WhatsApp and we will help you install it.</p>
+        <Image src="/images/devices-flatlay.webp" alt="A remote, phone, tablet, laptop and streaming stick all showing the same streaming app" width={1408} height={768} priority className="mx-auto mt-8 w-full max-w-3xl rounded-3xl shadow-xl" />
         <nav className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
           {INSTALL_GUIDES.map((g) => <a key={g.id} href={`#${g.id}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand hover:text-brand">{g.title.split(' (')[0]}</a>)}
         </nav>

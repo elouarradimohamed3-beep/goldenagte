@@ -49,7 +49,7 @@ export default function Home() {
         <div className="grid gap-5 lg:grid-cols-3">
           <Reveal className="lg:col-span-2 lg:row-span-2">
             <div className="relative h-full min-h-80 overflow-hidden rounded-3xl">
-              <Image src="/images/family-tv.webp" alt="Two children watching live TV together" width={500} height={500} className="absolute inset-0 size-full object-cover" />
+              <Image src="/images/kids-tv.webp" alt="Two young children watching a cartoon on TV in their playroom" width={1408} height={768} className="absolute inset-0 size-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
               <div className="relative flex h-full flex-col justify-end p-8 text-white">
                 <h3 className="font-display text-2xl font-bold !text-white sm:text-3xl">TV the whole family can share</h3>
@@ -72,6 +72,16 @@ export default function Home() {
       <Section id="plans" tone="soft" eyebrow="Pricing" title="Choose your IPTV subscription plan" intro="Every plan includes the full channel and on-demand library, free updates and a 7-day refund.">
         <PlansGrid />
       </Section>
+
+      <section className="relative isolate overflow-hidden">
+        <Image src="/images/sports-family.webp" alt="A family laughing together on the sofa while watching live sports on a 4K TV" width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/60 to-transparent" />
+        <Reveal className="mx-auto max-w-6xl px-4 py-28 sm:py-36">
+          <h2 className="max-w-xl font-display text-3xl font-extrabold !text-white sm:text-5xl">Every game, every show, every room.</h2>
+          <p className="mt-4 max-w-lg text-lg text-white/80">Bring the whole family together with live sports, movies and kids&apos; shows in 4K, on as many as five screens at once.</p>
+          <Link href="/#plans" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 font-semibold text-brand shadow-xl transition hover:scale-105">See plans <ArrowRight size={18} /></Link>
+        </Reveal>
+      </section>
 
       <Section eyebrow="Get started" title="Watching in three simple steps">
         <div className="relative grid gap-8 md:grid-cols-3">

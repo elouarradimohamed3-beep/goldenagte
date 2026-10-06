@@ -5,6 +5,11 @@ import { Rewind, Smartphone, Tv2 } from 'lucide-react'
 import { LONG_ARTICLES } from '@/lib/site'
 
 const ICONS = [Smartphone, Tv2, Rewind]
+const PHOTOS = [
+  { src: '/images/airport-phone.webp', alt: 'A traveler watching a live match on a phone while waiting at an airport gate' },
+  { src: '/images/movie-night.webp', alt: 'A couple under a blanket watching a movie on a large TV at night' },
+  { src: '/images/news-kitchen.webp', alt: 'A man drinking coffee and watching the morning news on a TV in his kitchen' },
+]
 const SHORT = ['Multi-device', 'HD and 4K', 'Interactivity and DVR']
 
 export function ExploreTabs() {
@@ -22,14 +27,10 @@ export function ExploreTabs() {
           <div className="mt-5 space-y-4 text-slate-600">{a.body.map((p) => <p key={p}>{p}</p>)}</div>
           <a href="#plans" className="mt-6 inline-block rounded-full bg-brand px-6 py-3 font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-brand-dark">Sign up now</a>
         </div>
-        {t === 0 ? (
-          <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-xl"><Image src="/images/family-tv.webp" alt="Two children watching live TV together in the living room" width={500} height={500} className="aspect-[4/3] w-full object-cover" /></div>
-        ) : (
-          <div className="relative grid aspect-[4/3] place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand via-violet-600 to-fuchsia-600 shadow-xl">
-            <div className="animate-drift absolute size-60 rounded-full bg-white/20 blur-[70px]" />
-            <I className="relative text-white" size={110} strokeWidth={1.1} />
-          </div>
-        )}
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-xl">
+          <Image src={PHOTOS[t].src} alt={PHOTOS[t].alt} width={1408} height={768} className="aspect-[4/3] w-full object-cover" />
+          <span className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-ink shadow-lg backdrop-blur"><I size={16} className="text-brand" />{SHORT[t]}</span>
+        </div>
       </div>
     </div>
   )
