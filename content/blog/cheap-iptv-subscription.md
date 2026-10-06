@@ -1,5 +1,5 @@
 ---
-title: "Cheap IPTV Subscriptions 2025: Pros & Cons"
+title: "Cheap IPTV Subscriptions 2026: Pros & Cons"
 slug: cheap-iptv-subscription
 date: 2026-10-06
 sort: 2025-09-05-02884

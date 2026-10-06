@@ -3,6 +3,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SITE } from '@/lib/site'
+import { FOCUS } from '@/lib/seo'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CookieBanner } from '@/components/cookie-banner'
@@ -13,8 +14,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: `${SITE.name} | ${SITE.tagline}`, template: `%s | ${SITE.name}` },
-  description: 'IPTV subscriptions from $20 a month. Live TV, movies and series on Smart TV, Fire Stick, phones and computers, with a seven-day refund.',
+  title: { default: FOCUS.title, template: `%s | ${SITE.name}` },
+  description: FOCUS.description,
   alternates: { canonical: '/' },
   openGraph: { type: 'website', siteName: SITE.name, locale: 'en_US' },
   twitter: { card: 'summary_large_image' },

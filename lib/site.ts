@@ -73,6 +73,12 @@ export const PLAN_INCLUDES = [
 ]
 
 export const FAQ = [
+  { q: 'What is an IPTV service?', a: 'An IPTV service delivers live TV channels and on-demand movies and series over your internet connection instead of cable or satellite. You subscribe, receive a login and watch in an app on your Smart TV, Fire TV Stick, phone or computer.' },
+  { q: 'How much does an IPTV subscription cost?', a: 'Our IPTV subscription starts at $7 for one day and $20 for one month for a single screen. Longer plans cost less per month: $37 for 3 months, $49 for 6 months, $77 for 1 year and $119 for 2 years. Plans for 2 and 3 screens and premium plans for up to 5 screens cost more.' },
+  { q: 'What is premium IPTV?', a: 'Premium IPTV adds higher picture quality such as 4K, more simultaneous screens, a TV guide, stable servers and fast support. Our premium plans cover 1 to 5 screens for a year, from $77 to $229.' },
+  { q: 'Is IPTV available in the USA?', a: 'Yes. Our IPTV service is built for viewers in the USA, with prices in US dollars, support on WhatsApp around the clock and setup guides for popular American devices. Ask us about local coverage for your area before you buy.' },
+  { q: 'Is there an IPTV free trial?', a: 'You can request a short free trial. Tell us the device you will watch on and we will reply on WhatsApp with next steps. Every paid plan also has a 7-day refund.' },
+  { q: 'Is IPTV legal in the USA?', a: 'It depends on the service and the content it provides, and rules differ by state and over time. Choose a provider that is open about what it sells, keep your receipts and check the regulations that apply to you.' },
   { q: 'What is IPTV?', a: 'IPTV means Internet Protocol Television. Instead of arriving through a cable or satellite dish, live channels and on-demand titles reach you over your internet connection and play in an app on your own devices.' },
   { q: 'How will I receive my credentials?', a: 'Right after your payment clears we email your username, password and server details together with a link to the setup guide. Most customers are watching within a few minutes.' },
   { q: 'Can I watch local sports and news in my area?', a: 'Many regional and national sports and news feeds are included, but coverage varies by location. Message support with your city and we will tell you exactly what you can expect before you buy.' },

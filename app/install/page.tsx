@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PillarLinks } from '@/components/pillar-links'
 import Image from 'next/image'
 import { INSTALL_GUIDES } from '@/lib/install'
 import { Reveal } from '@/components/reveal'
@@ -6,8 +7,8 @@ import { CtaBand } from '@/components/cta-band'
 import { waLink } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Installation guide: how to set up IPTV on your device',
-  description: 'Step-by-step IPTV setup for Smart TV, Fire TV Stick, Android, iPhone, MAG box, Windows and Enigma 2.',
+  title: { absolute: 'IPTV Setup Guide: Install on Smart TV, Firestick, Android, iPhone and MAG' },
+  description: 'Step-by-step IPTV setup for Smart TV, Fire TV Stick, Android, iPhone and iPad, MAG box, Windows and Enigma 2. Get your IPTV service running in minutes.',
   alternates: { canonical: '/install' },
 }
 
@@ -47,6 +48,7 @@ export default function Install() {
         ))}
         <p className="text-center text-sm text-slate-500">Need a hand? <a href={waLink('Hi! I need help installing IPTV on my device')} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand underline">Chat with support on WhatsApp</a>.</p>
       </div>
+      <PillarLinks />
       <CtaBand />
     </>
   )

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Menu, Tv, X } from 'lucide-react'
 import { waLink } from '@/lib/site'
 
-const NAV = [['Plans', '/#plans'], ['Reseller', '/reseller'], ['Install', '/install'], ['Blog', '/blog'], ['FAQ', '/#faq'], ['Contact', '/contact']]
+const NAV = [['IPTV Subscription', '/iptv-subscription'], ['IPTV USA', '/iptv-usa'], ['Premium IPTV', '/iptv-premium'], ['Install', '/install'], ['Blog', '/blog'], ['Contact', '/contact']]
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -22,7 +22,7 @@ export function Header() {
           <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-ink text-white"><Tv size={18} /></span>
           Golden Gate <span className="text-brand">IPTV</span>
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
           {NAV.map(([l, h]) => <Link key={h} href={h} className="transition-colors hover:text-brand">{l}</Link>)}
         </nav>
         <div className="flex items-center gap-2">

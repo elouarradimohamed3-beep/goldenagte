@@ -235,9 +235,9 @@ IPTV
 
 As technology and customer behaviour continue to advance, IPTV appears to have a better future than before. With the global streaming market growing rapidly, IPTV is expected to play a central role in how people watch television.
 
-### **Trends in 2025 and Beyond**
+### **Trends in 2026 and Beyond**
 
-By 2025, IPTV services are projected to surpass traditional cable subscriptions in many countries. Faster internet speeds, widespread 5G networks, and affordable streaming devices are fueling this growth.
+By 2026, IPTV services are projected to surpass traditional cable subscriptions in many countries. Faster internet speeds, widespread 5G networks, and affordable streaming devices are fueling this growth.
 
 One major trend is **personalization through artificial intelligence (AI)**. IPTV platforms are increasingly using AI to recommend content based on viewing habits, much like Netflix or YouTube. This makes the experience more engaging and tailored to individual preferences.
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PillarLinks } from '@/components/pillar-links'
 import Image from 'next/image'
 import { Check, Layers, Library, Workflow } from 'lucide-react'
 import { RESELLER_FAQ, RESELLER_INCLUDES, RESELLER_PACKAGES, RESELLER_STEPS, RESELLER_WHY, waLink } from '@/lib/site'
@@ -8,8 +9,8 @@ import { FaqList } from '@/components/faq'
 import { CtaBand } from '@/components/cta-band'
 
 export const metadata: Metadata = {
-  title: 'IPTV reseller program',
-  description: 'Become an IPTV reseller in the USA, Canada and the UK. Buy credits, get your own panel and sell subscriptions with 24/7 support.',
+  title: { absolute: 'IPTV Reseller Program: Buy Credits and Sell IPTV Subscriptions' },
+  description: 'Become an IPTV reseller in the USA, Canada and the UK. Buy credits from $329, get your own panel and sell IPTV subscriptions with 24/7 support.',
   alternates: { canonical: '/reseller' },
 }
 
@@ -92,6 +93,7 @@ export default function Reseller() {
         <FaqList items={RESELLER_FAQ} />
       </Section>
 
+      <PillarLinks />
       <CtaBand />
     </>
   )

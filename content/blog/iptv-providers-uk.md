@@ -1,5 +1,5 @@
 ---
-title: "Best IPTV Providers UK 2025: Complete Guide"
+title: "Best IPTV Providers UK 2026: Complete Guide"
 slug: iptv-providers-uk
 date: 2026-10-06
 sort: 2025-09-02-02856

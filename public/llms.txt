@@ -1,16 +1,26 @@
 # Golden Gate IPTV
 
-> IPTV subscriptions for the USA: live TV and on-demand movies and series on Smart TVs, Fire TV Stick, Android, iPhone, Windows and Mac. Plans from $20 a month with a 7-day refund and 24/7 support.
+> Golden Gate IPTV is an IPTV service for viewers in the USA: live TV channels and on-demand movies and series over the internet, on Smart TV, Fire TV Stick, Android, iPhone, Windows and Mac. IPTV subscription plans start at $7 for one day and $20 for one month, with a 7-day refund, 24/7 support on WhatsApp and premium plans for up to 5 screens.
 
 ## Key facts
-- Standard plans: 1 day $7, 1 month $20, 3 months $37, 6 months $49, 1 year $77, 2 years $119 (1 device). 2-device and 3-device pricing is listed on the plans section.
-- Premium plans: 1 year with 1 to 5 connections, $77 to $229.
-- Orders and support are handled on WhatsApp.
-- Refund: 7 days from purchase.
+- Standard IPTV subscription (1 screen): 1 day $7, 1 month $20, 3 months $37, 6 months $49, 1 year $77, 2 years $119.
+- Premium IPTV (1 year): 1 connection $77, 2 connections $119, 3 connections $149, 4 connections $189, 5 connections $229.
+- Included in every plan: live TV by genre, on-demand movies and series, TV guide (EPG), free updates, HD and 4K where the source supports it.
+- Refund: 7 days from purchase. A free trial can be requested on the free trial page.
+- Orders and support: WhatsApp +212 707 711 512, email goldengateiptv@gmail.com.
+- Last updated: 2026-10-06.
 
-## Pages
-- https://goldengateiptv.com/ : plans, features and FAQ
-- https://goldengateiptv.com/blog : guides and articles
-- https://goldengateiptv.com/install : installation guide
-- https://goldengateiptv.com/reseller : reseller plan
-- https://goldengateiptv.com/legal/refund : refund policy
+## Core guides
+- [IPTV service (home)](https://goldengateiptv.com/): what an IPTV service is, plans and FAQ.
+- [IPTV subscription guide](https://goldengateiptv.com/iptv-subscription): plans, prices, free trial and how to buy safely.
+- [IPTV USA guide](https://goldengateiptv.com/iptv-usa): devices, internet speeds, pricing in USD and setup in the United States.
+- [Premium IPTV guide](https://goldengateiptv.com/iptv-premium): 4K quality, multiple screens and premium plans.
+- [IPTV free trial](https://goldengateiptv.com/free-trial): how to request a trial.
+
+## Other pages
+- [Plans and pricing](https://goldengateiptv.com/plans)
+- [Installation guide](https://goldengateiptv.com/install)
+- [Reseller program](https://goldengateiptv.com/reseller)
+- [FAQ](https://goldengateiptv.com/faq)
+- [All IPTV articles](https://goldengateiptv.com/blog): 120+ guides grouped by IPTV service, IPTV subscription, IPTV USA and premium IPTV.
+- [Refund policy](https://goldengateiptv.com/legal/refund) and [Terms](https://goldengateiptv.com/legal/terms)

@@ -1,18 +1,53 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { TrialForm } from '@/components/trial-form'
+import { FaqList } from '@/components/faq'
+import { PillarLinks } from '@/components/pillar-links'
+import { Breadcrumbs } from '@/components/breadcrumbs'
+import { JsonLd } from '@/components/json-ld'
 
 export const metadata: Metadata = {
-  title: 'Request a free trial',
-  description: 'Ask for a trial of Golden Gate IPTV. Tell us your device and we will reply on WhatsApp with your test login.',
+  title: { absolute: 'IPTV Free Trial: Test Our IPTV Service Before You Subscribe' },
+  description: 'Request an IPTV free trial. Tell us your device and we reply on WhatsApp with next steps. Every IPTV subscription also has a 7-day refund.',
   alternates: { canonical: '/free-trial' },
 }
 
+const FAQ_TRIAL = [
+  { q: 'How does the IPTV free trial work?', a: 'Tell us which device you will watch on. We reply on WhatsApp with next steps and a test login so you can try live TV and on-demand titles on your own device and internet connection.' },
+  { q: 'Is the IPTV free trial really free?', a: 'Trial requests are free to make and you are not asked to commit. Availability and length are at our discretion, and every paid IPTV subscription also has a 7-day refund.' },
+  { q: 'What should I check during an IPTV free trial?', a: 'Test your main device at the time you usually watch, try a few live channels and an on-demand title, check the TV guide and see how quickly support replies.' },
+  { q: 'What happens after the free trial?', a: 'Choose an IPTV subscription from $7 for one day or $20 for one month, or a premium plan with up to 5 screens. There is no obligation to continue.' },
+]
+
 export default function FreeTrial() {
+  const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_TRIAL.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }
   return (
-    <div className="mx-auto max-w-xl px-4 pt-36 pb-16 text-center">
-      <h1 className="text-4xl font-bold">Request a free trial</h1>
-      <p className="mt-3 text-slate-500">Try the service before you commit. Tell us what you will watch on and we will reply on WhatsApp with your trial login.</p>
-      <TrialForm />
-    </div>
+    <>
+      <JsonLd data={ld} />
+      <div className="mx-auto max-w-3xl px-4 pt-28 pb-10">
+        <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'IPTV free trial', href: '/free-trial' }]} />
+        <h1 className="text-center text-4xl font-bold">IPTV free trial</h1>
+        <p className="mx-auto mt-3 max-w-xl text-center text-slate-600">Try our IPTV service before you commit. Tell us what you will watch on and we will reply on WhatsApp with your trial login.</p>
+        <div className="mx-auto max-w-md"><TrialForm /></div>
+
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold">How the IPTV free trial works</h2>
+          <ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">
+            <li>Send your name and the device you will use (Smart TV, Fire TV Stick, phone or computer).</li>
+            <li>We reply on WhatsApp with next steps and your test login.</li>
+            <li>Install a compatible player using our <Link href="/install" className="font-semibold text-brand hover:underline">installation guide</Link>.</li>
+            <li>Test live channels, the on-demand library and the TV guide on your own connection.</li>
+            <li>If you like it, choose an <Link href="/iptv-subscription" className="font-semibold text-brand hover:underline">IPTV subscription</Link> that fits. Every paid plan has a 7-day refund.</li>
+          </ol>
+          <p className="mt-4 text-slate-600">Want to know what to expect first? Read our guide to <Link href="/blog/iptv-free-trial-usa-guide" className="font-semibold text-brand hover:underline">IPTV free trials in the USA</Link>.</p>
+        </section>
+
+        <section className="mt-14">
+          <h2 className="text-2xl font-bold">IPTV free trial questions</h2>
+          <div className="mt-6"><FaqList items={FAQ_TRIAL} /></div>
+        </section>
+      </div>
+      <PillarLinks />
+    </>
   )
 }

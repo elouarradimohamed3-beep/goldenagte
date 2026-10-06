@@ -1,11 +1,27 @@
 import type { MetadataRoute } from 'next'
 import { getPosts } from '@/lib/posts'
+import { PILLARS } from '@/lib/seo'
 import { SITE } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ['', '/plans', '/reseller', '/install', '/faq', '/blog', '/free-trial', '/about', '/contact', '/legal/terms', '/legal/refund', '/privacy-policy', '/cookie-policy', '/dmca']
+  const last = SITE.launched
+  const entry = (path: string, priority: number, changeFrequency: 'weekly' | 'monthly' = 'monthly') => ({ url: `${SITE.url}${path}`, lastModified: last, changeFrequency, priority })
   return [
-    ...pages.map((p) => ({ url: `${SITE.url}${p}`, lastModified: SITE.launched })),
-    ...getPosts().map((p) => ({ url: `${SITE.url}/blog/${p.slug}`, lastModified: p.date })),
+    entry('', 1, 'weekly'),
+    ...PILLARS.map((p) => entry(`/${p.slug}`, 0.9, 'weekly')),
+    entry('/plans', 0.9),
+    entry('/free-trial', 0.8),
+    entry('/blog', 0.8, 'weekly'),
+    entry('/install', 0.7),
+    entry('/reseller', 0.7),
+    entry('/faq', 0.6),
+    entry('/about', 0.4),
+    entry('/contact', 0.4),
+    entry('/legal/terms', 0.2),
+    entry('/legal/refund', 0.2),
+    entry('/privacy-policy', 0.2),
+    entry('/cookie-policy', 0.2),
+    entry('/dmca', 0.2),
+    ...getPosts().map((p) => ({ url: `${SITE.url}/blog/${p.slug}`, lastModified: p.date, changeFrequency: 'monthly' as const, priority: 0.5 })),
   ]
 }

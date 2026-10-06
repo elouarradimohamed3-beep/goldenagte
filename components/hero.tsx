@@ -12,8 +12,8 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[1.05fr_1fr]">
         <div>
           <p className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold text-slate-600">Plans from $20 a month · cancel any time</p>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">The best IPTV service provider in the USA</h1>
-          <p className="mt-6 max-w-xl text-lg text-slate-600">Stream live TV, movies and series in HD and 4K on your Smart TV, Fire Stick, phone or computer. Get your login in minutes and watch on every screen you own.</p>
+          <h1 className="mt-6 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">A reliable IPTV service for live TV, movies and series in the USA</h1>
+          <p className="mt-6 max-w-xl text-lg text-slate-600">Choose an <Link href="/iptv-subscription" className="font-semibold text-brand hover:underline">IPTV subscription</Link> from $20 a month, or upgrade to <Link href="/iptv-premium" className="font-semibold text-brand hover:underline">premium IPTV</Link> for 4K and up to 5 screens. Get your login in minutes and watch on your Smart TV, Fire Stick, phone or computer across the <Link href="/iptv-usa" className="font-semibold text-brand hover:underline">USA</Link>.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/#plans" className="group inline-flex items-center gap-2 rounded-lg bg-brand px-7 py-3.5 font-semibold text-white transition-colors hover:bg-brand-dark">Subscribe now <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5" /></Link>
             <Link href="/free-trial" className="rounded-lg border border-slate-300 bg-white px-7 py-3.5 font-semibold text-ink transition-colors hover:border-brand hover:text-brand">Request a trial</Link>

@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import { PillarLinks } from '@/components/pillar-links'
 import Link from 'next/link'
 import { Baby, Clapperboard, Crown, ShieldCheck, Trophy, Gift } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { CtaBand } from '@/components/cta-band'
 
 export const metadata: Metadata = {
-  title: 'About us: a trusted IPTV provider',
-  description: 'Golden Gate IPTV delivers premium live TV and on-demand streaming with reliable servers, wide device support and 24/7 customer care.',
+  title: { absolute: 'About Golden Gate IPTV: A Trusted IPTV Service Provider' },
+  description: 'Golden Gate IPTV delivers live TV and on-demand streaming with IPTV subscriptions, premium IPTV plans and 24/7 customer care for viewers in the USA.',
   alternates: { canonical: '/about' },
 }
 
@@ -42,6 +43,7 @@ export default function About() {
           ))}
         </div>
       </section>
+      <PillarLinks />
       <CtaBand />
     </>
   )

@@ -1,5 +1,5 @@
 ---
-title: "IPTV Services Legal: 5 Essential Facts You Must Know in 2025"
+title: "IPTV Services Legal: 5 Essential Facts You Must Know in 2026"
 slug: iptv-services-legal-what-you-need-to-know
 date: 2026-10-06
 sort: 2025-08-30-02811

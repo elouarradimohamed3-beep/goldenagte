@@ -1,5 +1,5 @@
 ---
-title: "Is IPTV Legal in the United States? 2025 Laws & Risks"
+title: "Is IPTV Legal in the United States? 2026 Laws & Risks"
 slug: is-iptv-legal-in-the-united-states
 date: 2026-10-06
 sort: 2025-12-30-03451

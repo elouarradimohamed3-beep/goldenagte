@@ -1,5 +1,5 @@
 ---
-title: "Affordable IPTV Services Under $5 in 2025"
+title: "Affordable IPTV Services Under $5 in 2026"
 slug: cheap-iptv-service
 date: 2026-10-06
 sort: 2025-08-30-02818

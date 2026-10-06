@@ -9,6 +9,9 @@ import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { FaqList } from '@/components/faq'
 import { CtaBand } from '@/components/cta-band'
+import { PillarLinks } from '@/components/pillar-links'
+import { FOCUS } from '@/lib/seo'
+import type { Metadata } from 'next'
 import { ExploreTabs } from '@/components/explore-tabs'
 
 const WHY_ICONS = [Zap, MonitorSmartphone, Tv2, Server, Headphones, Gauge]
@@ -16,13 +19,19 @@ const INFRA_ICONS = [Server, Activity, Globe2, Cpu]
 const GENRE_ICONS = [Trophy, Newspaper, Clapperboard, Popcorn, Baby, Mountain, Music2, Languages]
 const FEAT_ICONS = [Gauge, Layers, Film]
 
+export const metadata: Metadata = {
+  title: { absolute: FOCUS.title },
+  description: FOCUS.description,
+  alternates: { canonical: '/' },
+}
+
 const LD = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: `${SITE.url}/images/logo.png` },
+    { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: `${SITE.url}/images/logo.png`, description: FOCUS.description, contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: SITE.email, telephone: '+212707711512', availableLanguage: 'English', areaServed: 'US' } },
     { '@type': 'WebSite', name: SITE.name, url: SITE.url },
     {
-      '@type': 'Product', name: `${SITE.name} subscription`, description: 'IPTV subscription with live TV and on-demand movies and series.',
+      '@type': 'Product', name: `${SITE.name} IPTV subscription`, description: 'IPTV service with live TV and on-demand movies and series, available as a subscription or premium multi-screen plan.', brand: { '@type': 'Brand', name: SITE.name },
       offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: 7, highPrice: 297, offerCount: PLAN_TIERS.flatMap((t) => t.plans).length },
     },
     { '@type': 'FAQPage', mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
@@ -43,6 +52,26 @@ export default function Home() {
           </div>
         </Reveal>
       </section>
+
+      <Section eyebrow="IPTV service" title="What is an IPTV service?">
+        <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
+          <Reveal>
+            <p className="text-lg text-ink">An <strong>IPTV service</strong> delivers live TV channels and on-demand movies and series over your internet connection, so you can watch on a Smart TV, Fire TV Stick, phone or computer without a cable box or satellite dish.</p>
+            <p className="mt-4">You choose an <Link href="/iptv-subscription" className="font-semibold text-brand hover:underline">IPTV subscription</Link> for the length you want, receive your login in minutes and sign in to an app. If you want the sharpest picture or several screens at once, look at <Link href="/iptv-premium" className="font-semibold text-brand hover:underline">premium IPTV</Link>. For devices, speeds and pricing in US dollars, see our <Link href="/iptv-usa" className="font-semibold text-brand hover:underline">IPTV USA</Link> guide.</p>
+            <p className="mt-4">Still learning? Read <Link href="/blog/what-is-iptv-service" className="font-semibold text-brand hover:underline">what an IPTV service is</Link> or browse all our <Link href="/blog" className="font-semibold text-brand hover:underline">IPTV guides</Link>.</p>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="glass rounded-2xl p-7">
+              <h3 className="text-lg font-semibold">How to choose a reliable IPTV service</h3>
+              <ul className="mt-4 space-y-3 text-sm">
+                {['A clear refund window, so you can test it on your own devices', 'Support you can reach at any hour before and after you pay', 'Setup guides for the exact device you own', 'Prices shown as a monthly cost with no hidden extras', 'Multiple screens on one plan if your household shares it'].map((t) => (
+                  <li key={t} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{t}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </Section>
 
       <Section eyebrow="Why us" title="No more buffering, no more freezing">
         <div className="grid gap-5 lg:grid-cols-3">
@@ -182,6 +211,8 @@ export default function Home() {
           ))}
         </div>
       </Section>
+
+      <PillarLinks title="Explore our IPTV guides" />
 
       <Section id="faq" tone="soft" eyebrow="FAQ" title="Frequently asked questions about IPTV subscriptions">
         <FaqList />

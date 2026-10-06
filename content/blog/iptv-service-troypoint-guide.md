@@ -1,5 +1,5 @@
 ---
-title: "IPTV Service Troypoint The Ultimate Safety & Setup Guide 2025"
+title: "IPTV Service Troypoint The Ultimate Safety & Setup Guide 2026"
 slug: iptv-service-troypoint-guide
 date: 2026-10-06
 sort: 2025-12-28-03442

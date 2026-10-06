@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
+import { classify, type PillarKey } from './seo'
 
 export type PostMeta = {
   slug: string
@@ -10,6 +11,7 @@ export type PostMeta = {
   readMinutes: number
   cover?: string
   sort: string
+  pillar: PillarKey
 }
 export type Post = PostMeta & { body: string }
 
@@ -31,6 +33,7 @@ function load(): Post[] {
         readMinutes: Number(data.readMinutes ?? 5),
         cover: data.cover ? String(data.cover) : undefined,
         sort: String(data.sort ?? data.date),
+        pillar: (data.pillar as PillarKey) ?? classify(String(data.title), String(data.slug ?? f.replace(/\.md$/, ''))),
         body: content,
       }
     })
@@ -40,9 +43,10 @@ function load(): Post[] {
 
 export const getPosts = (): PostMeta[] => load().map(({ body: _body, ...meta }) => meta)
 export const getPost = (slug: string) => load().find((p) => p.slug === slug)
-export const getRelated = (slug: string, n = 3): PostMeta[] => {
+export const getByPillar = (key: PillarKey): PostMeta[] => getPosts().filter((p) => p.pillar === key)
+export const getRelated = (slug: string, n = 6): PostMeta[] => {
   const all = load()
-  const i = all.findIndex((p) => p.slug === slug)
-  const pick = [1, 2, 3, -1, -2].map((d) => all[i + d]).filter(Boolean).slice(0, n)
-  return pick.map(({ body: _body, ...meta }) => meta)
+  const me = all.find((p) => p.slug === slug)
+  if (!me) return []
+  return all.filter((p) => p.pillar === me.pillar && p.slug !== slug).slice(0, n).map(({ body: _body, ...meta }) => meta)
 }

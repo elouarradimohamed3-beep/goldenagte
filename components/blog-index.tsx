@@ -4,16 +4,19 @@ import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { ArrowRight, Search } from 'lucide-react'
 import type { PostMeta } from '@/lib/posts'
+import { CLUSTER_LABEL, clusterHref, type PillarKey } from '@/lib/seo'
 
 const PAGE = 12
 
 export function BlogIndex({ posts }: { posts: PostMeta[] }) {
   const [q, setQ] = useState('')
   const [shown, setShown] = useState(PAGE)
+  const [cluster, setCluster] = useState<PillarKey | 'all'>('all')
   const list = useMemo(() => {
     const t = q.trim().toLowerCase()
-    return t ? posts.filter((p) => (p.title + ' ' + p.description).toLowerCase().includes(t)) : posts
-  }, [q, posts])
+    return posts.filter((p) => (cluster === 'all' || p.pillar === cluster) && (!t || (p.title + ' ' + p.description).toLowerCase().includes(t)))
+  }, [q, cluster, posts])
+  const keys: PillarKey[] = ['subscription', 'service', 'usa', 'premium']
   return (
     <>
       <div className="relative mx-auto mt-8 max-w-xl">
@@ -21,6 +24,14 @@ export function BlogIndex({ posts }: { posts: PostMeta[] }) {
         <input value={q} onChange={(e) => { setQ(e.target.value); setShown(PAGE) }} placeholder={`Search ${posts.length} articles`} aria-label="Search articles"
           className="w-full rounded-lg border border-slate-300 bg-white py-3 pr-4 pl-11 outline-none transition-colors focus:border-brand" />
       </div>
+      <div className="mt-5 flex flex-wrap justify-center gap-2">
+        {(['all', ...keys] as const).map((k) => (
+          <button key={k} onClick={() => { setCluster(k); setShown(PAGE) }} className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${cluster === k ? 'border-brand bg-brand text-white' : 'border-slate-200 bg-white text-slate-700 hover:border-brand hover:text-brand'}`}>
+            {k === 'all' ? 'All guides' : CLUSTER_LABEL[k]} <span className="opacity-60">({k === 'all' ? posts.length : posts.filter((p) => p.pillar === k).length})</span>
+          </button>
+        ))}
+      </div>
+      {cluster !== 'all' && <p className="mt-3 text-center text-sm"><Link href={clusterHref(cluster)} className="font-semibold text-brand">Read the complete {CLUSTER_LABEL[cluster]} guide →</Link></p>}
       <p className="mt-4 text-center text-sm text-slate-500">{list.length} {list.length === 1 ? 'article' : 'articles'}</p>
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.slice(0, shown).map((p) => (
