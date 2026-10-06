@@ -146,3 +146,41 @@ export const COMPARE = [
   ['Watching away from home', 'Limited to one location', 'Anywhere with internet'],
   ['Refund', 'Rarely offered', '7-day refund'],
 ]
+
+export const RESELLER_PACKAGES = [
+  { credits: 120, price: 290, save: 35 },
+  { credits: 240, price: 560, save: 35 },
+  { credits: 360, price: 840, save: 35 },
+]
+
+export const RESELLER_INCLUDES = [
+  'Credits never expire',
+  'Get your own reseller panel',
+  '1 credit = 1 month',
+  '12 credits = 1 year',
+  'TV guide (EPG)',
+  '24/7 support',
+]
+
+export const RESELLER_WHY = [
+  { title: 'White-label platform', body: 'Build your brand on a customizable reseller dashboard with your own logo, colors and domain name.' },
+  { title: 'Premium content library', body: 'Offer customers 34,000+ live channels and 130,000+ movies and series in HD across sports, movies and international genres.' },
+  { title: 'Automated management', body: 'Create accounts, extend subscriptions and handle customer requests from one panel, so you spend time selling instead of administering.' },
+]
+
+export const RESELLER_STEPS = [
+  { title: 'Select your reseller package', body: 'Choose the credit bundle that fits your goals and budget. Contact us if you want pricing tailored to your market.' },
+  { title: 'Receive expert training', body: 'Once you are onboarded, we walk you through the panel, how to price your plans and how to look after your customers.' },
+  { title: 'Start generating revenue', body: 'Launch your reselling business with support behind you. Every customer you add brings recurring income.' },
+]
+
+export const RESELLER_FAQ = [
+  { q: 'What content is included with my IPTV service?', a: 'The full lineup of 34,000+ live channels, including sports, movies, entertainment and international genres, in HD and 4K quality, plus a large on-demand library.' },
+  { q: 'Do you provide an EPG (electronic program guide)?', a: 'Yes. Every package includes a TV guide that shows program information for most channels, so your customers can find and plan what to watch.' },
+  { q: 'On how many devices can my customers use the service?', a: 'Depending on the subscription, 1 to 5 devices at the same time, so a whole household can watch different content together.' },
+  { q: 'Can I cancel at any time?', a: 'Services are prepaid for the period you choose, and we offer a 7-day money-back guarantee if you are not satisfied.' },
+  { q: 'What payment methods do you accept?', a: 'Major credit cards, PayPal, cryptocurrency and other secure payment methods.' },
+  { q: 'Is the service compatible with my customers’ devices?', a: 'It works with most modern devices, including Smart TVs, Amazon Fire Stick, Android and iOS devices, MAG boxes and computers.' },
+  { q: 'Is IPTV legal where I live?', a: 'Rules differ by country and region. Check the regulations that apply to you before you resell any IPTV service.' },
+  { q: 'Do you offer technical support?', a: 'Yes. We provide 24/7 support on WhatsApp and by email for resellers and their customers.' },
+]

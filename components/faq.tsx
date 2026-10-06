@@ -4,11 +4,11 @@ import { Plus } from 'lucide-react'
 import { FAQ } from '@/lib/site'
 import { Reveal } from './reveal'
 
-export function FaqList() {
+export function FaqList({ items = FAQ }: { items?: { q: string; a: string }[] }) {
   const [open, setOpen] = useState<number | null>(0)
   return (
     <div className="mx-auto max-w-3xl space-y-3">
-      {FAQ.map((f, i) => {
+      {items.map((f, i) => {
         const on = open === i
         return (
           <Reveal key={f.q} delay={i * 40}>

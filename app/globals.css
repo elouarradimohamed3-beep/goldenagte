@@ -31,8 +31,8 @@ section[id] { scroll-margin-top: 90px; }
 .reveal-left { transform: translateX(-34px); }
 .reveal-right { transform: translateX(34px); }
 
-.spot { position: relative; overflow: hidden; }
-.spot::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
+.spot { position: relative; }
+.spot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
   background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(79, 70, 229, .08), transparent 45%); }
 .spot:hover::after { opacity: 1; }
 .tilt { transform-style: preserve-3d; transition: transform .2s ease-out; }
