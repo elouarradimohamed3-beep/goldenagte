@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { PillarLinks } from '@/components/pillar-links'
 import Image from 'next/image'
 import { Check, Layers, Library, Workflow } from 'lucide-react'
-import { RESELLER_FAQ, RESELLER_INCLUDES, RESELLER_PACKAGES, RESELLER_STEPS, RESELLER_WHY, waLink } from '@/lib/site'
+import { SITE, RESELLER_FAQ, RESELLER_INCLUDES, RESELLER_PACKAGES, RESELLER_STEPS, RESELLER_WHY, waLink } from '@/lib/site'
 import { Price, OtherCurrencies } from '@/components/price'
 import { OrderLink } from '@/components/order-link'
 import { CurrencySwitcher } from '@/components/currency-switcher'
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 }
 
 const WHY_ICONS = [Layers, Library, Workflow]
-const START = waLink('Hi! I need more info about the reseller program on goldengateiptv.com')
+const START = waLink(`Hi! I need more info about the reseller program on ${SITE.host}`)
 
 export default function Reseller() {
   return (
@@ -55,7 +55,7 @@ export default function Reseller() {
                   <ul className="mb-8 flex-1 space-y-3 text-sm">
                     {RESELLER_INCLUDES.map((x) => <li key={x} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{x}</li>)}
                   </ul>
-                  <OrderLink order={`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} USD`} usd={p.price} className={`rounded-lg py-3 text-center font-semibold transition-colors ${i === 1 ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>Subscribe now</OrderLink>
+                  <OrderLink order={`${SITE.host} - Reseller ${p.credits} Credits - ${p.price} USD`} usd={p.price} className={`rounded-lg py-3 text-center font-semibold transition-colors ${i === 1 ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>Subscribe now</OrderLink>
                 </div>
               </Reveal>
             ))}

@@ -11,16 +11,16 @@
 - Last updated: 2026-10-06.
 
 ## Core guides
-- [IPTV service (home)](https://goldengateiptv.com/): what an IPTV service is, plans and FAQ.
-- [IPTV subscription guide](https://goldengateiptv.com/iptv-subscription): plans, prices, free trial and how to buy safely.
-- [IPTV USA guide](https://goldengateiptv.com/iptv-usa): devices, internet speeds, pricing in USD and setup in the United States.
-- [Premium IPTV guide](https://goldengateiptv.com/iptv-premium): 4K quality, multiple screens and premium plans.
-- [IPTV free trial](https://goldengateiptv.com/free-trial): how to request a trial.
+- [IPTV service (home)](https://ww1.goldengateiptv.com/): what an IPTV service is, plans and FAQ.
+- [IPTV subscription guide](https://ww1.goldengateiptv.com/iptv-subscription): plans, prices, free trial and how to buy safely.
+- [IPTV USA guide](https://ww1.goldengateiptv.com/iptv-usa): devices, internet speeds, pricing in USD and setup in the United States.
+- [Premium IPTV guide](https://ww1.goldengateiptv.com/iptv-premium): 4K quality, multiple screens and premium plans.
+- [IPTV free trial](https://ww1.goldengateiptv.com/free-trial): how to request a trial.
 
 ## Other pages
-- [Plans and pricing](https://goldengateiptv.com/plans)
-- [Installation guide](https://goldengateiptv.com/install)
-- [Reseller program](https://goldengateiptv.com/reseller)
-- [FAQ](https://goldengateiptv.com/faq)
-- [All IPTV articles](https://goldengateiptv.com/blog): 120+ guides grouped by IPTV service, IPTV subscription, IPTV USA and premium IPTV.
-- [Refund policy](https://goldengateiptv.com/legal/refund) and [Terms](https://goldengateiptv.com/legal/terms)
+- [Plans and pricing](https://ww1.goldengateiptv.com/plans)
+- [Installation guide](https://ww1.goldengateiptv.com/install)
+- [Reseller program](https://ww1.goldengateiptv.com/reseller)
+- [FAQ](https://ww1.goldengateiptv.com/faq)
+- [All IPTV articles](https://ww1.goldengateiptv.com/blog): 120+ guides grouped by IPTV service, IPTV subscription, IPTV USA and premium IPTV.
+- [Refund policy](https://ww1.goldengateiptv.com/legal/refund) and [Terms](https://ww1.goldengateiptv.com/legal/terms)

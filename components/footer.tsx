@@ -11,7 +11,7 @@ export function Footer() {
         <div>
           <Image src="/images/logo.png" alt="Golden Gate IPTV" width={150} height={50} />
           <p className="mt-4 max-w-sm">Live TV, movies and series on every screen, with plans from $20 a month and a 7-day refund.</p>
-          <a href={waLink('Hi! I have a question about goldengateiptv.com')} target="_blank" rel="noopener noreferrer" className={`mt-4 flex items-center gap-2 ${L}`}><MessageCircle size={16} />WhatsApp {SITE.whatsappDisplay}</a>
+          <a href={waLink(`Hi! I have a question about ${SITE.host}`)} target="_blank" rel="noopener noreferrer" className={`mt-4 flex items-center gap-2 ${L}`}><MessageCircle size={16} />WhatsApp {SITE.whatsappDisplay}</a>
           <a href={`mailto:${SITE.email}`} className={`mt-2 flex items-center gap-2 ${L}`}><Mail size={16} />{SITE.email}</a>
         </div>
         <div className="flex flex-col gap-2"><p className="font-semibold text-white">Popular guides</p>

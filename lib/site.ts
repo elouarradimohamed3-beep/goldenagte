@@ -1,6 +1,9 @@
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ww1.goldengateiptv.com').replace(/\/$/, '')
+
 export const SITE = {
   name: 'Golden Gate IPTV',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goldengateiptv.com',
+  url: SITE_URL,
+  host: new URL(SITE_URL).hostname,
   tagline: 'Live TV, movies and series on every screen',
   orderUrl: '/contact',
   whatsapp: '212707711512',
@@ -46,7 +49,7 @@ export const PLAN_TIERS = [1, 2, 3].map((devices) => ({
     connections: devices,
     badge: d === '1 Year' ? 'Best value' : undefined,
     save: MONTHS[i] >= 3 ? Math.round((1 - PRICES[devices][i] / (PRICES[devices][1] * MONTHS[i])) * 100) : undefined,
-    order: `goldengateiptv.com - ${d} / ${devices} ${devices === 1 ? 'Device' : 'Devices'} - ${PRICES[devices][i]} USD`,
+    order: `${SITE.host} - ${d} / ${devices} ${devices === 1 ? 'Device' : 'Devices'} - ${PRICES[devices][i]} USD`,
   })),
 }))
 
@@ -57,7 +60,7 @@ export const MULTI: Plan[] = [[1, 77], [2, 119], [3, 149], [4, 189], [5, 229]].m
   per: 'full year',
   connections: n,
   badge: n > 1 ? 'World Cup' : undefined,
-  order: `goldengateiptv.com - 1 Year / ${n} Device - ${price} USD`,
+  order: `${SITE.host} - 1 Year / ${n} Device - ${price} USD`,
 }))
 
 export const PLAN_INCLUDES = [
