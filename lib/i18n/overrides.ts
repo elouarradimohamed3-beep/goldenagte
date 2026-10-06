@@ -42,20 +42,20 @@ export const OVERRIDES: Partial<Record<Lang, Override>> = {
   },
   es: {
     area: 'ES',
-    focus: { keyword: 'IPTV España', db: 'es', volume: 3600, kd: 38, also: 'IPTV gratis 2,400 · lista IPTV 1,000 · IPTV premium 720 (“iptv spain” solo 480)' },
-    meta: { title: 'IPTV España: suscripción IPTV desde 20 $ al mes', description: 'IPTV España fiable: suscripción IPTV con TV en vivo, películas y series en HD y 4K en todos tus dispositivos. Desde 7 $ al día, reembolso de 7 días.' },
+    focus: { keyword: 'IPTV España', db: 'es', volume: 3600, kd: 38, also: 'lista IPTV 1,000 · IPTV premium 720 · “IPTV Spain” 480 (kept in title) · servicio IPTV 140' },
+    meta: { title: 'IPTV España (IPTV Spain): suscripción desde 20 $ al mes', description: 'IPTV España (IPTV Spain) fiable: suscripción IPTV con TV en vivo, películas y series en HD y 4K en todos tus dispositivos. Desde 7 $ al día, reembolso 7 días.' },
     hero: {
-      h1: 'IPTV España: un servicio IPTV fiable para ver TV en vivo, películas y series',
+      h1: 'IPTV España (IPTV Spain): un servicio IPTV fiable para ver TV en vivo, películas y series',
       p: 'Elige una {sub} desde 20 $ al mes o pasa a {prem} para disfrutar de 4K y hasta 5 pantallas. Recibe tus datos de acceso en minutos y mira en tu Smart TV, Fire Stick, teléfono u ordenador en España y en cualquier lugar.',
     },
     service: {
-      eyebrow: 'IPTV España', title: 'IPTV España: ¿qué es y cómo funciona?',
-      p1: '**IPTV España** es un servicio que ofrece canales de televisión en vivo y películas y series bajo demanda a través de tu conexión a internet, para que veas en una Smart TV, Fire TV Stick, teléfono u ordenador sin decodificador ni antena parabólica.',
-      p2: 'Eliges una {sub} por el tiempo que quieras, recibes tus datos de acceso en minutos e inicias sesión en una aplicación. Si has probado una lista IPTV gratis y buscas algo más estable, aquí tienes soporte, reembolso de 7 días y, si quieres la mejor imagen, {prem}. Los precios están en dólares, con su equivalente en euros.',
+      eyebrow: 'IPTV España · IPTV Spain', title: 'IPTV España: ¿qué es y cómo funciona?',
+      p1: '**IPTV España** (IPTV Spain) es un servicio que ofrece canales de televisión en vivo y películas y series bajo demanda a través de tu conexión a internet, para que veas en una Smart TV, Fire TV Stick, teléfono u ordenador sin decodificador ni antena parabólica.',
+      p2: 'Eliges una {sub} por el tiempo que quieras, recibes tus datos de acceso en minutos e inicias sesión en una aplicación. Si buscas un servicio IPTV estable, con soporte a todas horas y reembolso de 7 días, y la mejor imagen con {prem}, aquí lo tienes. Los precios están en dólares, con su equivalente en euros.',
     },
     faq: {
       lead: [
-        { q: 'IPTV España: ¿cómo funciona?', a: 'Con IPTV España ves televisión en vivo y películas y series bajo demanda a través de internet, sin antena parabólica ni decodificador. Contratas una suscripción IPTV, recibes tus datos de acceso en minutos e inicias sesión en una aplicación en tu Smart TV, Fire TV Stick, teléfono u ordenador.' },
+        { q: 'IPTV España (IPTV Spain): ¿cómo funciona?', a: 'Con IPTV España (IPTV Spain) ves televisión en vivo y películas y series bajo demanda a través de internet, sin antena parabólica ni decodificador. Contratas una suscripción IPTV, recibes tus datos de acceso en minutos e inicias sesión en una aplicación en tu Smart TV, Fire TV Stick, teléfono u ordenador.' },
         { q: '¿Cuánto cuesta una suscripción IPTV en España y dónde contratarla?', a: 'Puedes contratar tu suscripción IPTV directamente aquí, por WhatsApp. Nuestros planes empiezan en 7 $ por un día y 20 $ por un mes (unos 18 € al mes), y el plan anual sale por unos 6,42 $ al mes. Incluye reembolso de 7 días.' },
       ],
       availability: { q: '¿Está disponible la IPTV en España?', a: 'Sí. Nuestro servicio IPTV funciona en toda España y en el resto del mundo, con soporte por WhatsApp a todas horas y guías de instalación para los dispositivos más habituales. Los precios se fijan en dólares y también se muestran en euros. Pregúntanos por los canales que te interesan antes de comprar.' },
@@ -86,7 +86,7 @@ export const OVERRIDES: Partial<Record<Lang, Override>> = {
   },
   pt: {
     area: 'PT',
-    focus: { keyword: 'IPTV Portugal', db: 'pt', volume: 5400, kd: 30, also: 'IPTV grátis 480 · serviço IPTV 170 · melhor IPTV 170 (Brasil: IPTV Brasil 5,400 KD 58)' },
+    focus: { keyword: 'IPTV Portugal', db: 'pt', volume: 5400, kd: 30, also: 'serviço IPTV 170 · melhor IPTV 170 · IPTV pt 140 (Brasil: IPTV Brasil 5,400 KD 58)' },
     meta: { title: 'IPTV Portugal: assinatura IPTV desde 20 $ por mês', description: 'IPTV Portugal fiável: assinatura IPTV com TV ao vivo, filmes e séries em HD e 4K em todos os dispositivos. Desde 7 $ por dia, reembolso de 7 dias.' },
     hero: {
       h1: 'IPTV Portugal: um serviço IPTV fiável para TV ao vivo, filmes e séries',
