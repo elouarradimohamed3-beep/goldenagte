@@ -148,9 +148,9 @@ export const COMPARE = [
 ]
 
 export const RESELLER_PACKAGES = [
-  { credits: 120, price: 290, save: 35 },
-  { credits: 240, price: 560, save: 35 },
-  { credits: 360, price: 840, save: 35 },
+  { credits: 120, price: 329 },
+  { credits: 240, price: 629 },
+  { credits: 360, price: 949 },
 ]
 
 export const RESELLER_INCLUDES = [

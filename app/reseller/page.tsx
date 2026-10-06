@@ -36,13 +36,12 @@ export default function Reseller() {
           {RESELLER_PACKAGES.map((p, i) => (
             <Reveal key={p.credits} delay={i * 100} className="h-full">
               <div className={`card-hover relative flex h-full flex-col rounded-3xl bg-white p-7 ${i === 1 ? 'glow-border' : 'glass spot'}`}>
-                <span className="absolute -top-3 left-6 rounded-full bg-emerald-500 px-3 py-1 text-xs font-bold text-white">Save €{p.save}</span>
                 <h3 className="text-lg font-semibold">{p.credits} credits</h3>
-                <p className="mt-4 flex items-start gap-1 text-ink"><span className="mt-2 text-xl text-slate-500">€</span><span className="font-display text-5xl font-extrabold">{p.price}</span></p>
+                <p className="mt-4 flex items-start gap-1 text-ink"><span className="mt-2 text-xl text-slate-500">$</span><span className="font-display text-5xl font-extrabold">{p.price}</span></p>
                 <ul className="my-6 space-y-2.5 text-sm text-slate-600">
                   {RESELLER_INCLUDES.map((x) => <li key={x} className="flex gap-2"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{x}</li>)}
                 </ul>
-                <a href={waLink(`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} EUR`)} target="_blank" rel="noopener noreferrer" className={`mt-auto rounded-full py-3 text-center font-semibold transition ${i === 1 ? 'bg-brand text-white shadow-lg shadow-brand/30 hover:bg-brand-dark' : 'bg-brand-soft text-brand hover:bg-brand hover:text-white'}`}>Buy now</a>
+                <a href={waLink(`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} USD`)} target="_blank" rel="noopener noreferrer" className={`mt-auto rounded-full py-3 text-center font-semibold transition ${i === 1 ? 'bg-brand text-white shadow-lg shadow-brand/30 hover:bg-brand-dark' : 'bg-brand-soft text-brand hover:bg-brand hover:text-white'}`}>Buy now</a>
               </div>
             </Reveal>
           ))}
