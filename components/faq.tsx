@@ -11,8 +11,8 @@ export function FaqList({ items = FAQ }: { items?: { q: string; a: string }[] })
       {items.map((f, i) => {
         const on = open === i
         return (
-          <Reveal key={f.q} delay={i * 40}>
-            <div className={`rounded-2xl border transition-colors ${on ? 'border-brand/40 bg-white shadow-lg shadow-brand/10' : 'border-slate-200 bg-white'}`}>
+          <Reveal key={f.q}>
+            <div className={`rounded-xl border transition-colors ${on ? 'border-brand/40 bg-white shadow-sm' : 'border-slate-200 bg-white'}`}>
               <button onClick={() => setOpen(on ? null : i)} aria-expanded={on} className="flex w-full items-center justify-between gap-4 p-5 text-left font-semibold">
                 {f.q}<Plus className={`shrink-0 text-brand transition-transform duration-300 ${on ? 'rotate-45' : ''}`} />
               </button>

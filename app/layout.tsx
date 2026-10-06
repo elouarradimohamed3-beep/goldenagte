@@ -3,14 +3,13 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SITE } from '@/lib/site'
-import { Inter, Sora } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CookieBanner } from '@/components/cookie-banner'
 import { Effects } from '@/components/effects'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
-const sora = Sora({ subsets: ['latin'], variable: '--font-sora', display: 'swap' })
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${sora.variable}`}>
+    <html lang="en" className={`${inter.variable}`}>
       <body className="antialiased">
         <Effects />
         <Header />

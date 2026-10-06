@@ -24,16 +24,16 @@ export default function About() {
     <>
       <section className="bg-gradient-to-b from-brand-soft to-white px-4 pt-36 pb-16 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand">About us</p>
-        <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold sm:text-5xl">A trusted IPTV provider</h1>
+        <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-bold sm:text-5xl">A trusted IPTV provider</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">Golden Gate IPTV delivers premium live TV and on-demand streaming to viewers in the USA and worldwide. We combine reliable technology, a wide channel and movie selection and friendly support, so watching is simple.</p>
-        <Link href="/#plans" className="mt-8 inline-block rounded-full bg-brand px-8 py-3.5 font-semibold text-white shadow-lg shadow-brand/30 transition hover:bg-brand-dark">See pricing</Link>
+        <Link href="/#plans" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">See pricing</Link>
       </section>
       <section className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="mb-10 text-center text-3xl font-bold">Our journey towards premium entertainment</h2>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PLANS.map(({ Icon, title, body }, i) => (
             <Reveal key={title} delay={(i % 3) * 90}>
-              <div className="card-hover glass spot group h-full rounded-3xl p-7">
+              <div className="card-hover glass spot group h-full rounded-2xl p-7">
                 <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white"><Icon size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p>

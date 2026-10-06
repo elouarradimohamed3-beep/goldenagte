@@ -39,12 +39,12 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
           <div className="mt-3 space-y-4 text-slate-600">{s.p.map((t) => <p key={t}>{t}</p>)}</div>
         </section>
       ))}
-      <div className="glass mt-14 rounded-3xl p-8 text-center">
+      <div className="glass mt-14 rounded-2xl p-8 text-center">
         <h2 className="text-2xl font-bold">Ready to try it?</h2>
         <p className="mt-2 text-slate-500">Plans from $20 a month with a 7-day refund.</p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <Link href="/#plans" className="rounded-full bg-brand px-6 py-3 font-semibold text-white">See plans</Link>
-          <a href={waLink(`Hi! I read "${post.title}" and have a question`)} target="_blank" rel="noopener noreferrer" className="rounded-full border border-brand/40 px-6 py-3 font-semibold text-brand">Ask on WhatsApp</a>
+          <Link href="/#plans" className="rounded-lg bg-brand px-6 py-3 font-semibold text-white">See plans</Link>
+          <a href={waLink(`Hi! I read "${post.title}" and have a question`)} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-brand/40 px-6 py-3 font-semibold text-brand">Ask on WhatsApp</a>
         </div>
       </div>
     </article>

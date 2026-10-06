@@ -15,18 +15,18 @@ export default function Install() {
   return (
     <>
       <section className="bg-gradient-to-b from-brand-soft to-white px-4 pt-36 pb-12 text-center">
-        <h1 className="text-4xl font-extrabold sm:text-5xl">How to set up IPTV on your device</h1>
+        <h1 className="text-4xl font-bold sm:text-5xl">How to set up IPTV on your device</h1>
         <p className="mx-auto mt-4 max-w-2xl text-slate-600">Pick your device and follow the steps. Stuck? Message us on WhatsApp and we will help you install it.</p>
-        <Image src="/images/devices-flatlay.webp" alt="A remote, phone, tablet, laptop and streaming stick all showing the same streaming app" width={1408} height={768} priority className="mx-auto mt-8 w-full max-w-3xl rounded-3xl shadow-xl" />
+        <Image src="/images/devices-flatlay.webp" alt="A remote, phone, tablet, laptop and streaming stick all showing the same streaming app" width={1408} height={768} priority className="mx-auto mt-8 w-full max-w-3xl rounded-2xl shadow-xl" />
         <nav className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
-          {INSTALL_GUIDES.map((g) => <a key={g.id} href={`#${g.id}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-brand hover:text-brand">{g.title.split(' (')[0]}</a>)}
+          {INSTALL_GUIDES.map((g) => <a key={g.id} href={`#${g.id}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-brand hover:text-brand">{g.title.split(' (')[0]}</a>)}
         </nav>
       </section>
 
       <div className="mx-auto max-w-4xl space-y-8 px-4 py-12">
         {INSTALL_GUIDES.map((g) => (
           <Reveal key={g.id}>
-            <section id={g.id} className="glass scroll-mt-24 rounded-3xl p-7 sm:p-9">
+            <section id={g.id} className="glass scroll-mt-24 rounded-2xl p-7 sm:p-9">
               <div className="flex items-center gap-4">
                 {g.logo && <span className="grid size-16 shrink-0 place-items-center overflow-hidden rounded-2xl bg-slate-50 p-2"><Image src={g.logo} alt="" width={64} height={64} className="max-h-full w-auto object-contain" /></span>}
                 <h2 className="text-2xl font-bold">{g.title}</h2>
@@ -39,7 +39,7 @@ export default function Install() {
                       <li key={s} className="flex gap-3 text-slate-600"><span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-soft text-xs font-bold text-brand">{k + 1}</span><span className="break-words">{s}</span></li>
                     ))}
                   </ol>
-                  {grp.note && <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm text-amber-900">{grp.note}</p>}
+                  {grp.note && <p className="mt-4 rounded-xl bg-brand-soft p-4 text-sm text-slate-700">{grp.note}</p>}
                 </div>
               ))}
             </section>

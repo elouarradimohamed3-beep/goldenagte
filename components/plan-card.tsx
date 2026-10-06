@@ -1,24 +1,20 @@
-import { CircleCheck } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { PLAN_INCLUDES, waLink, type Plan } from '@/lib/site'
-import { AnimatedPrice } from './animated-price'
 
 export function PlanCard({ plan }: { plan: Plan; index?: number }) {
   const hot = plan.badge === 'Best value'
   return (
-    <div className={`plan-card neon-card group relative flex h-full flex-col rounded-[2rem] text-white transition duration-300 hover:-translate-y-2 ${hot ? 'neon-hot lg:scale-[1.04]' : ''}`}>
-      {plan.badge && <span className="badge-bob absolute -top-3 right-6 z-10 rounded-full bg-neon px-3 py-1 text-xs font-extrabold text-black shadow-lg">{plan.badge === 'World Cup' ? '⚽ World Cup' : '★ ' + plan.badge}</span>}
-      <div className="shine border-b border-white/15 px-7 pt-7 pb-6 text-center">
-        <h3 className="font-display text-xl font-bold !text-white">{plan.label}</h3>
-        <p className="mt-4 flex items-start justify-center gap-1"><span className="mt-2 text-xl font-bold text-white/80">$</span><span className="font-display text-6xl font-extrabold tabular-nums text-white"><AnimatedPrice value={plan.price} /></span></p>
-        <p className="mt-2 flex flex-wrap items-center justify-center gap-2 text-sm text-white/65">{plan.per}{plan.save ? <span className="rounded-full bg-neon px-2 py-0.5 text-xs font-extrabold text-black">Save {plan.save}%</span> : null}</p>
-      </div>
-      <ul className="flex-1 space-y-3 px-7 py-6 text-sm font-medium">
-        <li className="feat flex items-center gap-2.5 border-b border-white/10 pb-3" style={{ ['--i' as string]: 0 }}><CircleCheck size={18} className="shrink-0 text-neon" />{plan.connections} {plan.connections === 1 ? 'connection' : 'connections'}</li>
-        {PLAN_INCLUDES.map((i, k) => <li key={i} className="feat flex items-center gap-2.5 border-b border-white/10 pb-3 last:border-0" style={{ ['--i' as string]: k + 1 }}><CircleCheck size={18} className="shrink-0 text-neon" />{i}</li>)}
+    <div className={`relative flex h-full flex-col rounded-2xl bg-white p-7 text-slate-600 shadow-sm transition-shadow hover:shadow-xl ${hot ? 'ring-2 ring-brand' : 'ring-1 ring-slate-200'}`}>
+      {plan.badge && <span className={`absolute -top-3 left-7 rounded-full px-3 py-1 text-xs font-semibold text-white ${hot ? 'bg-brand' : 'bg-ink'}`}>{plan.badge === 'World Cup' ? 'World Cup special' : 'Most popular'}</span>}
+      <h3 className="text-lg font-semibold text-ink">{plan.label}</h3>
+      <p className="mt-4 flex items-baseline gap-1 text-ink"><span className="text-xl font-semibold text-slate-500">$</span><span className="text-5xl font-bold tracking-tight">{plan.price}</span></p>
+      <p className="mt-1 flex flex-wrap items-center gap-2 text-sm text-slate-500">{plan.per}{plan.save ? <span className="rounded-md bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700">Save {plan.save}%</span> : null}</p>
+      <hr className="my-6 border-slate-200" />
+      <ul className="mb-8 flex-1 space-y-3 text-sm">
+        <li className="flex gap-2.5 font-semibold text-ink"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{plan.connections} {plan.connections === 1 ? 'connection' : 'connections'}</li>
+        {PLAN_INCLUDES.map((i) => <li key={i} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{i}</li>)}
       </ul>
-      <div className="px-7 pb-7">
-        <a href={waLink(plan.order)} target="_blank" rel="noopener noreferrer" className="shine neon-btn block py-3.5 text-center font-extrabold transition hover:-translate-y-0.5">Subscribe now</a>
-      </div>
+      <a href={waLink(plan.order)} target="_blank" rel="noopener noreferrer" className={`rounded-lg py-3 text-center font-semibold transition-colors ${hot ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>Subscribe now</a>
     </div>
   )
 }

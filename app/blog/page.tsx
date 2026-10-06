@@ -18,7 +18,7 @@ export default function Blog() {
       <div className="mt-12 grid gap-5 md:grid-cols-2">
         {POSTS.map((p, i) => (
           <Reveal key={p.slug} delay={(i % 2) * 100}>
-            <Link href={`/blog/${p.slug}`} className="card-hover glass spot group flex h-full flex-col rounded-3xl p-7">
+            <Link href={`/blog/${p.slug}`} className="card-hover glass spot group flex h-full flex-col rounded-2xl p-7">
               <p className="text-xs text-slate-500">{new Date(p.date).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })} · {p.readMinutes} min read</p>
               <h2 className="mt-3 text-xl font-semibold">{p.title}</h2>
               <p className="mt-2 text-sm text-slate-500">{p.description}</p>
