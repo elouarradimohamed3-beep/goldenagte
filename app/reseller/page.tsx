@@ -3,6 +3,9 @@ import { PillarLinks } from '@/components/pillar-links'
 import Image from 'next/image'
 import { Check, Layers, Library, Workflow } from 'lucide-react'
 import { RESELLER_FAQ, RESELLER_INCLUDES, RESELLER_PACKAGES, RESELLER_STEPS, RESELLER_WHY, waLink } from '@/lib/site'
+import { Price, OtherCurrencies } from '@/components/price'
+import { OrderLink } from '@/components/order-link'
+import { CurrencySwitcher } from '@/components/currency-switcher'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { FaqList } from '@/components/faq'
@@ -38,6 +41,7 @@ export default function Reseller() {
             <p className="text-xs font-semibold uppercase tracking-[.18em] text-sky-300">Credit packages</p>
             <h2 className="mt-3 text-3xl font-bold !text-white sm:text-4xl">Choose your reseller package</h2>
             <p className="mt-4 text-slate-300">Buy credits in bulk and sell subscriptions at the price you choose.</p>
+            <div className="mt-6"><CurrencySwitcher tone="dark" note /></div>
           </Reveal>
           <div className="grid gap-6 md:grid-cols-3">
             {RESELLER_PACKAGES.map((p, i) => (
@@ -45,12 +49,13 @@ export default function Reseller() {
                 <div className={`relative flex h-full flex-col rounded-2xl bg-white p-7 text-slate-600 shadow-sm transition-shadow hover:shadow-xl ${i === 1 ? 'ring-2 ring-brand' : 'ring-1 ring-slate-200'}`}>
                   {i === 1 && <span className="absolute -top-3 left-7 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">Most popular</span>}
                   <h3 className="text-lg font-semibold text-ink">{p.credits} credits</h3>
-                  <p className="mt-4 flex items-baseline gap-1 text-ink"><span className="text-xl font-semibold text-slate-500">$</span><span className="text-5xl font-bold tracking-tight">{p.price}</span></p>
+                  <div className="mt-4 text-ink"><Price usd={p.price} /></div>
+                  <p className="mt-1"><OtherCurrencies usd={p.price} /></p>
                   <hr className="my-6 border-slate-200" />
                   <ul className="mb-8 flex-1 space-y-3 text-sm">
                     {RESELLER_INCLUDES.map((x) => <li key={x} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{x}</li>)}
                   </ul>
-                  <a href={waLink(`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} USD`)} target="_blank" rel="noopener noreferrer" className={`rounded-lg py-3 text-center font-semibold transition-colors ${i === 1 ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>Subscribe now</a>
+                  <OrderLink order={`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} USD`} usd={p.price} className={`rounded-lg py-3 text-center font-semibold transition-colors ${i === 1 ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>Subscribe now</OrderLink>
                 </div>
               </Reveal>
             ))}

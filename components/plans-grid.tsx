@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { MULTI, PLAN_TIERS, waLink } from '@/lib/site'
 import { PlanCard } from './plan-card'
+import { CurrencySwitcher } from './currency-switcher'
 
 export function PlansGrid() {
   const [tab, setTab] = useState<string>('1')
@@ -9,6 +10,7 @@ export function PlansGrid() {
   const tabs = [...PLAN_TIERS.map((t) => [String(t.devices), `${t.devices} ${t.devices === 1 ? 'device' : 'devices'}`]), ['premium', 'Premium plans']]
   return (
     <>
+      <div className="mb-6"><CurrencySwitcher tone="dark" note /></div>
       <div role="tablist" className="mx-auto mb-12 flex w-fit max-w-full flex-wrap justify-center rounded-lg border border-white/15 bg-white/10 p-1">
         {tabs.map(([k, l]) => (
           <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors sm:px-6 ${tab === k ? 'bg-white text-ink' : 'text-white/80 hover:text-white'}`}>{l}</button>

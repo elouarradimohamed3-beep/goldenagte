@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Menu, Tv, X } from 'lucide-react'
 import { waLink } from '@/lib/site'
+import { CurrencySwitcher } from './currency-switcher'
 
 const NAV = [['IPTV Subscription', '/iptv-subscription'], ['IPTV USA', '/iptv-usa'], ['Premium IPTV', '/iptv-premium'], ['Install', '/install'], ['Blog', '/blog'], ['Contact', '/contact']]
 
@@ -26,6 +27,7 @@ export function Header() {
           {NAV.map(([l, h]) => <Link key={h} href={h} className="transition-colors hover:text-brand">{l}</Link>)}
         </nav>
         <div className="flex items-center gap-2">
+          <div className="hidden lg:block"><CurrencySwitcher /></div>
           <a href={waLink('want buy 1 Day')} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark sm:px-5">Try now</a>
           <button aria-label="Menu" className="grid size-10 place-items-center rounded-lg text-ink md:hidden" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
         </div>

@@ -8,6 +8,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CookieBanner } from '@/components/cookie-banner'
 import { Effects } from '@/components/effects'
+import { CurrencyProvider } from '@/components/currency-provider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
@@ -27,12 +28,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="antialiased">
+        <CurrencyProvider>
         <Effects />
         <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
         <CookieBanner />
+        </CurrencyProvider>
         <Analytics />
       </body>
     </html>

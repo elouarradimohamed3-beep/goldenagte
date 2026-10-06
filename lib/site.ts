@@ -20,7 +20,7 @@ export const FEATURES = [
 
 export const DEVICES = ['Smart TV', 'Fire TV Stick', 'Android TV box', 'iPhone and iPad', 'Android phone', 'Windows and Mac']
 
-export type Plan = { save?: number; id: string; label: string; price: number; per: string; connections: number; badge?: string; order: string }
+export type Plan = { save?: number; id: string; label: string; price: number; per: string; months?: number; connections: number; badge?: string; order: string }
 
 export const waLink = (text: string) => `https://api.whatsapp.com/send/?phone=${SITE.whatsapp}&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`
 
@@ -33,7 +33,7 @@ const PRICES: Record<number, number[]> = {
   3: [12, 39, 79, 117, 189, 297],
 }
 
-const perMonth = (price: number, m: number) => (m === 0 ? 'one-day pass' : m === 1 ? 'billed monthly' : `$${(price / m).toFixed(2)} / month`)
+const perMonth = (price: number, m: number) => (m === 0 ? 'one-day pass' : m === 1 ? 'billed monthly' : '')
 
 export const PLAN_TIERS = [1, 2, 3].map((devices) => ({
   devices,
@@ -42,6 +42,7 @@ export const PLAN_TIERS = [1, 2, 3].map((devices) => ({
     label: d,
     price: PRICES[devices][i],
     per: perMonth(PRICES[devices][i], MONTHS[i]),
+    months: MONTHS[i],
     connections: devices,
     badge: d === '1 Year' ? 'Best value' : undefined,
     save: MONTHS[i] >= 3 ? Math.round((1 - PRICES[devices][i] / (PRICES[devices][1] * MONTHS[i])) * 100) : undefined,
