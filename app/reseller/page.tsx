@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Check, Layers, Library, Workflow } from 'lucide-react'
+import { CircleCheck, Layers, Library, Workflow } from 'lucide-react'
 import { RESELLER_FAQ, RESELLER_INCLUDES, RESELLER_PACKAGES, RESELLER_STEPS, RESELLER_WHY, waLink } from '@/lib/site'
+import { AnimatedPrice } from '@/components/animated-price'
 import { Section } from '@/components/section'
 import { Reveal } from '@/components/reveal'
 import { FaqList } from '@/components/faq'
@@ -31,22 +32,32 @@ export default function Reseller() {
         </div>
       </section>
 
-      <Section id="packages" tone="soft" eyebrow="Credit packages" title="Choose your reseller package" intro="Buy credits in bulk and sell subscriptions at the price you choose.">
-        <div className="grid gap-6 md:grid-cols-3">
-          {RESELLER_PACKAGES.map((p, i) => (
-            <Reveal key={p.credits} delay={i * 100} className="h-full">
-              <div className={`card-hover relative flex h-full flex-col rounded-3xl bg-white p-7 ${i === 1 ? 'glow-border' : 'glass spot'}`}>
-                <h3 className="text-lg font-semibold">{p.credits} credits</h3>
-                <p className="mt-4 flex items-start gap-1 text-ink"><span className="mt-2 text-xl text-slate-500">$</span><span className="font-display text-5xl font-extrabold">{p.price}</span></p>
-                <ul className="my-6 space-y-2.5 text-sm text-slate-600">
-                  {RESELLER_INCLUDES.map((x) => <li key={x} className="flex gap-2"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{x}</li>)}
-                </ul>
-                <a href={waLink(`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} USD`)} target="_blank" rel="noopener noreferrer" className={`mt-auto rounded-full py-3 text-center font-semibold transition ${i === 1 ? 'bg-brand text-white shadow-lg shadow-brand/30 hover:bg-brand-dark' : 'bg-brand-soft text-brand hover:bg-brand hover:text-white'}`}>Buy now</a>
-              </div>
-            </Reveal>
-          ))}
+      <section id="packages" className="relative isolate overflow-hidden bg-black py-24 text-white">
+        <div className="animate-drift absolute -top-32 left-1/2 -z-10 size-[30rem] -translate-x-1/2 rounded-full bg-neon/15 blur-[120px]" />
+        <div className="mx-auto max-w-6xl px-4">
+          <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="text-sm font-bold uppercase tracking-widest text-neon">Credit packages</p>
+            <h2 className="mt-3 font-display text-3xl font-extrabold !text-white sm:text-4xl">Choose your reseller package</h2>
+            <p className="mt-4 text-white/70">Buy credits in bulk and sell subscriptions at the price you choose.</p>
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-3">
+            {RESELLER_PACKAGES.map((p, i) => (
+              <Reveal key={p.credits} delay={i * 100} className="h-full">
+                <div className={`neon-card plan-card flex h-full flex-col rounded-[2rem] transition duration-300 hover:-translate-y-2 ${i === 1 ? 'neon-hot' : ''}`}>
+                  <div className="shine border-b border-white/15 px-7 pt-7 pb-6 text-center">
+                    <h3 className="font-display text-xl font-bold !text-white">{p.credits} credits</h3>
+                    <p className="mt-4 flex items-start justify-center gap-1"><span className="mt-2 text-xl font-bold text-white/80">$</span><span className="font-display text-6xl font-extrabold tabular-nums text-white"><AnimatedPrice value={p.price} /></span></p>
+                  </div>
+                  <ul className="flex-1 space-y-3 px-7 py-6 text-sm font-medium">
+                    {RESELLER_INCLUDES.map((x, k) => <li key={x} className="feat flex items-center gap-2.5 border-b border-white/10 pb-3 last:border-0" style={{ ['--i' as string]: k }}><CircleCheck size={18} className="shrink-0 text-neon" />{x}</li>)}
+                  </ul>
+                  <div className="px-7 pb-7"><a href={waLink(`goldengateiptv.com - Reseller ${p.credits} Credits - ${p.price} USD`)} target="_blank" rel="noopener noreferrer" className="shine neon-btn block py-3.5 text-center font-extrabold transition hover:-translate-y-0.5">Subscribe now</a></div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       <Section eyebrow="Why us" title="Why choose our IPTV reseller program?" intro="A profitable reseller opportunity with strong margins, 24/7 support and modern technology.">
         <div className="grid gap-5 md:grid-cols-3">

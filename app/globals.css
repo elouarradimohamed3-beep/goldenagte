@@ -6,6 +6,7 @@
   --color-brand-soft: #eef2ff;
   --color-ink: #0b1020;
   --color-sun: #f59e0b;
+  --color-neon: #f4ff1a;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, sans-serif;
 }
@@ -72,3 +73,10 @@ section[id] { scroll-margin-top: 90px; }
 .badge-bob { animation: bob 2.4s ease-in-out infinite; }
 .price-up { animation: pop-in .5s cubic-bezier(.2,.8,.2,1) both; }
 @media (prefers-reduced-motion: reduce) { .feat { opacity: 1; } }
+
+.neon-card { background: #000; border: 2px solid rgba(255, 255, 255, .85); box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 20px 50px -20px rgba(0,0,0,.7); }
+.neon-card:hover { border-color: var(--color-neon); box-shadow: 0 0 40px -8px rgba(244, 255, 26, .45); }
+.neon-hot { border-color: var(--color-neon); box-shadow: 0 0 50px -10px rgba(244, 255, 26, .5); animation: neon-pulse 3s ease-in-out infinite; }
+@keyframes neon-pulse { 0%, 100% { box-shadow: 0 0 30px -10px rgba(244,255,26,.35); } 50% { box-shadow: 0 0 60px -6px rgba(244,255,26,.6); } }
+.neon-btn { background: var(--color-neon); color: #000; border-radius: 1.6rem 1.6rem .4rem 1.6rem; }
+.neon-btn:hover { filter: brightness(1.05); }
