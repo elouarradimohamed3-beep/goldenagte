@@ -7,7 +7,6 @@ description: "Internet Protocol Television, better known as IPTV, has completely
 readMinutes: 6
 noindex: true
 ---
-
 [SUBSCRIBE NOW](/#plans)
 
 ## **Are IPTV Services Legal?**

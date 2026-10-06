@@ -8,7 +8,6 @@ readMinutes: 6
 cover: /blog-images/chatgpt-image-nov-11-2025-06-34-41-pm-dafdd0.webp
 noindex: true
 ---
-
 ![iptv technology](/blog-images/chatgpt-image-nov-11-2025-06-34-41-pm-dafdd0.webp)
 
 **IPTV Technology Overview**

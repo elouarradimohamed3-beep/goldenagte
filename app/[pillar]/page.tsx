@@ -61,7 +61,7 @@ export default async function PillarPageRoute({ params }: { params: Promise<{ pi
         {page.faq.length > 0 && (
           <section className="mt-12">
             <h2 id="frequently-asked-questions" className="text-2xl font-bold">Frequently asked questions</h2>
-            {faqIntro?.trim() && <p className="mt-3 text-slate-600">{faqIntro.trim()}</p>}
+            {faqIntro?.trim() && <div className="mt-3"><Markdown>{faqIntro.trim()}</Markdown></div>}
             <div className="mt-6"><FaqList items={page.faq} /></div>
           </section>
         )}

@@ -7,7 +7,6 @@ description: "The digital broadcasting landscape has shifted dramatically. While
 readMinutes: 4
 cover: /blog-images/whisk-bfa08a846e5c7ef84eb4f603387b9cf7dr-ad2b7e.webp
 ---
-
 ## The Ultimate Guide to IPTV Encoder Boxes: Mastering High-Definition Streaming in 2026
 
 The digital broadcasting landscape has shifted dramatically. While most consumers focus on the software side of streaming, professional-grade delivery relies on a critical piece of hardware: the **IPTV encoder box**. Whether you are a business owner looking to distribute internal content, a hospitality provider, or a high-level enthusiast, understanding how to bridge the gap between HDMI sources and network-based streaming is essential.
@@ -73,7 +72,7 @@ Setting up hardware can be intimidating, but following this plan ensures a smoot
 
 ### Phase 1: Physical Connection
 
-Connect your video source to the HDMI input of the encoder. Use a high-speed Cat6 Ethernet cable to connect the encoder to your network switch or router. Avoid Wi-Fi for the encoder itself; stability is paramount here.
+Connect your video source to the HDMI input of the encoder. Use a high-speed Cat6 Ethernet cable to connect the encoder to your network switch or router.
 
 ### Phase 2: Configuration
 

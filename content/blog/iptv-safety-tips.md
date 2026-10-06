@@ -7,7 +7,6 @@ description: "Introduce readers to the importance of IPTV safety, why it matters
 readMinutes: 5
 cover: /blog-images/iptv-safety-408bb9.webp
 ---
-
 ![iptv safety](/blog-images/iptv-safety-408bb9.webp)
 [SUBSCRIBE NOW](/#plans)
 

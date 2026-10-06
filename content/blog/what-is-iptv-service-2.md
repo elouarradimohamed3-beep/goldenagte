@@ -7,7 +7,6 @@ description: "Television has changed. Gone are the days when you had to wait for
 readMinutes: 9
 cover: /blog-images/what-is-iptv-service-0fb294.webp
 ---
-
 Television has changed. Gone are the days when you had to wait for a specific time to watch your favorite show or deal with messy cables running across your roof. The world is moving online, and television is following suit. You have likely heard the term “IPTV” thrown around in tech circles or by friends who have “cut the cord.” But what does it actually mean?
 
 ![What is IPTV service?](/blog-images/what-is-iptv-service-0fb294.webp)

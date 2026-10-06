@@ -8,7 +8,6 @@ readMinutes: 4
 cover: /blog-images/best-iptv-sites-bb8529.webp
 noindex: true
 ---
-
 ## **Best IPTV Sites & Platforms for 2026**
 
 ![best iptv sites](/blog-images/best-iptv-sites-bb8529.webp)
