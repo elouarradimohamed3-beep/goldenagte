@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'Live TV, movies and series on every screen',
   orderUrl: '/contact',
   whatsapp: '212707711512',
-  email: 'support@goldengateiptv.com',
+  email: 'goldengateiptv@gmail.com',
   whatsappDisplay: '+212 707 711 512',
   launched: '2026-10-05',
 }
