@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { PillarLinks } from '@/components/pillar-links'
 
 export const metadata: Metadata = {
-  title: 'IPTV Guides: Service, Subscription, Premium and USA Articles',
+  title: { absolute: 'IPTV Guides: Service, Subscription, Premium and USA Articles' },
   description: 'Read 120+ IPTV guides: how an IPTV service works, IPTV subscription prices, premium IPTV, IPTV in the USA, device setup and troubleshooting.',
   alternates: { canonical: '/blog' },
 }
