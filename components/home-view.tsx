@@ -5,6 +5,7 @@ import { PLAN_TIERS, SITE } from '@/lib/site'
 import { FOCUS } from '@/lib/seo'
 import { homePath, isRtl, HTML_LANG, type Lang } from '@/lib/i18n'
 import { rich } from '@/lib/i18n/rich'
+import { OVERRIDES } from '@/lib/i18n/overrides'
 import type { Dict } from '@/lib/i18n/en'
 import { Hero } from '@/components/hero'
 import { Section } from '@/components/section'
@@ -29,8 +30,9 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
   const ld = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: `${SITE.url}/images/logo.png`, description: FOCUS.description, contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: SITE.email, telephone: '+212707711512', availableLanguage: ['English', 'French', 'Spanish', 'German', 'Portuguese', 'Polish', 'Greek', 'Arabic'], areaServed: 'US' } },
+      { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: `${SITE.url}/images/logo.png`, description: FOCUS.description, contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: SITE.email, telephone: '+212707711512', availableLanguage: ['English', 'French', 'Spanish', 'German', 'Portuguese', 'Polish', 'Greek', 'Arabic'], areaServed: OVERRIDES[lang]?.area ?? 'US' } },
       { '@type': 'WebSite', name: SITE.name, url: SITE.url, inLanguage: HTML_LANG[lang] },
+      { '@type': 'WebPage', url: `${SITE.url}${home === '/' ? '' : home}`, name: t.meta.title, description: t.meta.description, inLanguage: HTML_LANG[lang], about: OVERRIDES[lang]?.focus.keyword ?? FOCUS.keyword },
       {
         '@type': 'Product', name: `${SITE.name} IPTV subscription`, description: t.meta.description, brand: { '@type': 'Brand', name: SITE.name },
         offers: PLAN_TIERS.flatMap((tier) => tier.plans).map((pl) => ({ '@type': 'Offer', name: `${pl.label}, ${pl.connections} ${pl.connections === 1 ? 'screen' : 'screens'}`, price: pl.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', priceValidUntil: '2027-10-06', url: `${SITE.url}/plans` })),

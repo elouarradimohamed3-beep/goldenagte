@@ -7,8 +7,10 @@ import { pt } from './pt'
 import { pl } from './pl'
 import { el } from './el'
 import { ar } from './ar'
+import { OVERRIDES, applyOverride } from './overrides'
 
-export const DICTS: Record<Lang, Dict> = { en, fr, es, de, pt, pl, el, ar }
+const BASE: Record<Lang, Dict> = { en, fr, es, de, pt, pl, el, ar }
+export const DICTS = Object.fromEntries((Object.keys(BASE) as Lang[]).map((l) => [l, applyOverride(BASE[l], OVERRIDES[l])])) as Record<Lang, Dict>
 export const getDict = (lang: Lang): Dict => DICTS[lang]
 export { en }
 export type { Dict }
