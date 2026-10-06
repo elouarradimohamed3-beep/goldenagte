@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { getByPillar } from '@/lib/posts'
 
 export const metadata: Metadata = {
-  title: { absolute: 'IPTV Subscription Plans and Pricing: From $7 a Day | Golden Gate IPTV' },
+  title: { absolute: 'IPTV Subscription Plans and Pricing: From $7 a Day' },
   description: 'Compare IPTV subscription plans from $7 a day to $119 for two years, plus premium IPTV plans for up to 5 screens. 7-day refund and instant activation.',
   alternates: { canonical: '/plans' },
 }

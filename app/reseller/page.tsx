@@ -9,7 +9,7 @@ import { FaqList } from '@/components/faq'
 import { CtaBand } from '@/components/cta-band'
 
 export const metadata: Metadata = {
-  title: { absolute: 'IPTV Reseller Program: Buy Credits and Sell IPTV Subscriptions' },
+  title: { absolute: 'IPTV Reseller Program: Buy Credits, Sell Subscriptions' },
   description: 'Become an IPTV reseller in the USA, Canada and the UK. Buy credits from $329, get your own panel and sell IPTV subscriptions with 24/7 support.',
   alternates: { canonical: '/reseller' },
 }

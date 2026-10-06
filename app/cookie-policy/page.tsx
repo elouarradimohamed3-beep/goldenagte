@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Cookie policy', description: 'How Golden Gate IPTV uses cookies and similar storage.', alternates: { canonical: '/cookie-policy' } }
+export const metadata: Metadata = { title: 'Cookie policy', description: 'Cookie policy: how Golden Gate IPTV uses cookies and similar browser storage, and how you can clear or block it at any time.', alternates: { canonical: '/cookie-policy' } }
 
 export default function Page() {
   return (

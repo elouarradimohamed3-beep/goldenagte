@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Check, X as XIcon, Gauge, Headphones, Layers, Film, MonitorSmartphone, Newspaper, Popcorn, Baby, Clapperboard, Mountain, Music2, Languages, Server, Trophy, Tv2, Zap, Activity, Globe2, Cpu } from 'lucide-react'
 import { COMPARE, FAQ, FEATURE_ARTICLES, GENRES, INFRA, PLAN_TIERS, SITE, STEPS, WHY } from '@/lib/site'
-import { getPosts } from '@/lib/posts'
+import { getByPillar } from '@/lib/posts'
 import { Hero } from '@/components/hero'
 import { PricingSection } from '@/components/pricing-section'
 import { Section } from '@/components/section'
@@ -32,7 +32,7 @@ const LD = {
     { '@type': 'WebSite', name: SITE.name, url: SITE.url },
     {
       '@type': 'Product', name: `${SITE.name} IPTV subscription`, description: 'IPTV service with live TV and on-demand movies and series, available as a subscription or premium multi-screen plan.', brand: { '@type': 'Brand', name: SITE.name },
-      offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: 7, highPrice: 297, offerCount: PLAN_TIERS.flatMap((t) => t.plans).length },
+      offers: PLAN_TIERS.flatMap((t) => t.plans).map((pl) => ({ '@type': 'Offer', name: `${pl.label}, ${pl.connections} ${pl.connections === 1 ? 'screen' : 'screens'}`, price: pl.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', priceValidUntil: '2027-10-06', url: `${SITE.url}/plans` })),
     },
     { '@type': 'FAQPage', mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
   ],
@@ -199,7 +199,7 @@ export default function Home() {
 
       <Section eyebrow="Guides" title="Learn more about IPTV">
         <div className="grid gap-5 md:grid-cols-3">
-          {getPosts().slice(0, 3).map((p, i) => (
+          {getByPillar('service').slice(0, 6).map((p, i) => (
             <Reveal key={p.slug} delay={i * 100}>
               <Link href={`/blog/${p.slug}`} className="card-hover glass spot group flex h-full flex-col rounded-2xl p-7">
                 <p className="text-xs text-slate-500">{p.readMinutes} min read</p>
@@ -210,6 +210,7 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm"><Link href="/blog/topic/service" className="font-semibold text-brand hover:underline">See all IPTV service guides</Link> · <Link href="/blog/topic/subscription" className="font-semibold text-brand hover:underline">IPTV subscription guides</Link> · <Link href="/blog/topic/usa" className="font-semibold text-brand hover:underline">IPTV USA guides</Link> · <Link href="/blog/topic/premium" className="font-semibold text-brand hover:underline">Premium IPTV guides</Link></p>
       </Section>
 
       <PillarLinks title="Explore our IPTV guides" />

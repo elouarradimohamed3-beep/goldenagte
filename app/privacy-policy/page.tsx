@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Privacy policy', description: 'How Golden Gate IPTV collects, uses and protects your information.', alternates: { canonical: '/privacy-policy' } }
+export const metadata: Metadata = { title: 'Privacy policy', description: 'Privacy policy: how Golden Gate IPTV collects, uses and protects the information you share when you order an IPTV subscription.', alternates: { canonical: '/privacy-policy' } }
 
 export default function Page() {
   return (

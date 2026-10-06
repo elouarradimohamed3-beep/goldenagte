@@ -36,7 +36,7 @@ export function BlogIndex({ posts }: { posts: PostMeta[] }) {
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.slice(0, shown).map((p) => (
           <Link key={p.slug} href={`/blog/${p.slug}`} className="card-hover glass group flex flex-col overflow-hidden rounded-2xl">
-            {p.cover ? <Image src={p.cover} alt="" width={600} height={340} className="aspect-[16/9] w-full object-cover" /> : <div className="aspect-[16/9] w-full bg-gradient-to-br from-ink to-navy" />}
+            {p.cover ? <Image src={p.cover} alt={p.title} width={600} height={340} className="aspect-[16/9] w-full object-cover" /> : <div className="aspect-[16/9] w-full bg-gradient-to-br from-ink to-navy" />}
             <div className="flex flex-1 flex-col p-6">
               <p className="text-xs text-slate-500">{new Date(p.date).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })} · {p.readMinutes} min read</p>
               <h2 className="mt-2 text-lg leading-snug font-semibold">{p.title}</h2>

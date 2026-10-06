@@ -7,7 +7,7 @@ import { CtaBand } from '@/components/cta-band'
 import { waLink } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: { absolute: 'IPTV Setup Guide: Install on Smart TV, Firestick, Android, iPhone and MAG' },
+  title: { absolute: 'IPTV Setup Guide: Smart TV, Firestick, Android, iPhone, MAG' },
   description: 'Step-by-step IPTV setup for Smart TV, Fire TV Stick, Android, iPhone and iPad, MAG box, Windows and Enigma 2. Get your IPTV service running in minutes.',
   alternates: { canonical: '/install' },
 }
@@ -29,7 +29,7 @@ export default function Install() {
           <Reveal key={g.id}>
             <section id={g.id} className="glass scroll-mt-24 rounded-2xl p-7 sm:p-9">
               <div className="flex items-center gap-4">
-                {g.logo && <span className="grid size-16 shrink-0 place-items-center overflow-hidden rounded-2xl bg-slate-50 p-2"><Image src={g.logo} alt="" width={64} height={64} className="max-h-full w-auto object-contain" /></span>}
+                {g.logo && <span className="grid size-16 shrink-0 place-items-center overflow-hidden rounded-2xl bg-slate-50 p-2"><Image src={g.logo} alt={`${g.title} logo`} width={64} height={64} className="max-h-full w-auto object-contain" /></span>}
                 <h2 className="text-2xl font-bold">{g.title}</h2>
               </div>
               {g.groups.map((grp, i) => (

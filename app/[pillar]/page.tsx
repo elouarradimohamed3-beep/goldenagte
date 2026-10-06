@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pillar: s
     title: { absolute: page.title },
     description: page.description,
     alternates: { canonical: `/${page.slug}` },
-    openGraph: { type: 'article', title: page.title, description: page.description, modifiedTime: page.updated },
+    openGraph: { type: 'article', title: page.title, description: page.description, modifiedTime: page.updated, images: ['/opengraph-image'] },
   }
 }
 

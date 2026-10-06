@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   openGraph: { type: 'website', siteName: SITE.name, locale: 'en_US' },
   twitter: { card: 'summary_large_image' },
 }
+
+export const viewport: Viewport = { themeColor: '#0b1b3a', width: 'device-width', initialScale: 1 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

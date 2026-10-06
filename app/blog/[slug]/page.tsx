@@ -15,12 +15,12 @@ export const generateStaticParams = () => getPosts().map((p) => ({ slug: p.slug 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const post = getPost((await params).slug)
   if (!post) return {}
-  const long = post.title.length > 48
   return {
-    title: long ? { absolute: post.title } : post.title,
+    title: { absolute: post.seoTitle },
+    robots: post.noindex ? { index: false, follow: true } : undefined,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { type: 'article', title: post.title, description: post.description, publishedTime: post.date, modifiedTime: post.date, images: post.cover ? [post.cover] : undefined },
+    openGraph: { type: 'article', title: post.title, description: post.description, publishedTime: post.date, modifiedTime: post.date, images: [post.cover ?? '/opengraph-image'] },
   }
 }
 
@@ -35,7 +35,7 @@ function splitIntro(body: string): [string, string] {
 export default async function Article({ params }: { params: Promise<{ slug: string }> }) {
   const post = getPost((await params).slug)
   if (!post) notFound()
-  const related = getRelated(post.slug, 6)
+  const related = getRelated(post.slug, 9)
   const hub = clusterHref(post.pillar)
   const hubLabel = CLUSTER_LABEL[post.pillar]
   const total = getByPillar(post.pillar).length

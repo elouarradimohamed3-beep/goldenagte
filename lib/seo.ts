@@ -11,7 +11,7 @@ export type PillarKey = 'service' | 'subscription' | 'usa' | 'premium'
 export const FOCUS = {
   keyword: 'IPTV service',
   title: 'IPTV Service USA: Live TV, Movies & Series from $20/Month',
-  description: 'A reliable IPTV service for the USA: live TV, movies and series in HD and 4K on Smart TV, Fire Stick, phone and PC. Plans from $7 a day or $20 a month with a 7-day refund.',
+  description: 'A reliable IPTV service for the USA: live TV, movies and series in HD and 4K on any device. Plans from $7 a day or $20 a month with a 7-day refund.',
 }
 
 export type Pillar = { key: Exclude<PillarKey, 'service'>; slug: string; label: string; keyword: string; blurb: string }

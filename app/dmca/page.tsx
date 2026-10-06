@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: 'DMCA and copyright', description: 'How to report copyright concerns to Golden Gate IPTV.', alternates: { canonical: '/dmca' } }
+export const metadata: Metadata = { title: 'DMCA and copyright', description: 'DMCA and copyright: how rights holders can report copyright concerns to Golden Gate IPTV and what a valid notice must include.', alternates: { canonical: '/dmca' } }
 
 export default function Page() {
   return (
