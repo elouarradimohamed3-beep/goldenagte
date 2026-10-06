@@ -1,10 +1,11 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { Menu, Tv, X } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
 import { waLink } from '@/lib/site'
 
-const NAV = [['Plans', '/#plans'], ['Reseller', '/reseller'], ['Install', '/install'], ['FAQ', '/#faq'], ['About', '/about'], ['Contact', '/contact']]
+const NAV = [['Plans', '/#plans'], ['Reseller', '/reseller'], ['Install', '/install'], ['Blog', '/blog'], ['FAQ', '/#faq'], ['About', '/about'], ['Contact', '/contact']]
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -18,10 +19,7 @@ export function Header() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || open ? 'border-b border-line bg-ink/85 backdrop-blur-xl' : 'bg-transparent'}`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold">
-          <span className="grid size-9 place-items-center rounded-xl bg-gold text-black"><Tv size={18} /></span>
-          <span>Golden Gate <span className="text-gold">IPTV</span></span>
-        </Link>
+        <Link href="/" aria-label="Golden Gate IPTV home"><Image src="/images/logo.png" alt="Golden Gate IPTV" width={132} height={44} priority /></Link>
         <nav className="hidden items-center gap-7 text-sm text-white/75 md:flex">
           {NAV.map(([l, h]) => <Link key={h} href={h} className="relative transition hover:text-gold after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full">{l}</Link>)}
         </nav>

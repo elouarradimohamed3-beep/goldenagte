@@ -1,0 +1,16 @@
+# Golden Gate IPTV
+
+> IPTV subscriptions for the USA: live TV and on-demand movies and series on Smart TVs, Fire TV Stick, Android, iPhone, Windows and Mac. Plans from $20 a month with a 7-day refund and 24/7 support.
+
+## Key facts
+- Standard plans: 1 day $7, 1 month $20, 3 months $37, 6 months $49, 1 year $77, 2 years $119 (1 device). 2-device and 3-device pricing is listed on the plans section.
+- Premium plans: 1 year with 1 to 5 connections, $77 to $229.
+- Orders and support are handled on WhatsApp.
+- Refund: 7 days from purchase.
+
+## Pages
+- https://goldengateiptv.com/ : plans, features and FAQ
+- https://goldengateiptv.com/blog : guides and articles
+- https://goldengateiptv.com/install : installation guide
+- https://goldengateiptv.com/reseller : reseller plan
+- https://goldengateiptv.com/legal/refund : refund policy

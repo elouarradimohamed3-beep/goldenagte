@@ -4,6 +4,8 @@ import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SITE } from '@/lib/site'
 import { Inter, Sora } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import { CookieBanner } from '@/components/cookie-banner'
 import { Effects } from '@/components/effects'
 import './globals.css'
 
@@ -15,6 +17,8 @@ export const metadata: Metadata = {
   title: { default: `${SITE.name} | ${SITE.tagline}`, template: `%s | ${SITE.name}` },
   description: 'IPTV subscriptions from $20 a month. Live TV, movies and series on Smart TV, Fire Stick, phones and computers, with a seven-day refund.',
   alternates: { canonical: '/' },
+  openGraph: { type: 'website', siteName: SITE.name, locale: 'en_US' },
+  twitter: { card: 'summary_large_image' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <CookieBanner />
+        <Analytics />
       </body>
     </html>
   )

@@ -1,6 +1,7 @@
 import { Activity, Cable, Cpu, Globe2, Headphones, MonitorSmartphone, Server, Tv2, Zap, Layers, Film, Gauge, Smartphone, Rewind } from 'lucide-react'
 import { Check, X as XIcon, Trophy, Newspaper, Clapperboard, Popcorn, Baby, Mountain, Music2, Languages } from 'lucide-react'
-import { COMPARE, FEATURE_ARTICLES, GENRES, INFRA, LONG_ARTICLES, STEPS, WHY } from '@/lib/site'
+import { FAQ, PLAN_TIERS, SITE, COMPARE, FEATURE_ARTICLES, GENRES, INFRA, LONG_ARTICLES, STEPS, WHY } from '@/lib/site'
+import Image from 'next/image'
 import { Hero } from '@/components/hero'
 import { PlansGrid } from '@/components/plans-grid'
 import { Section } from '@/components/section'
@@ -14,10 +15,33 @@ const FEAT_ICONS = [Gauge, Layers, Film]
 const GENRE_ICONS = [Trophy, Newspaper, Clapperboard, Popcorn, Baby, Mountain, Music2, Languages]
 const LONG_ICONS = [Smartphone, Tv2, Rewind]
 
+const LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', name: SITE.name, url: SITE.url, logo: `${SITE.url}/images/logo.png` },
+    { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+    {
+      '@type': 'Product', name: `${SITE.name} subscription`, description: 'IPTV subscription with live TV and on-demand movies and series.',
+      offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: 7, highPrice: 297, offerCount: PLAN_TIERS.flatMap((t) => t.plans).length },
+    },
+    { '@type': 'FAQPage', mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  ],
+}
+
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LD) }} />
       <Hero />
+
+      <section className="mx-auto mt-4 max-w-4xl px-4">
+        <Reveal>
+          <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-gold">Supports all devices</p>
+          <div className="rounded-3xl bg-white p-5 shadow-2xl shadow-gold/10">
+            <Image src="/images/devices.webp" alt="Supported devices: iPhone, iPad, Mac, Android, Windows, Chrome, MAG, Roku, Samsung Smart TV, LG Smart TV and Linux" width={946} height={142} className="mx-auto h-auto w-full" />
+          </div>
+        </Reveal>
+      </section>
 
       <Section id="plans" eyebrow="Pricing" title="Choose your IPTV subscription plan" intro="Every plan includes the full channel and on-demand library, free updates and a 7-day refund.">
         <PlansGrid />
@@ -106,14 +130,32 @@ export default function Home() {
               <a href="#plans" className="mt-6 inline-block rounded-full bg-gold px-6 py-3 font-semibold text-black transition hover:bg-gold-dark">Sign up now</a>
             </Reveal>
             <Reveal from={flip ? 'left' : 'right'} delay={120}>
-              <div className="glass animate-float relative grid aspect-[4/3] place-items-center overflow-hidden rounded-3xl" style={{ animationDelay: `${-i * 2}s` }}>
-                <div className="animate-drift absolute size-60 rounded-full bg-gold/25 blur-[80px]" />
-                <I className="relative text-gold" size={96} strokeWidth={1.2} />
-              </div>
+              {i === 0 ? (
+                <div className="animate-float relative overflow-hidden rounded-3xl border border-line">
+                  <Image src="/images/family-tv.webp" alt="Two children watching live TV together in the living room" width={500} height={500} className="aspect-[4/3] w-full object-cover" />
+                </div>
+              ) : (
+                <div className="glass animate-float relative grid aspect-[4/3] place-items-center overflow-hidden rounded-3xl" style={{ animationDelay: `${-i * 2}s` }}>
+                  <div className="animate-drift absolute size-60 rounded-full bg-gold/25 blur-[80px]" />
+                  <I className="relative text-gold" size={96} strokeWidth={1.2} />
+                </div>
+              )}
             </Reveal>
           </div>
         )})}
       </section>
+
+      <Section eyebrow="Customers" title="Our happy clients" intro="Messages from customers who contacted us on WhatsApp.">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {[1, 2, 3, 4].map((n, i) => (
+            <Reveal key={n} delay={i * 100}>
+              <div className="card-hover overflow-hidden rounded-2xl border border-line bg-white">
+                <Image src={`/images/chat-${n}.webp`} alt={`Customer WhatsApp conversation ${n}`} width={569} height={1011} className="h-auto w-full" />
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
 
       <Section eyebrow="Compare" title="Why people leave cable">
         <Reveal>
