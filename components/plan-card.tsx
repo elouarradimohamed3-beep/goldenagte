@@ -15,7 +15,7 @@ export function PlanCard({ plan, t }: { plan: Plan; t: Dict['plans']; index?: nu
   const label = isPremium ? t.premium[plan.connections - 1] : t.durations[MONTH_INDEX[plan.months ?? 1]]
   const per = plan.months === 0 ? t.oneDay : plan.months === 1 ? t.billed : plan.months && plan.months > 1 ? null : t.fullYear
   return (
-    <div className={`relative flex h-full flex-col rounded-2xl bg-white p-7 text-slate-600 shadow-sm transition-shadow hover:shadow-xl ${hot ? 'ring-2 ring-brand' : 'ring-1 ring-slate-200'}`}>
+    <div className={`relative flex h-full flex-col rounded-2xl bg-white p-7 text-slate-600 shadow-sm transition-shadow hover:shadow-xl lift ${hot ? 'pulse-ring ring-2 ring-brand' : 'ring-1 ring-slate-200'}`}>
       {plan.badge && <span className={`absolute -top-3 start-7 rounded-full px-3 py-1 text-xs font-semibold text-white ${hot ? 'bg-brand' : 'bg-ink'}`}>{plan.badge === 'World Cup' ? t.worldCup : t.popular}</span>}
       <h3 className="text-lg font-semibold text-ink">{label}</h3>
       <div className="mt-4 text-ink" dir="ltr"><Price usd={plan.price} /></div>
@@ -27,9 +27,9 @@ export function PlanCard({ plan, t }: { plan: Plan; t: Dict['plans']; index?: nu
       <hr className="my-6 border-slate-200" />
       <ul className="mb-8 flex-1 space-y-3 text-sm">
         <li className="flex gap-2.5 font-semibold text-ink"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{t.conn[plan.connections - 1]}</li>
-        {t.includes.map((i) => <li key={i} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{i}</li>)}
+        {t.includes.map((i) => <li key={i} className="flex gap-2.5 transition-transform hover:translate-x-1 rtl:hover:-translate-x-1"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{i}</li>)}
       </ul>
-      <a href={waLink(currency === 'USD' ? plan.order : `${plan.order} (${convert(plan.price, currency)} ${currency})`)} target="_blank" rel="noopener noreferrer" className={`rounded-lg py-3 text-center font-semibold transition-colors ${hot ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>{t.subscribe}</a>
+      <a href={waLink(currency === 'USD' ? plan.order : `${plan.order} (${convert(plan.price, currency)} ${currency})`)} target="_blank" rel="noopener noreferrer" className={`btn-shine press rounded-lg py-3 text-center font-semibold transition-colors ${hot ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>{t.subscribe}</a>
     </div>
   )
 }

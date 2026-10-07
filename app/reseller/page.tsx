@@ -67,7 +67,7 @@ export default function Reseller() {
         <div className="grid gap-5 md:grid-cols-3">
           {RESELLER_WHY.map((w, i) => { const I = WHY_ICONS[i]; return (
             <Reveal key={w.title} delay={i * 100}>
-              <div className="card-hover glass spot group h-full rounded-2xl p-7">
+              <div className="lift glass spot group h-full rounded-2xl p-7">
                 <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white"><I size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{w.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{w.body}</p>

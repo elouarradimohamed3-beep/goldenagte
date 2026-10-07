@@ -24,7 +24,7 @@ export default function Home() {
       <div className="grid gap-5 md:grid-cols-3">
         {getByPillar('service').slice(0, 6).map((p, i) => (
           <Reveal key={p.slug} delay={i * 100}>
-            <Link href={`/blog/${p.slug}`} className="card-hover glass spot group flex h-full flex-col rounded-2xl p-7">
+            <Link href={`/blog/${p.slug}`} className="lift glass spot group flex h-full flex-col rounded-2xl p-7">
               <p className="text-xs text-slate-500">{p.readMinutes} min read</p>
               <h3 className="mt-2 text-lg font-semibold">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{p.description}</p>

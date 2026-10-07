@@ -34,7 +34,7 @@ export default function About() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PLANS.map(({ Icon, title, body }, i) => (
             <Reveal key={title} delay={(i % 3) * 90}>
-              <div className="card-hover glass spot group h-full rounded-2xl p-7">
+              <div className="lift glass spot group h-full rounded-2xl p-7">
                 <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white"><Icon size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{body}</p>

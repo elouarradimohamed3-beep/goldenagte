@@ -6,6 +6,7 @@ import { SITE } from '@/lib/site'
 import { FOCUS } from '@/lib/seo'
 import { Inter, Noto_Sans_Arabic } from 'next/font/google'
 import { LangRedirect } from '@/components/lang-redirect'
+import { OfferPopup } from '@/components/offer-popup'
 import { Analytics } from '@vercel/analytics/next'
 import { CookieBanner } from '@/components/cookie-banner'
 import { Effects } from '@/components/effects'
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <WhatsAppButton />
         <CookieBanner />
+        <OfferPopup />
         </CurrencyProvider>
         <Analytics />
       </body>

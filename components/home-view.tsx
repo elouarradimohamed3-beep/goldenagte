@@ -45,6 +45,12 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <JsonLd data={ld} />
       <Hero t={t} home={home} />
 
+      <div className="marquee relative overflow-hidden border-y border-slate-200 bg-white py-4 [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]" aria-hidden dir="ltr">
+        <div className="marquee-track flex w-max gap-3 whitespace-nowrap">
+          {[...t.genres.items, ...t.genres.items, ...t.genres.items, ...t.genres.items].map((g, k) => <span key={k} className="rounded-full border border-slate-200 bg-slate-50 px-5 py-2 text-sm font-medium text-slate-600">{g.title}</span>)}
+        </div>
+      </div>
+
       <PricingSection t={t.plans} />
 
       <section className="px-4 pb-4">
@@ -88,7 +94,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           </Reveal>
           {t.why.items.map((f, i) => { const I = WHY_ICONS[i]; return (
             <Reveal key={f.title} delay={i * 80}>
-              <div className="card-hover glass spot group h-full rounded-2xl p-7">
+              <div className="lift glass spot group icon-spin h-full rounded-2xl p-7">
                 <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white"><I size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{f.body}</p>
@@ -104,7 +110,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <Reveal className="mx-auto max-w-6xl px-4 py-28 sm:py-36">
           <h2 className="max-w-xl text-3xl font-bold !text-white sm:text-5xl">{t.band.title}</h2>
           <p className="mt-4 max-w-lg text-lg text-white/80">{t.band.body}</p>
-          <Link href={plansHref} className="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3.5 font-semibold text-brand shadow-xl transition">{t.band.cta} <ArrowRight size={18} className="rtl:rotate-180" /></Link>
+          <Link href={plansHref} className="mt-8 inline-flex items-center gap-2 btn-shine press rounded-lg bg-white px-8 py-3.5 font-semibold text-brand shadow-xl transition hover:scale-105">{t.band.cta} <ArrowRight size={18} className="rtl:rotate-180" /></Link>
         </Reveal>
       </section>
 
@@ -112,9 +118,9 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <div className="relative grid gap-8 md:grid-cols-3">
           <div className="absolute top-8 right-[16%] left-[16%] hidden h-px border-t-2 border-dashed border-brand/30 md:block" />
           {t.steps.items.map((st, i) => (
-            <Reveal key={st.title} delay={i * 120}>
+            <Reveal key={st.title} delay={i * 140} from="zoom">
               <div className="relative text-center">
-                <span className="mx-auto grid size-14 place-items-center rounded-full bg-ink text-xl font-bold text-white">{i + 1}</span>
+                <span className="pulse-ring mx-auto grid size-14 place-items-center rounded-full bg-ink text-xl font-bold text-white">{i + 1}</span>
                 <h3 className="mt-5 text-lg font-semibold">{st.title}</h3>
                 <p className="mx-auto mt-2 max-w-xs text-sm text-slate-600">{st.body}</p>
               </div>
@@ -127,7 +133,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {t.genres.items.map((g, i) => { const I = GENRE_ICONS[i]; return (
             <Reveal key={g.title} delay={(i % 4) * 80}>
-              <div className="card-hover group relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink p-6 text-white">
+              <div className="lift icon-spin group relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink p-6 text-white">
                 <div className="absolute inset-0 bg-gradient-to-br from-navy/80 to-ink" />
                 <I className="absolute -end-3 -bottom-3 size-28 text-white/[.06]" strokeWidth={1.2} />
                 <span className="relative grid size-11 place-items-center rounded-lg bg-white/10 text-sky-300"><I size={22} /></span>
@@ -159,7 +165,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {t.infra.items.map((a, i) => { const I = INFRA_ICONS[i]; return (
             <Reveal key={a.title} delay={i * 90}>
-              <article className="card-hover glass spot h-full rounded-2xl p-6">
+              <article className="lift glass spot icon-spin h-full rounded-2xl p-6">
                 <div className="flex items-center justify-between"><span className="grid size-11 place-items-center rounded-xl bg-brand text-white"><I size={20} /></span><span className="text-3xl font-black text-slate-200" dir="ltr">0{i + 1}</span></div>
                 <h3 className="mt-4 font-semibold">{a.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{a.body}</p>
@@ -172,8 +178,8 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <Section eyebrow={t.customers.eyebrow} title={t.customers.title} intro={t.customers.intro}>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4" dir="ltr">
           {[1, 2, 3, 4].map((n, i) => (
-            <Reveal key={n} delay={i * 100}>
-              <div className="card-hover overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+            <Reveal key={n} delay={i * 100} from="zoom">
+              <div className="lift overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
                 <Image src={`/images/chat-${n}.webp`} alt={`${t.customers.alt} ${n}`} width={569} height={1011} className="h-auto w-full" />
               </div>
             </Reveal>
