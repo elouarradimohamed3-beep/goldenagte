@@ -45,6 +45,8 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <JsonLd data={ld} />
       <Hero t={t} home={home} />
 
+      <PricingSection t={t.plans} />
+
       <section className="px-4 pb-4">
         <Reveal className="mx-auto max-w-4xl">
           <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-brand">{t.devices.eyebrow}</p>
@@ -95,8 +97,6 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           )})}
         </div>
       </Section>
-
-      <PricingSection t={t.plans} />
 
       <section className="relative isolate overflow-hidden">
         <Image src="/images/sports-family.webp" alt={t.band.alt} width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />
