@@ -15,8 +15,6 @@ In this comprehensive guide, we will dive deep into the technology, setup, and s
 
 ![iptv encoder box](/blog-images/whisk-bfa08a846e5c7ef84eb4f603387b9cf7dr-ad2b7e.webp)
 
-#### **[SUBSCRIBE NOW](/#plans)**
-
 ## What is an IPTV Encoder Box?
 
 At its core, an **IPTV encoder box** is a hardware device that takes a raw video signal—typically from an HDMI, SDI, or VGA source—and converts (encodes) it into a digital format suitable for transmission over an IP network.

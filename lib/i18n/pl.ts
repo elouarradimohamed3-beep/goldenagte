@@ -119,7 +119,7 @@ export const pl: Dict = {
     title: 'Poznaj nasze poradniki IPTV', readGuide: 'Czytaj poradnik',
     items: [
       { label: 'Usługa IPTV', blurb: 'Jak działa niezawodna usługa IPTV, z planami od 20 $ miesięcznie.' },
-      { label: 'Abonament IPTV', blurb: 'Plany, ceny, bezpłatny test i jak bezpiecznie kupić abonament IPTV.' },
+      { label: 'Abonament IPTV', blurb: 'Plany, ceny i jak bezpiecznie kupić abonament IPTV.' },
       { label: 'IPTV USA', blurb: 'IPTV w Stanach Zjednoczonych: urządzenia, prędkości internetu, ceny i konfiguracja.' },
       { label: 'IPTV Premium', blurb: 'Co czyni IPTV premium: jakość 4K, wiele ekranów, stabilność i pomoc.' },
     ],
@@ -131,7 +131,7 @@ export const pl: Dict = {
       { q: 'Ile kosztuje abonament IPTV?', a: 'Nasz abonament IPTV zaczyna się od 7 $ za jeden dzień i 20 $ za jeden miesiąc dla pojedynczego ekranu. Dłuższe plany kosztują mniej miesięcznie: 37 $ za 3 miesiące, 49 $ za 6 miesięcy, 77 $ za 1 rok i 119 $ za 2 lata. Plany na 2 i 3 ekrany oraz plany premium na maksymalnie 5 ekranów kosztują więcej.' },
       { q: 'Czym jest IPTV premium?', a: 'IPTV premium zapewnia wyższą jakość obrazu, taką jak 4K, więcej ekranów jednocześnie, przewodnik po programach, stabilne serwery i szybką pomoc. Nasze plany premium obejmują od 1 do 5 ekranów na rok, od 77 $ do 229 $.' },
       { q: 'Czy IPTV jest dostępne w USA?', a: 'Tak. Nasza usługa IPTV jest stworzona dla widzów w USA – z cenami w dolarach, pomocą na WhatsAppie przez całą dobę i instrukcjami konfiguracji dla popularnych urządzeń. Przed zakupem zapytaj nas o lokalny zasięg w Twojej okolicy.' },
-      { q: 'Czy jest bezpłatny test IPTV?', a: 'Możesz poprosić o krótki bezpłatny test. Napisz, na jakim urządzeniu będziesz oglądać, a odpowiemy na WhatsAppie z kolejnymi krokami. Każdy płatny plan ma też zwrot pieniędzy w 7 dni.' },
+      { q: 'Czy mogę poprosić o test przed zakupem abonamentu?', a: 'Tak, możesz poprosić o krótki test. Napisz, na jakim urządzeniu będziesz oglądać, a odpowiemy na WhatsAppie z kolejnymi krokami. Każdy płatny plan ma też zwrot pieniędzy w 7 dni.' },
       { q: 'Czy IPTV jest legalne w USA?', a: 'To zależy od usługi i oferowanych treści, a przepisy różnią się w zależności od stanu i zmieniają się w czasie. Wybierz dostawcę, który otwarcie mówi, co sprzedaje, zachowaj paragony i sprawdź przepisy, które Cię dotyczą.' },
       { q: 'Co to jest IPTV?', a: 'IPTV to telewizja przez protokół internetowy. Zamiast docierać kablem lub antena satelitarną, kanały na żywo i tytuły na żądanie trafiają do Ciebie przez łącze internetowe i są odtwarzane w aplikacji na Twoich urządzeniach.' },
       { q: 'Jak otrzymam dane logowania?', a: 'Zaraz po zaksięgowaniu płatności wysyłamy e-mailem nazwę użytkownika, hasło i dane serwera wraz z linkiem do instrukcji instalacji. Większość klientów ogląda już po kilku minutach.' },

@@ -55,18 +55,11 @@ It does NOT natively support Roku. If you’re on Roku, review [IPTV for Roku US
 
 For Smart TVs running Android OS, see [IPTV for Smart TV USA](/blog/iptv-for-smart-tv-usa) setup considerations.
 
-## TiviMate Free vs Premium (Pro Version)
+## TiviMate Premium (Pro Version)
 
 ![How TiviMate IPTV connects to IPTV provider servers in the USA](/blog-images/whisk-54d85ffe0e75e67a3ca40250ee5f9994dr-84ac6c.webp)
 
 #### [SUBSCRIBE NOW](/#plans)
-
-| Feature | Free | Premium |
-| --- | --- | --- |
-| Multiple Playlists | No | Yes |
-| Recording | No | Yes |
-| EPG Customization | Limited | Advanced |
-| Multi-screen | No | Yes |
 
 For serious IPTV users in the USA managing multiple providers or backup playlists, Premium is practically required.
 
@@ -138,7 +131,6 @@ Learn more in [IPTV provider comparison](/blog/iptv-provider-comparison-2025).
 | 4K Bitrate | 15–25 Mbps |
 | Uptime | 99%+ |
 | Support Response | <24 hours |
-| Free Trial | 24–48 hours |
 
 Never commit to annual plans without stress-testing peak-hour performance.
 

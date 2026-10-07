@@ -11,7 +11,7 @@ export function TrialForm() {
   const [state, setState] = useState('')
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
-    const text = `Hi! I would like a free trial of ${SITE.host}.\nName: ${name}\nDevice: ${device}${state ? `\nState: ${state}` : ''}`
+    const text = `Hi! I would like to request a trial of ${SITE.host}.\nName: ${name}\nDevice: ${device}${state ? `\nState: ${state}` : ''}`
     window.open(waLink(text), '_blank', 'noopener,noreferrer')
   }
   const field = 'w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand'

@@ -6,7 +6,6 @@ export type PillarKey = 'service' | 'subscription' | 'usa' | 'premium'
  *  - PILLAR "IPTV subscription" 5,400/mo, KD 37  -> /iptv-subscription (commercial, CPC $1.32)
  *  - PILLAR "IPTV USA"          2,400/mo, KD 19  -> /iptv-usa
  *  - PILLAR "IPTV premium"      1,000/mo, KD 20  -> /iptv-premium ("premium iptv" 720, KD 13)
- *  - Extra  "IPTV free trial"   3,600/mo, KD 0   -> /free-trial
  */
 export const FOCUS = {
   keyword: 'IPTV service',
@@ -17,7 +16,7 @@ export const FOCUS = {
 export type Pillar = { key: Exclude<PillarKey, 'service'>; slug: string; label: string; keyword: string; blurb: string }
 
 export const PILLARS: Pillar[] = [
-  { key: 'subscription', slug: 'iptv-subscription', label: 'IPTV Subscription', keyword: 'IPTV subscription', blurb: 'Plans, prices, free trial and how to buy an IPTV subscription safely.' },
+  { key: 'subscription', slug: 'iptv-subscription', label: 'IPTV Subscription', keyword: 'IPTV subscription', blurb: 'Plans, prices and how to buy an IPTV subscription safely.' },
   { key: 'usa', slug: 'iptv-usa', label: 'IPTV USA', keyword: 'IPTV USA', blurb: 'IPTV in the United States: devices, internet speeds, pricing and setup.' },
   { key: 'premium', slug: 'iptv-premium', label: 'IPTV Premium', keyword: 'premium IPTV', blurb: 'What makes IPTV premium: 4K quality, multiple screens, stability and support.' },
 ]
@@ -38,7 +37,7 @@ export const clusterHref = (k: PillarKey) => (k === 'service' ? '/' : `/${pillar
 /** Assign every article to exactly one topic cluster from its title and slug. */
 export function classify(title: string, slug: string): PillarKey {
   const t = `${title} ${slug}`.toLowerCase().replace(/-/g, ' ')
-  if (/subscription|cost|price|pricing|cheap|deal|buy |monthly|annual|free trial|trial|how much/.test(t)) return 'subscription'
+  if (/subscription|cost|price|pricing|cheap|deal|buy |monthly|annual|trial|how much/.test(t)) return 'subscription'
   if (/premium|4k|paid|ultra hd|high performance|pro\b/.test(t)) return 'premium'
   if (/\busa\b|\bus\b|america|united states|florida|texas|california|u\.s\./.test(t)) return 'usa'
   return 'service'

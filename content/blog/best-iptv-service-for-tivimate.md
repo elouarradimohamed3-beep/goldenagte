@@ -24,7 +24,7 @@ Tivimate is not an IPTV provider but rather an **IPTV player**—a specialized a
 
 One of the reasons Tivimate has become so popular is its **feature-rich design**. Unlike basic IPTV players, it offers a clean electronic program guide (EPG), multiple playlist support, channel grouping, catch-up TV, recording options, and a powerful search function. Users can even create favorites, customize channel lists, and integrate external players if needed.
 
-Tivimate comes in both a **free version** and a **premium version**. The free version provides the essentials for testing playlists, while the premium subscription (a small annual fee) unlocks advanced features like recording shows, syncing settings across devices, and multiple playlist management. For serious IPTV users, the premium version is considered well worth the investment.
+For serious IPTV users, the premium version is considered well worth the investment.
 
 What sets Tivimate apart is its ability to give IPTV subscriptions a polished, cable-like experience. By itself, the app has no content—users must connect it to an IPTV provider via **M3U links** or **Xtream Codes API**. Once connected, Tivimate transforms raw IPTV data into a smooth, intuitive interface that feels like a modern TV service.
 

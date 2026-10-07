@@ -86,4 +86,4 @@ The answers below cover what people ask most about premium IPTV.
 
 ## Next steps
 
-Compare all plans on the [home page](/#plans), request a [free trial](/free-trial), or read about [IPTV in the USA](/iptv-usa).
+Compare all plans on the [home page](/#plans), request a [trial](/trial), or read about [IPTV in the USA](/iptv-usa).

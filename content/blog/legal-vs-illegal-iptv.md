@@ -146,8 +146,6 @@ If a provider offers “1000+ premium channels for $5 per month,” it’s not s
 
 Search for reviews on **Trustpilot**, **Reddit**, or IPTV community forums. Users quickly expose fraudulent IPTV providers. Look for consistent positive feedback, not fake or repetitive reviews.
 
-### **6. Refunds and Free Trials**
-
 A legitimate IPTV company provides a **trial period**, refund policy, or clear terms of service. Illegal operators avoid this — they don’t want to be traceable or accountable once you’ve paid.
 
 ## **Safe Viewing Practices**

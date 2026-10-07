@@ -10,7 +10,7 @@ import { CtaBand } from '@/components/cta-band'
 const KEYS: PillarKey[] = ['service', 'subscription', 'usa', 'premium']
 const INTRO: Record<PillarKey, string> = {
   service: 'Guides on how an IPTV service works, how to choose a reliable one and how to set it up on your devices.',
-  subscription: 'Guides on IPTV subscription prices, plan lengths, free trials and how to buy safely.',
+  subscription: 'Guides on IPTV subscription prices, plan lengths and how to buy safely.',
   usa: 'Guides for watching IPTV in the United States: devices, internet speeds, state guides and setup.',
   premium: 'Guides on premium IPTV: 4K quality, multiple screens, stability and what to look for.',
 }

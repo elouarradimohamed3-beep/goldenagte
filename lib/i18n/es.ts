@@ -119,7 +119,7 @@ export const es: Dict = {
     title: 'Explora nuestras guías IPTV', readGuide: 'Leer la guía',
     items: [
       { label: 'Servicio IPTV', blurb: 'Cómo funciona un servicio IPTV fiable, con planes desde 20 $ al mes.' },
-      { label: 'Suscripción IPTV', blurb: 'Planes, precios, prueba gratuita y cómo comprar una suscripción IPTV con seguridad.' },
+      { label: 'Suscripción IPTV', blurb: 'Planes, precios y cómo comprar una suscripción IPTV con seguridad.' },
       { label: 'IPTV EE. UU.', blurb: 'IPTV en Estados Unidos: dispositivos, velocidades de internet, precios e instalación.' },
       { label: 'IPTV Premium', blurb: 'Qué hace premium a la IPTV: calidad 4K, varias pantallas, estabilidad y soporte.' },
     ],
@@ -131,7 +131,7 @@ export const es: Dict = {
       { q: '¿Cuánto cuesta una suscripción IPTV?', a: 'Nuestra suscripción IPTV empieza en 7 $ por un día y 20 $ por un mes para una sola pantalla. Los planes más largos cuestan menos al mes: 37 $ por 3 meses, 49 $ por 6 meses, 77 $ por 1 año y 119 $ por 2 años. Los planes para 2 y 3 pantallas y los planes premium de hasta 5 pantallas cuestan más.' },
       { q: '¿Qué es la IPTV premium?', a: 'La IPTV premium añade mayor calidad de imagen como el 4K, más pantallas simultáneas, guía de programación, servidores estables y soporte rápido. Nuestros planes premium cubren de 1 a 5 pantallas durante un año, de 77 $ a 229 $.' },
       { q: '¿Está disponible la IPTV en EE. UU.?', a: 'Sí. Nuestro servicio IPTV está pensado para espectadores de EE. UU., con precios en dólares, soporte por WhatsApp a todas horas y guías de instalación para los dispositivos más habituales. Pregúntanos por la cobertura local de tu zona antes de comprar.' },
-      { q: '¿Hay una prueba gratuita de IPTV?', a: 'Puedes solicitar una breve prueba gratuita. Dinos el dispositivo en el que verás y te responderemos por WhatsApp con los siguientes pasos. Todos los planes de pago incluyen además un reembolso de 7 días.' },
+      { q: '¿Puedo pedir una prueba antes de suscribirme?', a: 'Sí, puedes solicitar una breve prueba. Dinos el dispositivo en el que verás y te responderemos por WhatsApp con los siguientes pasos. Todos los planes de pago incluyen además un reembolso de 7 días.' },
       { q: '¿Es legal la IPTV en EE. UU.?', a: 'Depende del servicio y del contenido que ofrece, y las normas varían según el estado y con el tiempo. Elige un proveedor transparente sobre lo que vende, guarda tus recibos y consulta la normativa que te afecte.' },
       { q: '¿Qué es la IPTV?', a: 'IPTV significa televisión por protocolo de internet. En lugar de llegar por cable o antena parabólica, los canales en vivo y los títulos bajo demanda te llegan por tu conexión a internet y se reproducen en una aplicación en tus propios dispositivos.' },
       { q: '¿Cómo recibiré mis datos de acceso?', a: 'En cuanto se confirma tu pago te enviamos por correo tu usuario, contraseña y datos del servidor junto con un enlace a la guía de instalación. La mayoría de los clientes ya están viendo en pocos minutos.' },

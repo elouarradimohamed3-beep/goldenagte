@@ -47,13 +47,10 @@ Downloader lets you enter URLs to fetch IPTV apps directly.
 In 2026, the most stable and Firestick-optimized IPTV players are:
 
 - **TiviMate** – Best paid premium player
-- **IPTV Smarters Pro** – Best free option
 - **XCIPTV Player** – Highly customizable
 - **OTT Navigator** – Great for managing multiple playlists
 
 Using Downloader, you simply enter the APK link provided by the app’s official developer website.
-
-#### **[SUBSCRIBE NOW](/#plans)**
 
 ### **4. Sign in With Your IPTV Service**
 
@@ -137,8 +134,6 @@ Supports multi-playlist setups, ideal for bilingual households.
 
 **Firestick Advantage:**
 Optimized for streaming in both HD and 4K on Firestick Max.
-
-#### **[SUBSCRIBE NOW](/#plans)**
 
 ## **Performance Comparison**
 
@@ -240,8 +235,6 @@ If your channel guide is empty:
 - Re-enter your EPG XML URL
 - Delete and re-add the playlist
 - Ensure your IPTV provider actually supports an EPG feed
-
-#### **[SUBSCRIBE NOW](/#plans)**
 
 ### **5. Improve Firestick Speed**
 

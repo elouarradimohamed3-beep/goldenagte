@@ -160,7 +160,7 @@ Begin by selecting a reputable IPTV service. Look for providers that are license
 
 ### **Step 2: Select a Subscription Plan**
 
-Most IPTV services offer different subscription lengths — monthly, quarterly, or yearly. Some even provide free trials or money-back guarantees, which are perfect for testing before committing.
+Most IPTV services offer different subscription lengths — monthly, quarterly, or yearly.
 
 ### **Step 3: Install the App or Player**
 

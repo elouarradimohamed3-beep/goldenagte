@@ -100,4 +100,4 @@ Answers to the most common questions about IPTV in the United States are below.
 
 ## Next steps
 
-Compare plans on the [home page](/#plans), request a [free trial](/free-trial), or learn what [premium IPTV](/iptv-premium) adds.
+Compare plans on the [home page](/#plans), request a [trial](/trial), or learn what [premium IPTV](/iptv-premium) adds.

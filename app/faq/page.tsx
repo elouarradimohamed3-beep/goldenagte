@@ -4,7 +4,7 @@ import { PillarLinks } from '@/components/pillar-links'
 
 export const metadata: Metadata = {
   title: { absolute: 'IPTV FAQ: Service, Subscription, Premium and USA Questions' },
-  description: 'Answers to common questions about an IPTV service: what it is, IPTV subscription prices, premium IPTV, the free trial, devices and IPTV in the USA.',
+  description: 'Answers to common questions about an IPTV service: what it is, IPTV subscription prices, premium IPTV, the trial, devices and IPTV in the USA.',
   alternates: { canonical: '/faq' },
 }
 

@@ -15,7 +15,7 @@ const PLANS = [
   { Icon: Baby, title: 'Family plan', body: 'Made for households with different tastes: several simultaneous connections and a full range of entertainment, from kids to movies.' },
   { Icon: Trophy, title: 'Sports coverage', body: 'Never miss a game, with international leagues, tournaments and big sporting events from around the world.' },
   { Icon: Clapperboard, title: 'Movies and series', body: 'Thousands of on-demand movies and series, from new releases to timeless classics, ready when you are.' },
-  { Icon: Gift, title: 'Free trial', body: 'Try the service before you commit. Request a short trial and see the quality for yourself, with no commitment.' },
+  { Icon: Gift, title: 'Trial', body: 'Try the service before you commit. Request a short trial and see the quality for yourself, with no commitment.' },
   { Icon: ShieldCheck, title: 'Money-back guarantee', body: 'Buy with confidence. If the service is not right for you, ask for a refund within the refund window.' },
   { Icon: Crown, title: '2-year plan', body: 'The biggest saving: our full lineup for two years at the lowest monthly price.' },
 ]

@@ -119,7 +119,7 @@ export const fr: Dict = {
     title: 'Découvrez nos guides IPTV', readGuide: 'Lire le guide',
     items: [
       { label: 'Service IPTV', blurb: 'Comment fonctionne un service IPTV fiable, avec des formules à partir de 20 $ par mois.' },
-      { label: 'Abonnement IPTV', blurb: 'Formules, prix, essai gratuit et comment acheter un abonnement IPTV en toute sécurité.' },
+      { label: 'Abonnement IPTV', blurb: 'Formules, prix et comment acheter un abonnement IPTV en toute sécurité.' },
       { label: 'IPTV USA', blurb: 'L’IPTV aux États-Unis : appareils, débits internet, prix et installation.' },
       { label: 'IPTV Premium', blurb: 'Ce qui rend l’IPTV premium : qualité 4K, plusieurs écrans, stabilité et assistance.' },
     ],
@@ -131,7 +131,7 @@ export const fr: Dict = {
       { q: 'Combien coûte un abonnement IPTV ?', a: 'Notre abonnement IPTV démarre à 7 $ pour une journée et 20 $ pour un mois, pour un seul écran. Les formules plus longues coûtent moins cher par mois : 37 $ pour 3 mois, 49 $ pour 6 mois, 77 $ pour 1 an et 119 $ pour 2 ans. Les formules pour 2 et 3 écrans et les formules premium jusqu’à 5 écrans coûtent davantage.' },
       { q: 'Qu’est-ce que l’IPTV premium ?', a: 'L’IPTV premium offre une meilleure qualité d’image comme la 4K, plus d’écrans simultanés, un guide des programmes, des serveurs stables et une assistance rapide. Nos formules premium couvrent 1 à 5 écrans pendant un an, de 77 $ à 229 $.' },
       { q: 'L’IPTV est-elle disponible aux États-Unis ?', a: 'Oui. Notre service IPTV est conçu pour les spectateurs américains, avec des prix en dollars, une assistance WhatsApp 24 h/24 et des guides d’installation pour les appareils les plus courants. Demandez-nous la couverture locale de votre région avant d’acheter.' },
-      { q: 'Existe-t-il un essai gratuit IPTV ?', a: 'Vous pouvez demander un court essai gratuit. Indiquez-nous l’appareil que vous utiliserez et nous vous répondons sur WhatsApp avec la marche à suivre. Chaque formule payante bénéficie aussi d’un remboursement sous 7 jours.' },
+      { q: 'Puis-je demander un essai avant de m’abonner ?', a: 'Oui, vous pouvez demander un court essai. Indiquez-nous l’appareil que vous utiliserez et nous vous répondons sur WhatsApp avec la marche à suivre. Chaque formule payante bénéficie aussi d’un remboursement sous 7 jours.' },
       { q: 'L’IPTV est-elle légale aux États-Unis ?', a: 'Cela dépend du service et des contenus proposés, et les règles varient selon les États et dans le temps. Choisissez un fournisseur transparent sur ce qu’il vend, conservez vos reçus et vérifiez la réglementation qui vous concerne.' },
       { q: 'Qu’est-ce que l’IPTV ?', a: 'IPTV signifie télévision par protocole internet. Au lieu d’arriver par le câble ou une parabole, les chaînes en direct et les titres à la demande vous parviennent via votre connexion internet et se lisent dans une application sur vos propres appareils.' },
       { q: 'Comment recevrai-je mes identifiants ?', a: 'Dès que votre paiement est validé, nous vous envoyons par e-mail votre nom d’utilisateur, votre mot de passe et les informations du serveur, avec un lien vers le guide d’installation. La plupart des clients regardent en quelques minutes.' },

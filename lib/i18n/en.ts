@@ -69,7 +69,7 @@ export const en = {
     title: 'Explore our IPTV guides', readGuide: 'Read the guide',
     items: [
       { label: 'IPTV Service', blurb: 'How a reliable IPTV service works, with plans from $20 a month.' },
-      { label: 'IPTV Subscription', blurb: 'Plans, prices, free trial and how to buy an IPTV subscription safely.' },
+      { label: 'IPTV Subscription', blurb: 'Plans, prices and how to buy an IPTV subscription safely.' },
       { label: 'IPTV USA', blurb: 'IPTV in the United States: devices, internet speeds, pricing and setup.' },
       { label: 'IPTV Premium', blurb: 'What makes IPTV premium: 4K quality, multiple screens, stability and support.' },
     ],

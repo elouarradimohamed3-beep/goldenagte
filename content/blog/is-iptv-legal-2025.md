@@ -44,7 +44,7 @@ The **legality of IPTV varies globally**. Some regions have clearly defined laws
 
 ### **1. United States**
 
-In the U.S., IPTV is **legal** as long as the provider respects copyright laws. However, using “free IPTV” websites or resellers that stream pirated channels is considered illegal. Under the **Protecting Lawful Streaming Act**, it’s now a **felony** to knowingly operate or assist in illegal streaming businesses.
+In the U.S., IPTV is **legal** as long as the provider respects copyright laws. Under the **Protecting Lawful Streaming Act**, it’s now a **felony** to knowingly operate or assist in illegal streaming businesses.
 
 ### **2. United Kingdom**
 
@@ -79,8 +79,6 @@ Countries such as Japan, South Korea, and Singapore encourage legal IPTV operati
 | China | Restricted | Only state-approved services |
 
 **In short:** Most countries support IPTV when it respects copyright laws. The real issue lies with **pirate IPTV services** that bypass licensing obligations.
-
-## [SUBSCRIBE NOW](/#plans)
 
 ## **Common Myths About IPTV Legality**
 

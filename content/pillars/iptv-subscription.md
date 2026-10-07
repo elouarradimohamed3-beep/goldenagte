@@ -9,8 +9,8 @@ faq:
     a: "Our IPTV subscription starts at $7 for 1 day and $20 for 1 month. Longer plans cost less per month: 3 months is $37, 6 months is $49, 1 year is $77 and 2 years is $119 for one screen. Plans for 2 and 3 screens, and premium multi-screen plans up to 5 screens, cost more."
   - q: "What is an IPTV subscription?"
     a: "It is a prepaid plan for watching live TV and on-demand titles over the internet instead of through cable or satellite. After you pay, you receive a login and sign in to an app on your Smart TV, Fire TV Stick, phone or computer."
-  - q: "Is there an IPTV free trial?"
-    a: "You can request a short trial before you commit. Send us your device and we will reply on WhatsApp with next steps. Every paid plan also has a 7-day refund."
+  - q: "Can I request a trial before I subscribe?"
+    a: "Yes. You can request a short trial before you commit. Send us your device and we will reply on WhatsApp with next steps. Every paid plan also has a 7-day refund."
   - q: "Is an IPTV subscription better value than cable?"
     a: "For many households it costs less because there is no equipment rental, no contract and one plan can cover several screens. Compare your current cable total, including fees, with the monthly equivalent of a longer IPTV plan."
   - q: "Can I cancel an IPTV subscription?"
@@ -71,9 +71,9 @@ If you are undecided, start with a month or request a trial, then move to a year
 
 A standard plan covers one screen at a time. If several people watch at once, choose a plan with two to five connections. Premium plans for one year cover one to five screens at $77, $119, $149, $189 and $229. See the [premium IPTV guide](/iptv-premium) for what else a premium plan includes.
 
-## IPTV free trial and refund
+## Trial and refund
 
-An **IPTV free trial** lets you test the service on your own device and internet connection. [Request a free trial](/free-trial) and tell us what you will watch on. If you buy a plan and it does not work for you, ask for a refund within 7 days of payment. Read the full [refund policy](/legal/refund). Our guide to [IPTV free trials in the USA](/blog/iptv-free-trial-usa-guide) explains what to expect.
+A trial lets you test the service on your own device and internet connection. [Request a trial](/trial) and tell us what you will watch on. If you buy a plan and it does not work for you, ask for a refund within 7 days of payment. Read the full [refund policy](/legal/refund).
 
 ## How to buy an IPTV subscription safely
 
@@ -110,4 +110,4 @@ The questions and answers below cover the most common things people ask before t
 
 ## Next steps
 
-Compare plans on the [home page](/#plans), request a [free trial](/free-trial), or read about [IPTV in the USA](/iptv-usa). If you want to resell, see our [reseller program](/reseller).
+Compare plans on the [home page](/#plans), request a [trial](/trial), or read about [IPTV in the USA](/iptv-usa). If you want to resell, see our [reseller program](/reseller).

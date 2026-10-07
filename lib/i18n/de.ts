@@ -119,7 +119,7 @@ export const de: Dict = {
     title: 'Entdecken Sie unsere IPTV-Ratgeber', readGuide: 'Ratgeber lesen',
     items: [
       { label: 'IPTV-Service', blurb: 'Wie ein zuverlässiger IPTV-Service funktioniert – mit Tarifen ab 20 $ im Monat.' },
-      { label: 'IPTV-Abo', blurb: 'Tarife, Preise, Testzugang und wie Sie ein IPTV-Abo sicher kaufen.' },
+      { label: 'IPTV-Abo', blurb: 'Tarife, Preise und wie Sie ein IPTV-Abo sicher kaufen.' },
       { label: 'IPTV USA', blurb: 'IPTV in den Vereinigten Staaten: Geräte, Internetgeschwindigkeiten, Preise und Einrichtung.' },
       { label: 'IPTV Premium', blurb: 'Was IPTV premium macht: 4K-Qualität, mehrere Bildschirme, Stabilität und Support.' },
     ],
@@ -131,7 +131,7 @@ export const de: Dict = {
       { q: 'Wie viel kostet ein IPTV-Abo?', a: 'Unser IPTV-Abo beginnt bei 7 $ für einen Tag und 20 $ für einen Monat für einen einzelnen Bildschirm. Längere Tarife kosten pro Monat weniger: 37 $ für 3 Monate, 49 $ für 6 Monate, 77 $ für 1 Jahr und 119 $ für 2 Jahre. Tarife für 2 und 3 Bildschirme sowie Premium-Tarife für bis zu 5 Bildschirme kosten mehr.' },
       { q: 'Was ist Premium-IPTV?', a: 'Premium-IPTV bietet höhere Bildqualität wie 4K, mehr gleichzeitige Bildschirme, einen Programmführer, stabile Server und schnellen Support. Unsere Premium-Tarife decken 1 bis 5 Bildschirme für ein Jahr ab, von 77 $ bis 229 $.' },
       { q: 'Ist IPTV in den USA verfügbar?', a: 'Ja. Unser IPTV-Service ist für Zuschauer in den USA gemacht, mit Preisen in US-Dollar, Support per WhatsApp rund um die Uhr und Einrichtungsanleitungen für gängige amerikanische Geräte. Fragen Sie vor dem Kauf nach der lokalen Abdeckung in Ihrer Region.' },
-      { q: 'Gibt es einen kostenlosen IPTV-Test?', a: 'Sie können einen kurzen kostenlosen Test anfragen. Nennen Sie uns das Gerät, auf dem Sie schauen werden, und wir antworten per WhatsApp mit den nächsten Schritten. Jeder kostenpflichtige Tarif hat außerdem 7 Tage Rückgaberecht.' },
+      { q: 'Kann ich vor dem Abo einen Test anfragen?', a: 'Ja, Sie können einen kurzen Test anfragen. Nennen Sie uns das Gerät, auf dem Sie schauen werden, und wir antworten per WhatsApp mit den nächsten Schritten. Jeder kostenpflichtige Tarif hat außerdem 7 Tage Rückgaberecht.' },
       { q: 'Ist IPTV in den USA legal?', a: 'Das hängt vom Service und den angebotenen Inhalten ab, und die Regeln unterscheiden sich je nach Bundesstaat und ändern sich im Lauf der Zeit. Wählen Sie einen Anbieter, der offen sagt, was er verkauft, bewahren Sie Ihre Belege auf und prüfen Sie die für Sie geltenden Vorschriften.' },
       { q: 'Was ist IPTV?', a: 'IPTV steht für Internet Protocol Television. Statt über Kabel oder Satellitenschüssel erreichen Sie Live-Sender und On-Demand-Titel über Ihre Internetverbindung und werden in einer App auf Ihren eigenen Geräten abgespielt.' },
       { q: 'Wie erhalte ich meine Zugangsdaten?', a: 'Sobald Ihre Zahlung eingegangen ist, senden wir Ihnen per E-Mail Benutzernamen, Passwort und Serverdaten samt Link zur Einrichtungsanleitung. Die meisten Kunden schauen nach wenigen Minuten.' },

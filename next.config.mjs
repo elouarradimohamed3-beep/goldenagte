@@ -17,6 +17,7 @@ const nextConfig = {
   // Keep rankings: the old WordPress site served articles at /<slug>/ and pages at their own paths.
   async redirects() {
     return [
+      { source: '/free-trial', destination: '/trial', permanent: true },
       { source: "/home-2", destination: "/reseller", permanent: true },
       { source: "/installation-guide", destination: "/install", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
@@ -31,7 +32,7 @@ const nextConfig = {
       { source: "/iptv-what-is-it-guide", destination: "/blog/iptv-what-is-it-guide", permanent: true },
       { source: "/iptv-services-the-ultimate-guide-to-best-streaming", destination: "/blog/iptv-services-the-ultimate-guide-to-best-streaming", permanent: true },
       { source: "/iptv-providers-ultimate-guide", destination: "/blog/iptv-providers-ultimate-guide", permanent: true },
-      { source: "/iptv-free-trial-expansion-plan", destination: "/blog/iptv-free-trial-expansion-plan", permanent: true },
+      { source: "/iptv-free-trial-expansion-plan", destination: "/iptv-subscription", permanent: true },
       { source: "/iptv-smart-player-expansion-plan", destination: "/blog/iptv-smart-player-expansion-plan", permanent: true },
       { source: "/iptv-encoder-unlock-entertainment-future", destination: "/blog/iptv-encoder-unlock-entertainment-future", permanent: true },
       { source: "/iptv-box-entertainment-solution", destination: "/blog/iptv-box-entertainment-solution", permanent: true },
@@ -55,7 +56,7 @@ const nextConfig = {
       { source: "/iptv-for-roku-usa", destination: "/blog/iptv-for-roku-usa", permanent: true },
       { source: "/best-iptv-for-firestick-usa", destination: "/blog/best-iptv-for-firestick-usa", permanent: true },
       { source: "/cheap-iptv-usa", destination: "/blog/cheap-iptv-usa", permanent: true },
-      { source: "/iptv-free-trial-usa-guide", destination: "/blog/iptv-free-trial-usa-guide", permanent: true },
+      { source: "/iptv-free-trial-usa-guide", destination: "/iptv-subscription", permanent: true },
       { source: "/is-iptv-legal-in-the-usa", destination: "/blog/is-iptv-legal-in-the-usa", permanent: true },
       { source: "/best-iptv-service-usa-the-2026-buyers-guide-legal-safe", destination: "/blog/best-iptv-service-usa-the-2026-buyers-guide-legal-safe", permanent: true },
       { source: "/top-iptv-usa", destination: "/blog/top-iptv-usa", permanent: true },
@@ -75,7 +76,7 @@ const nextConfig = {
       { source: "/iptv-streaming-services-2", destination: "/blog/iptv-streaming-services-2", permanent: true },
       { source: "/best-iptv-services-reddit", destination: "/blog/best-iptv-services-reddit", permanent: true },
       { source: "/best-iptv-service-2026", destination: "/blog/best-iptv-service-2026", permanent: true },
-      { source: "/iptv-free-trial-usa-2025", destination: "/blog/iptv-free-trial-usa-2025", permanent: true },
+      { source: "/iptv-free-trial-usa-2025", destination: "/iptv-subscription", permanent: true },
       { source: "/best-iptv-subscription-deals-2025", destination: "/blog/best-iptv-subscription-deals-2025", permanent: true },
       { source: "/iptv-subscription-cost-2025", destination: "/blog/iptv-subscription-cost-2025", permanent: true },
       { source: "/monthly-iptv-subscription-vs-annual", destination: "/blog/monthly-iptv-subscription-vs-annual", permanent: true },
@@ -119,7 +120,7 @@ const nextConfig = {
       { source: "/iptv-subscription-reddit", destination: "/blog/iptv-subscription-reddit", permanent: true },
       { source: "/iptv-subscription-firestick", destination: "/blog/iptv-subscription-firestick", permanent: true },
       { source: "/premium-iptv-services", destination: "/blog/premium-iptv-services", permanent: true },
-      { source: "/free-vs-paid-iptv", destination: "/blog/free-vs-paid-iptv", permanent: true },
+      { source: "/free-vs-paid-iptv", destination: "/iptv-subscription", permanent: true },
       { source: "/arabic-iptv-providers", destination: "/blog/arabic-iptv-providers", permanent: true },
       { source: "/iptv-smarters-providers", destination: "/blog/iptv-smarters-providers", permanent: true },
       { source: "/best-legal-iptv-providers", destination: "/blog/best-legal-iptv-providers", permanent: true },
