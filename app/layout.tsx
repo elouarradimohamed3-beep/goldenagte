@@ -7,6 +7,7 @@ import { FOCUS } from '@/lib/seo'
 import { Inter, Noto_Sans_Arabic } from 'next/font/google'
 import { LangRedirect } from '@/components/lang-redirect'
 import { OfferPopup } from '@/components/offer-popup'
+import { GoogleAnalytics } from '@/components/google-analytics'
 import { Analytics } from '@vercel/analytics/next'
 import { CookieBanner } from '@/components/cookie-banner'
 import { Effects } from '@/components/effects'
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <OfferPopup />
         </CurrencyProvider>
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   )
