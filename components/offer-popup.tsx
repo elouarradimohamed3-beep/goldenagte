@@ -14,7 +14,7 @@ const KEY = 'gg-offer-seen'
 const COOLDOWN_MS = 3 * 24 * 60 * 60 * 1000
 const SKIP = ['/legal', '/privacy-policy', '/cookie-policy', '/dmca', '/trial']
 
-/** One-time offer for the 1-year plan: after ~15 s, on 40% scroll, or when the mouse leaves the top of the page. */
+/** One-time offer for the 1-year plan: after ~15 s, after scrolling about two screens (or 40% of a short page), or when the mouse leaves the top of the page. */
 export function OfferPopup() {
   const lang = useLang()
   const path = usePathname() ?? '/'
@@ -46,7 +46,7 @@ export function OfferPopup() {
     } catch {}
     shown.current = false
     const timer = window.setTimeout(show, 15000)
-    const onScroll = () => { if (window.scrollY > (document.documentElement.scrollHeight - innerHeight) * 0.4) show() }
+    const onScroll = () => { const room = document.documentElement.scrollHeight - innerHeight; if (window.scrollY > Math.min(room * 0.4, 2200)) show() }
     const onLeave = (e: MouseEvent) => { if (e.clientY <= 0) show() }
     window.addEventListener('scroll', onScroll, { passive: true })
     document.addEventListener('mouseleave', onLeave)
