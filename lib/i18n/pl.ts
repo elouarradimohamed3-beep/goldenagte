@@ -19,7 +19,7 @@ export const pl: Dict = {
     { to: 7, suffix: ' dni', label: 'na zwrot pieniędzy' },
     { to: 24, suffix: '/7', label: 'Pomoc' },
   ],
-  devices: { eyebrow: 'Obsługuje wszystkie urządzenia', alt: 'Obsługiwane urządzenia: iPhone, iPad, Mac, Android, Windows, Chrome, MAG, Roku, Samsung Smart TV, LG Smart TV i Linux' },
+  devices: { eyebrow: 'Obsługuje wszystkie urządzenia', alt: 'Smart TV, przystawka do streamingu, tablet, smartfon i laptop z tą samą aplikacją' },
   service: {
     eyebrow: 'Usługa IPTV', title: 'Czym jest usługa IPTV?',
     p1: '**Usługa IPTV** dostarcza kanały telewizyjne na żywo oraz filmy i seriale na żądanie przez Twoje łącze internetowe, dzięki czemu możesz oglądać na Smart TV, Fire TV Stick, telefonie lub komputerze – bez dekodera kablowego i anteny satelitarnej.',

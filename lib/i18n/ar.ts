@@ -19,7 +19,7 @@ export const ar: Dict = {
     { to: 7, suffix: ' أيام', label: 'مهلة الاسترداد' },
     { to: 24, suffix: '/7', label: 'الدعم' },
   ],
-  devices: { eyebrow: 'يدعم جميع الأجهزة', alt: 'الأجهزة المدعومة: iPhone وiPad وMac وAndroid وWindows وChrome وMAG وRoku وSamsung Smart TV وLG Smart TV وLinux' },
+  devices: { eyebrow: 'يدعم جميع الأجهزة', alt: 'تلفزيون ذكي وجهاز بث وجهاز لوحي وهاتف ذكي وحاسوب محمول تعرض التطبيق نفسه' },
   service: {
     eyebrow: 'خدمة IPTV', title: 'ما هي خدمة IPTV؟',
     p1: 'تقدّم **خدمة IPTV** القنوات التلفزيونية المباشرة والأفلام والمسلسلات عند الطلب عبر اتصالك بالإنترنت، لتشاهد على تلفزيون ذكي أو Fire TV Stick أو هاتف أو حاسوب دون جهاز استقبال كابل أو طبق فضائي.',

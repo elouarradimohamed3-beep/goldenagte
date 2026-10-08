@@ -20,7 +20,7 @@ export const en = {
     { to: 7, suffix: '-day', label: 'Refund window' },
     { to: 24, suffix: '/7', label: 'Support' },
   ],
-  devices: { eyebrow: 'Supports all devices', alt: 'Supported devices: iPhone, iPad, Mac, Android, Windows, Chrome, MAG, Roku, Samsung Smart TV, LG Smart TV and Linux' },
+  devices: { eyebrow: 'Supports all devices', alt: 'A smart TV, streaming stick, tablet, smartphone and laptop showing the same streaming app' },
   service: {
     eyebrow: 'IPTV service', title: 'What is an IPTV service?',
     p1: 'An **IPTV service** delivers live TV channels and on-demand movies and series over your internet connection, so you can watch on a Smart TV, Fire TV Stick, phone or computer without a cable box or satellite dish.',

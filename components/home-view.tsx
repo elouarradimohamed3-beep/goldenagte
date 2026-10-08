@@ -53,11 +53,11 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
 
       <PricingSection t={t.plans} />
 
-      <section className="px-4 pb-4">
+      <section className="px-4 pt-20 pb-4">
         <Reveal className="mx-auto max-w-4xl">
           <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-brand">{t.devices.eyebrow}</p>
-          <div className="glass rounded-2xl p-5" dir="ltr">
-            <Image src="/images/devices.webp" alt={t.devices.alt} width={946} height={142} className="mx-auto h-auto w-full" />
+          <div className="lift overflow-hidden rounded-2xl border border-slate-200 bg-white" dir="ltr">
+            <Image src="/images/devices-lineup.webp" alt={t.devices.alt} width={1340} height={315} className="mx-auto h-auto w-full" />
           </div>
         </Reveal>
       </section>
@@ -105,7 +105,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       </Section>
 
       <section className="relative isolate overflow-hidden">
-        <Image src="/images/sports-family.webp" alt={t.band.alt} width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />
+        <Image src="/images/family-living-room.webp" alt={t.band.alt} width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/60 to-transparent rtl:bg-gradient-to-l" />
         <Reveal className="mx-auto max-w-6xl px-4 py-28 sm:py-36">
           <h2 className="max-w-xl text-3xl font-bold !text-white sm:text-5xl">{t.band.title}</h2>

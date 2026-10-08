@@ -19,7 +19,7 @@ export const es: Dict = {
     { to: 7, suffix: ' días', label: 'de reembolso' },
     { to: 24, suffix: '/7', label: 'Soporte' },
   ],
-  devices: { eyebrow: 'Compatible con todos los dispositivos', alt: 'Dispositivos compatibles: iPhone, iPad, Mac, Android, Windows, Chrome, MAG, Roku, Samsung Smart TV, LG Smart TV y Linux' },
+  devices: { eyebrow: 'Compatible con todos los dispositivos', alt: 'Una Smart TV, un dispositivo de streaming, una tableta, un smartphone y un portátil con la misma aplicación' },
   service: {
     eyebrow: 'Servicio IPTV', title: '¿Qué es un servicio IPTV?',
     p1: 'Un **servicio IPTV** ofrece canales de televisión en vivo y películas y series bajo demanda a través de tu conexión a internet, para que puedas ver en una Smart TV, una Fire TV Stick, un teléfono o un ordenador sin decodificador de cable ni antena parabólica.',

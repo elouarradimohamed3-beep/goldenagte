@@ -19,7 +19,7 @@ export const el: Dict = {
     { to: 7, suffix: ' ημέρες', label: 'επιστροφής χρημάτων' },
     { to: 24, suffix: '/7', label: 'Υποστήριξη' },
   ],
-  devices: { eyebrow: 'Υποστηρίζει όλες τις συσκευές', alt: 'Υποστηριζόμενες συσκευές: iPhone, iPad, Mac, Android, Windows, Chrome, MAG, Roku, Samsung Smart TV, LG Smart TV και Linux' },
+  devices: { eyebrow: 'Υποστηρίζει όλες τις συσκευές', alt: 'Smart TV, συσκευή streaming, tablet, κινητό και φορητός υπολογιστής με την ίδια εφαρμογή' },
   service: {
     eyebrow: 'Υπηρεσία IPTV', title: 'Τι είναι μια υπηρεσία IPTV;',
     p1: 'Μια **υπηρεσία IPTV** παραδίδει ζωντανά τηλεοπτικά κανάλια και ταινίες και σειρές κατά παραγγελία μέσω της σύνδεσής σας στο διαδίκτυο, ώστε να βλέπετε σε Smart TV, Fire TV Stick, κινητό ή υπολογιστή χωρίς αποκωδικοποιητή καλωδίου ή δορυφορικό πιάτο.',

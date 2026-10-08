@@ -19,7 +19,7 @@ export const de: Dict = {
     { to: 7, suffix: ' Tage', label: 'Rückgaberecht' },
     { to: 24, suffix: '/7', label: 'Support' },
   ],
-  devices: { eyebrow: 'Unterstützt alle Geräte', alt: 'Unterstützte Geräte: iPhone, iPad, Mac, Android, Windows, Chrome, MAG, Roku, Samsung Smart TV, LG Smart TV und Linux' },
+  devices: { eyebrow: 'Unterstützt alle Geräte', alt: 'Smart TV, Streaming-Stick, Tablet, Smartphone und Laptop mit derselben Streaming-App' },
   service: {
     eyebrow: 'IPTV-Service', title: 'Was ist ein IPTV-Service?',
     p1: 'Ein **IPTV-Service** liefert Live-TV-Sender sowie Filme und Serien auf Abruf über Ihre Internetverbindung. So schauen Sie auf Smart TV, Fire TV Stick, Handy oder Computer – ohne Kabelreceiver oder Satellitenschüssel.',
