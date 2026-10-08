@@ -22,6 +22,7 @@ const INFRA_ICONS = [Server, Activity, Globe2, Cpu]
 const GENRE_ICONS = [Trophy, Newspaper, Clapperboard, Popcorn, Baby, Mountain, Music2, Languages]
 const FEAT_ICONS = [Gauge, Layers, Film]
 // Same order as the genres: sports, news, movies, series, kids, documentaries, music, international
+const STEP_IMAGES = ['step-choose', 'step-login', 'step-watch']
 const GENRE_IMAGES: (string | null)[] = [null, 'genre-news', 'genre-movies', 'genre-series', 'genre-kids', 'genre-docs', 'genre-music', 'genre-international']
 
 /** The whole home page, rendered from one dictionary so every language shares the same layout. */
@@ -118,11 +119,13 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
 
       <Section eyebrow={t.steps.eyebrow} title={t.steps.title}>
         <div className="relative grid gap-8 md:grid-cols-3">
-          <div className="absolute top-8 right-[16%] left-[16%] hidden h-px border-t-2 border-dashed border-brand/30 md:block" />
           {t.steps.items.map((st, i) => (
             <Reveal key={st.title} delay={i * 140} from="zoom">
-              <div className="relative text-center">
-                <span className="pulse-ring mx-auto grid size-14 place-items-center rounded-full bg-ink text-xl font-bold text-white">{i + 1}</span>
+              <div className="lift group relative h-full rounded-2xl border border-slate-200 bg-white p-4 pb-7 text-center">
+                <div className="overflow-hidden rounded-xl">
+                  <Image src={`/images/${STEP_IMAGES[i]}.webp`} alt="" width={1408} height={768} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <span className="pulse-ring relative mx-auto -mt-7 grid size-14 place-items-center rounded-full border-4 border-white bg-ink text-xl font-bold text-white">{i + 1}</span>
                 <h3 className="mt-5 text-lg font-semibold">{st.title}</h3>
                 <p className="mx-auto mt-2 max-w-xs text-sm text-slate-600">{st.body}</p>
               </div>
