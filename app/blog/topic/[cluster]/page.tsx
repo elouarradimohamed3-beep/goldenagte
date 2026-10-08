@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ cluster: 
     title: { absolute: `${label} Guides and Articles | Golden Gate IPTV` },
     description: `${INTRO[k]} ${getByPillar(k).length} in-depth articles.`.slice(0, 155),
     alternates: { canonical: `/blog/topic/${k}` },
-    openGraph: { images: ['/opengraph-image'] },
+    openGraph: { images: ['/opengraph-image.png'] },
   }
 }
 

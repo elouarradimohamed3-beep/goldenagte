@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pillar: s
       title: { absolute: t.meta.title },
       description: t.meta.description,
       alternates: { canonical: homePath(slug), languages: { en: '/', ...Object.fromEntries(LOCALES.map((l) => [l, homePath(l)])), 'x-default': '/' } },
-      openGraph: { type: 'website', title: t.meta.title, description: t.meta.description, locale: OG_LOCALE[slug], images: ['/opengraph-image'] },
+      openGraph: { type: 'website', title: t.meta.title, description: t.meta.description, locale: OG_LOCALE[slug], images: ['/opengraph-image.png'] },
     }
   }
   const page = getPillarPage(slug)
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pillar: s
     title: { absolute: page.title },
     description: page.description,
     alternates: { canonical: `/${page.slug}` },
-    openGraph: { type: 'article', title: page.title, description: page.description, modifiedTime: page.updated, images: ['/opengraph-image'] },
+    openGraph: { type: 'article', title: page.title, description: page.description, modifiedTime: page.updated, images: ['/opengraph-image.png'] },
   }
 }
 

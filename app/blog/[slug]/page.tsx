@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     robots: post.noindex ? { index: false, follow: true } : undefined,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { type: 'article', title: post.title, description: post.description, publishedTime: post.date, modifiedTime: post.date, images: [post.cover ?? '/opengraph-image'] },
+    openGraph: { type: 'article', title: post.title, description: post.description, publishedTime: post.date, modifiedTime: post.date, images: [post.cover ?? '/opengraph-image.png'] },
   }
 }
 
