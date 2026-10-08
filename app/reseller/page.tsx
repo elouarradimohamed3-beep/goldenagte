@@ -79,7 +79,7 @@ export default function Reseller() {
 
       <Section tone="soft" eyebrow="How it works" title="How our IPTV reseller program works">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <Reveal from="left"><Image src="/images/reseller-diagram.webp" alt="Illustration of the reseller flow: customer orders online, credits move to the reseller, and the service is delivered" width={1024} height={1024} className="mx-auto w-full max-w-md rounded-2xl shadow-xl" /></Reveal>
+          <Reveal from="left"><Image src="/images/team-office.webp" alt="Three colleagues reviewing sales charts together on a laptop and a tablet" width={1408} height={768} className="lift mx-auto w-full rounded-2xl object-cover shadow-xl" /></Reveal>
           <div className="space-y-6">
             {RESELLER_STEPS.map((s, i) => (
               <Reveal key={s.title} delay={i * 100}>
