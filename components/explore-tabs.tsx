@@ -5,7 +5,7 @@ import { Rewind, Smartphone, Tv2 } from 'lucide-react'
 import type { Dict } from '@/lib/i18n/en'
 
 const ICONS = [Smartphone, Tv2, Rewind]
-const PHOTOS = ['/images/airport-phone.webp', '/images/movie-night.webp', '/images/news-kitchen.webp']
+const PHOTOS = ['/images/explore-travel.webp', '/images/explore-movie-night.webp', '/images/explore-news.webp']
 
 export function ExploreTabs({ t: dict, plansHref = '#plans' }: { t: Dict['explore']; plansHref?: string }) {
   const [t, setT] = useState(0)
