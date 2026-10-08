@@ -23,7 +23,7 @@ const GENRE_ICONS = [Trophy, Newspaper, Clapperboard, Popcorn, Baby, Mountain, M
 const FEAT_ICONS = [Gauge, Layers, Film]
 // Same order as the genres: sports, news, movies, series, kids, documentaries, music, international
 const STEP_IMAGES = ['step-choose', 'step-login', 'step-watch']
-const GENRE_IMAGES: (string | null)[] = [null, 'genre-news', 'genre-movies', 'genre-series', 'genre-kids', 'genre-docs', 'genre-music', 'genre-international']
+const GENRE_IMAGES: (string | null)[] = ['genre-sports', 'genre-news', 'genre-movies', 'genre-series', 'genre-kids', 'genre-docs', 'genre-music', 'genre-international']
 
 /** The whole home page, rendered from one dictionary so every language shares the same layout. */
 export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: React.ReactNode }) {
@@ -87,7 +87,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <div className="grid gap-5 lg:grid-cols-3">
           <Reveal className="lg:col-span-2 lg:row-span-2">
             <div className="relative h-full min-h-80 overflow-hidden rounded-2xl">
-              <Image src="/images/kids-tv.webp" alt={t.why.tileAlt} width={1408} height={768} className="absolute inset-0 size-full object-cover" />
+              <Image src="/images/why-kids-tv.webp" alt={t.why.tileAlt} width={1408} height={768} className="absolute inset-0 size-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
               <div className="relative flex h-full flex-col justify-end p-8 text-white">
                 <h3 className="text-2xl font-bold !text-white sm:text-3xl">{t.why.tileTitle}</h3>
