@@ -21,6 +21,8 @@ const WHY_ICONS = [Zap, MonitorSmartphone, Tv2, Server, Headphones]
 const INFRA_ICONS = [Server, Activity, Globe2, Cpu]
 const GENRE_ICONS = [Trophy, Newspaper, Clapperboard, Popcorn, Baby, Mountain, Music2, Languages]
 const FEAT_ICONS = [Gauge, Layers, Film]
+// Same order as the genres: sports, news, movies, series, kids, documentaries, music, international
+const GENRE_IMAGES: (string | null)[] = [null, 'genre-news', 'genre-movies', 'genre-series', 'genre-kids', 'genre-docs', 'genre-music', 'genre-international']
 
 /** The whole home page, rendered from one dictionary so every language shares the same layout. */
 export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: React.ReactNode }) {
@@ -134,9 +136,18 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           {t.genres.items.map((g, i) => { const I = GENRE_ICONS[i]; return (
             <Reveal key={g.title} delay={(i % 4) * 80}>
               <div className="lift icon-spin group relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink p-6 text-white">
-                <div className="absolute inset-0 bg-gradient-to-br from-navy/80 to-ink" />
-                <I className="absolute -end-3 -bottom-3 size-28 text-white/[.06]" strokeWidth={1.2} />
-                <span className="relative grid size-11 place-items-center rounded-lg bg-white/10 text-sky-300"><I size={22} /></span>
+                {GENRE_IMAGES[i] ? (
+                  <>
+                    <Image src={`/images/${GENRE_IMAGES[i]}.webp`} alt="" width={1000} height={545} sizes="(min-width: 1024px) 25vw, 50vw" className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/45 to-ink/10" />
+                  </>
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-br from-navy/80 to-ink" />
+                    <I className="absolute -end-3 -bottom-3 size-28 text-white/[.06]" strokeWidth={1.2} />
+                  </>
+                )}
+                <span className="relative grid size-11 place-items-center rounded-lg bg-white/15 text-sky-200 backdrop-blur-sm"><I size={22} /></span>
                 <div className="absolute inset-x-6 bottom-6">
                   <h3 className="text-lg font-semibold !text-white">{g.title}</h3>
                   <p className="mt-1 text-sm text-slate-300">{g.body}</p>
