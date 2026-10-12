@@ -31,7 +31,7 @@ export default function Reseller() {
             <p className="mt-6 max-w-xl text-lg text-slate-600">Become an IPTV reseller today. Earn real profit with a turnkey solution: premium content, strong margins and no technical hassle. Join resellers building a business with us.</p>
             <a href={START} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">Start your IPTV business</a>
           </div>
-          <Reveal from="right"><Image src="/images/reseller-office.webp" alt="A smiling entrepreneur on a phone call at a desk with a customer dashboard on screen" width={1408} height={768} priority className="mx-auto w-full max-w-xl rounded-2xl object-cover shadow-2xl" /></Reveal>
+          <Reveal from="right"><Image src="/images/reseller-partners.webp" alt="Two business partners shaking hands over a laptop showing a sales dashboard" width={1408} height={768} priority className="mx-auto w-full max-w-xl rounded-2xl object-cover shadow-2xl" /></Reveal>
         </div>
       </section>
 

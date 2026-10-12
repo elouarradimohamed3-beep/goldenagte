@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { PillarLinks } from '@/components/pillar-links'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Baby, Clapperboard, Crown, ShieldCheck, Trophy, Gift } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
@@ -29,6 +30,9 @@ export default function About() {
         <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">Golden Gate IPTV delivers premium live TV and on-demand streaming to viewers in the USA and worldwide. We combine reliable technology, a wide channel and movie selection and friendly support, so watching is simple.</p>
         <Link href="/#plans" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">See pricing</Link>
       </section>
+      <div className="mx-auto -mt-4 max-w-5xl px-4">
+        <Image src="/images/about-family.webp" alt="Three children laughing together while watching a cartoon on a TV in their playroom" width={1408} height={768} priority className="lift w-full rounded-2xl object-cover shadow-xl" />
+      </div>
       <section className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="mb-10 text-center text-3xl font-bold">Our journey towards premium entertainment</h2>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

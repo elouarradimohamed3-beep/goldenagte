@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { PillarLinks } from '@/components/pillar-links'
 import Image from 'next/image'
+import { Tv, Usb, Smartphone, Tablet, Box, Monitor, Server } from 'lucide-react'
+
+const DEVICE_ICONS: Record<string, typeof Tv> = { 'smart-tv': Tv, 'fire-tv': Usb, android: Smartphone, ios: Tablet, mag: Box, windows: Monitor, enigma2: Server }
 import { INSTALL_GUIDES } from '@/lib/install'
 import { Reveal } from '@/components/reveal'
 import { CtaBand } from '@/components/cta-band'
@@ -18,7 +21,7 @@ export default function Install() {
       <section className="bg-gradient-to-b from-brand-soft to-white px-4 pt-36 pb-12 text-center">
         <h1 className="text-4xl font-bold sm:text-5xl">How to set up IPTV on your device</h1>
         <p className="mx-auto mt-4 max-w-2xl text-slate-600">Pick your device and follow the steps. Stuck? Message us on WhatsApp and we will help you install it.</p>
-        <Image src="/images/devices-flatlay.webp" alt="A remote, phone, tablet, laptop and streaming stick all showing the same streaming app" width={1408} height={768} priority className="mx-auto mt-8 w-full max-w-3xl rounded-2xl shadow-xl" />
+        <Image src="/images/install-devices.webp" alt="A remote, streaming stick, phone, tablet and laptop all showing the same streaming app" width={1408} height={768} priority className="mx-auto mt-8 w-full max-w-3xl rounded-2xl shadow-xl" />
         <nav className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
           {INSTALL_GUIDES.map((g) => <a key={g.id} href={`#${g.id}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:border-brand hover:text-brand">{g.title.split(' (')[0]}</a>)}
         </nav>
@@ -29,7 +32,7 @@ export default function Install() {
           <Reveal key={g.id}>
             <section id={g.id} className="glass scroll-mt-24 rounded-2xl p-7 sm:p-9">
               <div className="flex items-center gap-4">
-                {g.logo && <span className="grid size-16 shrink-0 place-items-center overflow-hidden rounded-2xl bg-slate-50 p-2"><Image src={g.logo} alt={`${g.title} logo`} width={64} height={64} className="max-h-full w-auto object-contain" /></span>}
+                {(() => { const I = DEVICE_ICONS[g.id] ?? Tv; return <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand"><I size={28} /></span> })()}
                 <h2 className="text-2xl font-bold">{g.title}</h2>
               </div>
               {g.groups.map((grp, i) => (

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getPillarPage } from '@/lib/pillars'
@@ -15,6 +16,11 @@ import { CtaBand } from '@/components/cta-band'
 import { HomeView } from '@/components/home-view'
 import { getDict } from '@/lib/i18n/dicts'
 import { LOCALES, OG_LOCALE, homePath, isLocale } from '@/lib/i18n'
+
+const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
+  'iptv-premium': { src: '/images/guide-premium.webp', alt: 'A hand pointing a remote at a large 4K smart TV showing a colorful app menu' },
+  'iptv-subscription': { src: '/images/plans-couple.webp', alt: 'A couple relaxing on the sofa watching a big TV at night' },
+}
 
 export const dynamicParams = false
 export const generateStaticParams = () => [...PILLARS.map((p) => ({ pillar: p.slug })), ...LOCALES.map((l) => ({ pillar: l }))]
@@ -69,6 +75,7 @@ export default async function PillarPageRoute({ params }: { params: Promise<{ pi
           <p className="text-sm font-semibold tracking-wide text-brand uppercase">Quick answer</p>
           <p className="mt-2 text-ink">{page.answer}</p>
         </div>
+        {PILLAR_IMAGES[page.slug] && <Image src={PILLAR_IMAGES[page.slug].src} alt={PILLAR_IMAGES[page.slug].alt} width={1408} height={768} priority className="mt-6 w-full rounded-2xl object-cover shadow-lg" />}
         <div className="mt-6"><Toc body={page.body} /></div>
         <div className="mt-8"><Markdown fallbackAlt={page.h1}>{before}</Markdown></div>
 

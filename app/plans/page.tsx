@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { PillarLinks } from '@/components/pillar-links'
 import { PricingSection } from '@/components/pricing-section'
@@ -18,6 +19,7 @@ export default function Plans() {
       <PricingSection as="h1" id="pricing" />
       <section className="mx-auto max-w-4xl px-4 py-16">
         <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'IPTV subscription plans', href: '/plans' }]} />
+        <Image src="/images/plans-couple.webp" alt="A couple relaxing on the sofa under a blanket, watching a big TV at night" width={1408} height={768} className="lift mb-8 w-full rounded-2xl object-cover shadow-xl" />
         <h2 className="text-2xl font-bold">Choosing an IPTV subscription</h2>
         <p className="mt-3 text-slate-600">An IPTV subscription is a prepaid plan for live TV and on-demand movies and series. Pick the length that suits you and the number of screens you need. Read our complete <Link href="/iptv-subscription" className="font-semibold text-brand hover:underline">IPTV subscription guide</Link> for pricing and safe buying tips, or see <Link href="/iptv-premium" className="font-semibold text-brand hover:underline">premium IPTV</Link> for 4K and multi-screen plans.</p>
         <h2 className="mt-10 text-2xl font-bold">IPTV subscription guides</h2>

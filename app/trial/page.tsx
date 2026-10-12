@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { TrialForm } from '@/components/trial-form'
 import { FaqList } from '@/components/faq'
@@ -30,7 +31,8 @@ export default function FreeTrial() {
         <p className="mx-auto mt-3 max-w-xl text-center text-slate-600">Try our IPTV service before you commit. Tell us what you will watch on and we will reply on WhatsApp with your trial login.</p>
         <div className="mx-auto max-w-md"><TrialForm /></div>
 
-        <section className="mt-16">
+        <Image src="/images/trial-kitchen.webp" alt="A man with a coffee cup watching a morning news program on a TV in his kitchen" width={1408} height={768} className="lift mt-16 w-full rounded-2xl object-cover shadow-xl" />
+        <section className="mt-12">
           <h2 className="text-2xl font-bold">How the trial works</h2>
           <ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">
             <li>Send your name and the device you will use (Smart TV, Fire TV Stick, phone or computer).</li>
