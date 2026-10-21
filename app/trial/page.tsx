@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { TrialForm } from '@/components/trial-form'
+import { TrialOptions } from '@/components/trial-options'
 import { FaqList } from '@/components/faq'
 import { PillarLinks } from '@/components/pillar-links'
 import { Breadcrumbs } from '@/components/breadcrumbs'
@@ -25,11 +25,11 @@ export default function FreeTrial() {
   return (
     <>
       <JsonLd data={ld} />
-      <div className="mx-auto max-w-3xl px-4 pt-28 pb-10">
+      <div className="mx-auto max-w-4xl px-4 pt-28 pb-10">
         <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Request a trial', href: '/trial' }]} />
         <h1 className="text-center text-4xl font-bold">Request a trial</h1>
         <p className="mx-auto mt-3 max-w-xl text-center text-slate-600">Try our IPTV service before you commit. Tell us what you will watch on and we will reply on WhatsApp with your trial login.</p>
-        <div className="mx-auto max-w-md"><TrialForm /></div>
+        <TrialOptions />
 
         <Image src="/images/trial-kitchen.webp" alt="A man with a coffee cup watching a morning news program on a TV in his kitchen" width={1408} height={768} className="lift mt-16 w-full rounded-2xl object-cover shadow-xl" />
         <section className="mt-12">

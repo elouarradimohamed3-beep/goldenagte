@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
 import { Counter } from './counter'
 import { DeviceMockup } from './device-mockup'
+import { TrialButton } from './trial-button'
 import { rich } from '@/lib/i18n/rich'
 import type { Dict } from '@/lib/i18n/en'
 
@@ -20,7 +21,7 @@ export function Hero({ t, home = '/' }: { t: Pick<Dict, 'hero' | 'stats'>; home?
           <p className="mt-6 max-w-xl text-lg text-slate-600">{rich(hero.p, { sub: link('/iptv-subscription', hero.sub), prem: link('/iptv-premium', hero.prem), usa: link('/iptv-usa', hero.usa) })}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href={`${home === '/' ? '' : home}/#plans`.replace('//', '/')} className="btn-shine pulse-ring press group inline-flex items-center gap-2 rounded-lg bg-brand px-7 py-3.5 font-semibold text-white transition-colors hover:bg-brand-dark">{hero.subscribe} <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" /></Link>
-            <Link href="/trial" className="rounded-lg border border-slate-300 bg-white px-7 py-3.5 font-semibold text-ink transition-colors hover:border-brand hover:text-brand">{hero.trial}</Link>
+            <TrialButton label={hero.trial} className="press rounded-lg border border-slate-300 bg-white px-7 py-3.5 font-semibold text-ink transition-colors hover:border-brand hover:text-brand" />
           </div>
           <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
             {hero.checks.map((c) => <li key={c} className="flex items-center gap-2"><Check size={16} className="text-brand" />{c}</li>)}
