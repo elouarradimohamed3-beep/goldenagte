@@ -68,7 +68,7 @@ export function OfferPopup() {
     <div dir={isRtl(lang) ? 'rtl' : 'ltr'} className="fixed inset-0 z-[70] grid place-items-center p-4" role="dialog" aria-modal="true" aria-labelledby="offer-title">
       <button aria-label={t.close} onClick={dismiss} className="absolute inset-0 bg-ink/60 backdrop-blur-sm" style={{ animation: 'fade .3s ease both' }} tabIndex={-1} />
       <div className="pop-in relative w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
-        <div className="grad-pan relative bg-gradient-to-br from-ink via-navy to-brand px-7 pt-8 pb-7 text-white">
+        <div className="grad-pan relative bg-gradient-to-br from-ink via-[#1c1c1c] to-[#3d3212] px-7 pt-8 pb-7 text-white">
           <div className="orb absolute -top-10 -end-10 size-40 rounded-full bg-white/15 blur-2xl" />
           <button ref={closeBtn} onClick={dismiss} aria-label={t.close} className="absolute end-3 top-3 grid size-9 place-items-center rounded-full bg-white/10 transition hover:bg-white/20"><X size={18} /></button>
           <span className="wiggle inline-block rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-ink">★ {t.badge}</span>

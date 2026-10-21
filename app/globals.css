@@ -6,8 +6,8 @@
   --color-brand-ink: #7a5c0a;
   --color-brand-dark: #b08d1a;
   --color-brand-soft: #faf5e4;
-  --color-ink: #0f172a;
-  --color-navy: #1e293b;
+  --color-ink: #0a0a0a;
+  --color-navy: #1c1c1c;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
