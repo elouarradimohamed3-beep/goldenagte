@@ -23,10 +23,10 @@ export function CookieBanner() {
     setShow(false)
   }
   return (
-    <div dir={isRtl(lang) ? 'rtl' : 'ltr'} className="glass fixed inset-x-4 bottom-24 z-50 mx-auto flex max-w-xl flex-col gap-3 rounded-2xl bg-white p-5 text-sm sm:flex-row sm:items-center">
-      <p className="text-slate-600">{ui.text} <Link href="/cookie-policy" className="text-brand-ink underline">{ui.policy}</Link>.</p>
+    <div dir={isRtl(lang) ? 'rtl' : 'ltr'} className="glass fixed inset-x-4 bottom-24 z-50 mx-auto flex max-w-xl flex-col gap-3 rounded-2xl bg-zinc-900 p-5 text-sm sm:flex-row sm:items-center">
+      <p className="text-zinc-300">{ui.text} <Link href="/cookie-policy" className="text-brand-ink underline">{ui.policy}</Link>.</p>
       <div className="flex shrink-0 gap-2">
-        <button onClick={() => choose(false)} className="rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-700 transition-colors hover:border-slate-400">{ui.no}</button>
+        <button onClick={() => choose(false)} className="rounded-lg border border-zinc-700 px-4 py-2 font-semibold text-zinc-200 transition-colors hover:border-zinc-500">{ui.no}</button>
         <button onClick={() => choose(true)} className="rounded-lg bg-brand px-5 py-2 font-semibold text-ink transition-colors hover:bg-brand-dark">{ui.ok}</button>
       </div>
     </div>

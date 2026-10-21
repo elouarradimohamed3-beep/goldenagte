@@ -8,7 +8,7 @@ export function Price({ usd, className = '' }: { usd: number; className?: string
   const { currency } = useCurrency()
   return (
     <span className={`flex items-baseline gap-1 ${className}`}>
-      <span className="text-xl font-semibold text-slate-500">{SYMBOL[currency]}</span>
+      <span className="text-xl font-semibold text-zinc-400">{SYMBOL[currency]}</span>
       <CountUp value={convert(usd, currency)} className="text-5xl font-bold tracking-tight tabular-nums" />
     </span>
   )
@@ -17,7 +17,7 @@ export function Price({ usd, className = '' }: { usd: number; className?: string
 /** Small line showing the same price in the other two currencies. */
 export function OtherCurrencies({ usd }: { usd: number }) {
   const { currency } = useCurrency()
-  return <span className="text-xs text-slate-400">≈ {CURRENCIES.filter((c) => c !== currency).map((c) => money(usd, c)).join(' · ')}</span>
+  return <span className="text-xs text-zinc-400">≈ {CURRENCIES.filter((c) => c !== currency).map((c) => money(usd, c)).join(' · ')}</span>
 }
 
 export function PerMonth({ usd, suffix = '/ month' }: { usd: number; suffix?: string }) {

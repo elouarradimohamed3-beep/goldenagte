@@ -14,16 +14,16 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-    <section className="bg-gradient-to-b from-brand-soft to-white px-4 pt-36 pb-20">
+    <section className="bg-gradient-to-b from-[#17140a] to-[#0a0a0a] px-4 pt-36 pb-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div>
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl">IPTV support, available 24/7</h1>
-          <p className="mt-5 max-w-xl text-lg text-slate-600">Our technical team is here to help with your IPTV subscription. We assist with connection issues, channel setup, device compatibility and streaming quality, so you can enjoy uninterrupted entertainment.</p>
+          <p className="mt-5 max-w-xl text-lg text-zinc-300">Our technical team is here to help with your IPTV subscription. We assist with connection issues, channel setup, device compatibility and streaming quality, so you can enjoy uninterrupted entertainment.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={waLink(`Hi! I have a question about ${SITE.host}`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-7 py-3.5 font-semibold text-black shadow-lg transition-colors hover:brightness-110"><MessageCircle size={18} />WhatsApp {SITE.whatsappDisplay}</a>
-            <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-7 py-3.5 font-semibold text-ink transition-colors hover:border-brand hover:text-brand-ink"><Mail size={18} />Email us</a>
+            <a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900 px-7 py-3.5 font-semibold text-zinc-50 transition-colors hover:border-brand hover:text-brand-ink"><Mail size={18} />Email us</a>
           </div>
-          <p className="mt-4 text-sm text-slate-500">{SITE.email}</p>
+          <p className="mt-4 text-sm text-zinc-400">{SITE.email}</p>
         </div>
         <Reveal from="right"><Image src="/images/contact-support.webp" alt="A smiling support agent with a headset answering a live chat on her laptop" width={1408} height={768} priority className="mx-auto w-full max-w-xl rounded-2xl object-cover shadow-2xl" /></Reveal>
       </div>

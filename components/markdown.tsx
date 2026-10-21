@@ -11,7 +11,7 @@ function isCta(children: React.ReactNode) {
 
 export function Markdown({ children, fallbackAlt = '' }: { children: string; fallbackAlt?: string }) {
   return (
-    <div className="prose prose-slate prose-lg max-w-none prose-headings:scroll-mt-24 prose-headings:text-ink prose-a:text-brand-ink prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-sm prose-strong:text-ink">
+    <div className="prose prose-invert prose-zinc prose-lg max-w-none prose-headings:scroll-mt-24 prose-headings:text-zinc-50 prose-a:text-brand-ink prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-sm prose-strong:text-zinc-50">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}
@@ -21,7 +21,10 @@ export function Markdown({ children, fallbackAlt = '' }: { children: string; fal
             // eslint-disable-next-line @next/next/no-img-element
             <img src={typeof src === 'string' ? src : undefined} alt={alt || fallbackAlt} loading="lazy" className="mx-auto h-auto max-w-full" />
           ),
-          table: ({ children }) => <div className="my-6 overflow-x-auto rounded-xl border border-slate-200"><table className="!my-0 w-full">{children}</table></div>,
+          table: ({ children }) => <div className="my-6 overflow-x-auto rounded-xl border border-zinc-800"><table className="!my-0 w-full">{children}</table></div>,
+          p: ({ children }) => isCta(children) && /subscribe now/i.test(String((Array.isArray(children) ? children[0] : children as { props?: { children?: unknown } })?.props?.children ?? ''))
+            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-ink [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
+            : <p>{children}</p>,
           h4: ({ children }) => isCta(children)
             ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-ink [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
             : <h4>{children}</h4>,

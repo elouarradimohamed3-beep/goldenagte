@@ -9,13 +9,13 @@ export function CurrencySwitcher({ tone = 'light', note = false, asOf = RATES_AS
   const dark = tone === 'dark'
   return (
     <div className="flex flex-col items-center gap-2">
-      <div role="radiogroup" aria-label="Currency" className={`inline-flex rounded-lg p-1 text-xs font-semibold ${dark ? 'border border-white/15 bg-white/10' : 'border border-slate-200 bg-slate-100'}`}>
+      <div role="radiogroup" aria-label="Currency" className={`inline-flex rounded-lg p-1 text-xs font-semibold ${dark ? 'border border-white/15 bg-white/10' : 'border border-zinc-800 bg-zinc-900'}`}>
         {CURRENCIES.map((c) => (
           <button key={c} role="radio" aria-checked={currency === c} onClick={() => setCurrency(c)}
-            className={`rounded-md px-3 py-1.5 transition-colors ${currency === c ? (dark ? 'bg-white text-ink' : 'bg-white text-ink shadow-sm') : dark ? 'text-white/80 hover:text-white' : 'text-slate-600 hover:text-ink'}`}>{c}</button>
+            className={`rounded-md px-3 py-1.5 transition-colors ${currency === c ? (dark ? 'bg-zinc-900 text-zinc-50' : 'bg-zinc-900 text-zinc-50 shadow-sm') : dark ? 'text-white/80 hover:text-white' : 'text-zinc-300 hover:text-white'}`}>{c}</button>
         ))}
       </div>
-      {note && <p className={`text-center text-xs ${dark ? 'text-white/60' : 'text-slate-500'}`}>{(typeof note === 'string' ? note : EN_NOTE).replace('{eur}', String(RATES.EUR)).replace('{cad}', String(RATES.CAD)).replace('{asOf}', asOf)}</p>}
+      {note && <p className={`text-center text-xs ${dark ? 'text-white/60' : 'text-zinc-400'}`}>{(typeof note === 'string' ? note : EN_NOTE).replace('{eur}', String(RATES.EUR)).replace('{cad}', String(RATES.CAD)).replace('{asOf}', asOf)}</p>}
     </div>
   )
 }

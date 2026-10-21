@@ -14,7 +14,7 @@ export function TrialForm() {
     const text = `Hi! I would like to request a trial of ${SITE.host}.\nName: ${name}\nDevice: ${device}${state ? `\nState: ${state}` : ''}`
     window.open(waLink(text), '_blank', 'noopener,noreferrer')
   }
-  const field = 'w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand'
+  const field = 'w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-zinc-50 outline-none transition focus:border-brand'
   return (
     <form onSubmit={submit} className="glass mx-auto mt-8 max-w-md space-y-4 rounded-2xl p-7 text-left">
       <label className="block text-sm">Your name<input required value={name} onChange={(e) => setName(e.target.value)} className={`${field} mt-1`} placeholder="Jane" /></label>

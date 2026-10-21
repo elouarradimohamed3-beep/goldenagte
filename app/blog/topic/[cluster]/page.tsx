@@ -40,19 +40,19 @@ export default async function Topic({ params }: { params: Promise<{ cluster: str
       <div className="mx-auto max-w-4xl px-4 pt-28 pb-12">
         <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: label, href: `/blog/topic/${k}` }]} />
         <h1 className="text-3xl font-bold sm:text-4xl">{label} guides and articles</h1>
-        <p className="mt-3 text-slate-600">{INTRO[k]} Start with our complete <Link href={clusterHref(k)} className="font-semibold text-brand-ink hover:underline">{label.toLowerCase()} guide</Link>.</p>
-        <ul className="mt-8 divide-y divide-slate-200 rounded-xl border border-slate-200">
+        <p className="mt-3 text-zinc-300">{INTRO[k]} Start with our complete <Link href={clusterHref(k)} className="font-semibold text-brand-ink hover:underline">{label.toLowerCase()} guide</Link>.</p>
+        <ul className="mt-8 divide-y divide-zinc-800 rounded-xl border border-zinc-800">
           {posts.map((p) => (
             <li key={p.slug}>
-              <Link href={`/blog/${p.slug}`} className="block px-5 py-4 transition-colors hover:bg-slate-50">
-                <span className="font-semibold text-ink">{p.title}</span>
-                <span className="mt-1 block text-sm text-slate-500">{p.description}</span>
+              <Link href={`/blog/${p.slug}`} className="block px-5 py-4 transition-colors hover:bg-white/5">
+                <span className="font-semibold text-zinc-50">{p.title}</span>
+                <span className="mt-1 block text-sm text-zinc-400">{p.description}</span>
               </Link>
             </li>
           ))}
         </ul>
         <nav aria-label="Topics" className="mt-8 flex flex-wrap gap-2 text-sm">
-          {KEYS.filter((x) => x !== k).map((x) => <Link key={x} href={`/blog/topic/${x}`} className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand-ink">{CLUSTER_LABEL[x]} guides</Link>)}
+          {KEYS.filter((x) => x !== k).map((x) => <Link key={x} href={`/blog/topic/${x}`} className="rounded-full border border-zinc-800 px-4 py-2 text-zinc-200 transition-colors hover:border-brand hover:text-brand-ink">{CLUSTER_LABEL[x]} guides</Link>)}
         </nav>
       </div>
       <PillarLinks />

@@ -10,7 +10,7 @@ export function PricingSection({ as: H = 'h2', id = 'plans', t = en.plans }: { a
         <Reveal className="mx-auto mb-10 max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[.18em] text-amber-300">{t.eyebrow}</p>
           <H className="mt-3 text-3xl font-bold !text-white sm:text-4xl">{t.title}</H>
-          <p className="mt-4 text-slate-300">{t.intro}</p>
+          <p className="mt-4 text-zinc-300">{t.intro}</p>
         </Reveal>
         <PlansGrid t={t} />
       </div>

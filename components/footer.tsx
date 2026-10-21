@@ -12,7 +12,7 @@ export function Footer() {
   const lang = useLang()
   const ui = UI[lang].footer
   return (
-    <footer dir={isRtl(lang) ? 'rtl' : 'ltr'} className="bg-ink py-16 text-sm text-slate-400">
+    <footer dir={isRtl(lang) ? 'rtl' : 'ltr'} className="border-t border-zinc-800 bg-black py-16 text-sm text-zinc-400">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <span className="flex items-center gap-2 whitespace-nowrap text-lg font-bold text-white"><span className="grid size-9 place-items-center rounded-lg bg-brand text-ink"><Tv size={18} /></span>Golden Gate<span className="text-brand">IPTV</span></span>

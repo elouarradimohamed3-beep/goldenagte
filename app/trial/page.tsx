@@ -28,13 +28,13 @@ export default function FreeTrial() {
       <div className="mx-auto max-w-4xl px-4 pt-28 pb-10">
         <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Request a trial', href: '/trial' }]} />
         <h1 className="text-center text-4xl font-bold">Request a trial</h1>
-        <p className="mx-auto mt-3 max-w-xl text-center text-slate-600">Try our IPTV service before you commit. Tell us what you will watch on and we will reply on WhatsApp with your trial login.</p>
+        <p className="mx-auto mt-3 max-w-xl text-center text-zinc-300">Try our IPTV service before you commit. Tell us what you will watch on and we will reply on WhatsApp with your trial login.</p>
         <TrialOptions />
 
         <Image src="/images/trial-kitchen.webp" alt="A man with a coffee cup watching a morning news program on a TV in his kitchen" width={1408} height={768} className="lift mt-16 w-full rounded-2xl object-cover shadow-xl" />
         <section className="mt-12">
           <h2 className="text-2xl font-bold">How the trial works</h2>
-          <ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">
+          <ol className="mt-4 list-decimal space-y-2 pl-6 text-zinc-300">
             <li>Send your name and the device you will use (Smart TV, Fire TV Stick, phone or computer).</li>
             <li>We reply on WhatsApp with next steps and your test login.</li>
             <li>Install a compatible player using our <Link href="/install" className="font-semibold text-brand-ink hover:underline">installation guide</Link>.</li>

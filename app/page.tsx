@@ -25,9 +25,9 @@ export default function Home() {
         {getByPillar('service').slice(0, 6).map((p, i) => (
           <Reveal key={p.slug} delay={i * 100}>
             <Link href={`/blog/${p.slug}`} className="lift glass spot group flex h-full flex-col rounded-2xl p-7">
-              <p className="text-xs text-slate-500">{p.readMinutes} min read</p>
+              <p className="text-xs text-zinc-400">{p.readMinutes} min read</p>
               <h3 className="mt-2 text-lg font-semibold">{p.title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{p.description}</p>
+              <p className="mt-2 text-sm text-zinc-300">{p.description}</p>
               <span className="mt-auto flex items-center gap-1 pt-5 text-sm font-semibold text-brand-ink">Read article <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
             </Link>
           </Reveal>

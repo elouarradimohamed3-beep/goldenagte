@@ -70,10 +70,10 @@ export default async function PillarPageRoute({ params }: { params: Promise<{ pi
       <article className="mx-auto max-w-3xl px-4 pt-28 pb-12">
         <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: pillar.label, href: `/${page.slug}` }]} />
         <h1 className="text-3xl leading-tight font-bold sm:text-4xl">{page.h1}</h1>
-        <p className="mt-3 text-sm text-slate-500">Updated {new Date(page.updated).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })} · By the {SITE.name} team</p>
-        <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft p-5">
+        <p className="mt-3 text-sm text-zinc-400">Updated {new Date(page.updated).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })} · By the {SITE.name} team</p>
+        <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand/10 p-5">
           <p className="text-sm font-semibold tracking-wide text-brand-ink uppercase">Quick answer</p>
-          <p className="mt-2 text-ink">{page.answer}</p>
+          <p className="mt-2 text-zinc-50">{page.answer}</p>
         </div>
         {PILLAR_IMAGES[page.slug] && <Image src={PILLAR_IMAGES[page.slug].src} alt={PILLAR_IMAGES[page.slug].alt} width={1408} height={768} priority className="mt-6 w-full rounded-2xl object-cover shadow-lg" />}
         <div className="mt-6"><Toc body={page.body} /></div>
@@ -90,9 +90,9 @@ export default async function PillarPageRoute({ params }: { params: Promise<{ pi
 
         <section className="mt-14">
           <h2 className="text-2xl font-bold">All {pillar.label.toLowerCase()} guides</h2>
-          <p className="mt-2 text-slate-600">{guides.length} in-depth articles on {pillar.keyword}.</p>
+          <p className="mt-2 text-zinc-300">{guides.length} in-depth articles on {pillar.keyword}.</p>
           <ul className="mt-5 grid gap-x-8 gap-y-2.5 sm:grid-cols-2">
-            {guides.map((g) => <li key={g.slug}><Link href={`/blog/${g.slug}`} className="text-sm text-slate-700 transition-colors hover:text-brand-ink hover:underline">{g.title}</Link></li>)}
+            {guides.map((g) => <li key={g.slug}><Link href={`/blog/${g.slug}`} className="text-sm text-zinc-200 transition-colors hover:text-brand-ink hover:underline">{g.title}</Link></li>)}
           </ul>
         </section>
       </article>

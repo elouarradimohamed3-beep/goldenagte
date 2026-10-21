@@ -48,9 +48,9 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <JsonLd data={ld} />
       <Hero t={t} home={home} />
 
-      <div className="marquee relative overflow-hidden border-y border-slate-200 bg-white py-4 [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]" aria-hidden dir="ltr">
+      <div className="marquee relative overflow-hidden border-y border-zinc-800 bg-zinc-900 py-4 [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]" aria-hidden dir="ltr">
         <div className="marquee-track flex w-max gap-3 whitespace-nowrap">
-          {[...t.genres.items, ...t.genres.items, ...t.genres.items, ...t.genres.items].map((g, k) => <span key={k} className="rounded-full border border-slate-200 bg-slate-50 px-5 py-2 text-sm font-medium text-slate-600">{g.title}</span>)}
+          {[...t.genres.items, ...t.genres.items, ...t.genres.items, ...t.genres.items].map((g, k) => <span key={k} className="rounded-full border border-zinc-800 bg-zinc-950 px-5 py-2 text-sm font-medium text-zinc-300">{g.title}</span>)}
         </div>
       </div>
 
@@ -59,7 +59,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <section className="px-4 pt-20 pb-4">
         <Reveal className="mx-auto max-w-4xl">
           <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-brand-ink">{t.devices.eyebrow}</p>
-          <div className="lift overflow-hidden rounded-2xl border border-slate-200 bg-white" dir="ltr">
+          <div className="lift overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900" dir="ltr">
             <Image src="/images/devices-lineup.webp" alt={t.devices.alt} width={1340} height={315} className="mx-auto h-auto w-full" />
           </div>
         </Reveal>
@@ -68,7 +68,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <Section eyebrow={t.service.eyebrow} title={t.service.title}>
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
           <Reveal>
-            <p className="text-lg text-ink">{rich(t.service.p1)}</p>
+            <p className="text-lg text-zinc-50">{rich(t.service.p1)}</p>
             <p className="mt-4">{rich(t.service.p2, { sub: <Link href="/iptv-subscription" className={A}>{t.service.sub}</Link>, prem: <Link href="/iptv-premium" className={A}>{t.service.prem}</Link>, usa: <Link href="/iptv-usa" className={A}>{t.service.usa}</Link> })}</p>
             <p className="mt-4">{rich(t.service.p3, { what: <Link href="/blog/what-is-iptv-service" className={A}>{t.service.what}</Link>, blog: <Link href="/blog" className={A}>{t.service.blog}</Link> })}</p>
           </Reveal>
@@ -98,9 +98,9 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           {t.why.items.map((f, i) => { const I = WHY_ICONS[i]; return (
             <Reveal key={f.title} delay={i * 80}>
               <div className="lift glass spot group icon-spin h-full rounded-2xl p-7">
-                <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand-ink transition group-hover:bg-brand group-hover:text-ink"><I size={22} /></span>
+                <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-ink transition group-hover:bg-brand group-hover:text-ink"><I size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{f.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">{f.body}</p>
               </div>
             </Reveal>
           )})}
@@ -113,7 +113,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <Reveal className="mx-auto max-w-6xl px-4 py-28 sm:py-36">
           <h2 className="max-w-xl text-3xl font-bold !text-white sm:text-5xl">{t.band.title}</h2>
           <p className="mt-4 max-w-lg text-lg text-white/80">{t.band.body}</p>
-          <Link href={plansHref} className="mt-8 inline-flex items-center gap-2 btn-shine press rounded-lg bg-white px-8 py-3.5 font-semibold text-brand-ink shadow-xl transition hover:scale-105">{t.band.cta} <ArrowRight size={18} className="rtl:rotate-180" /></Link>
+          <Link href={plansHref} className="mt-8 inline-flex items-center gap-2 btn-shine press rounded-lg bg-brand px-8 py-3.5 font-semibold text-ink shadow-xl transition hover:scale-105">{t.band.cta} <ArrowRight size={18} className="rtl:rotate-180" /></Link>
         </Reveal>
       </section>
 
@@ -121,13 +121,13 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <div className="relative grid gap-8 md:grid-cols-3">
           {t.steps.items.map((st, i) => (
             <Reveal key={st.title} delay={i * 140} from="zoom">
-              <div className="lift group relative h-full rounded-2xl border border-slate-200 bg-white p-4 pb-7 text-center">
+              <div className="lift group relative h-full rounded-2xl border border-zinc-800 bg-zinc-900 p-4 pb-7 text-center">
                 <div className="overflow-hidden rounded-xl">
                   <Image src={`/images/${STEP_IMAGES[i]}.webp`} alt="" width={1408} height={768} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <span className="pulse-ring relative mx-auto -mt-7 grid size-14 place-items-center rounded-full border-4 border-white bg-ink text-xl font-bold text-white">{i + 1}</span>
                 <h3 className="mt-5 text-lg font-semibold">{st.title}</h3>
-                <p className="mx-auto mt-2 max-w-xs text-sm text-slate-600">{st.body}</p>
+                <p className="mx-auto mt-2 max-w-xs text-sm text-zinc-300">{st.body}</p>
               </div>
             </Reveal>
           ))}
@@ -153,7 +153,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
                 <span className="relative grid size-11 place-items-center rounded-lg bg-white/15 text-amber-200 backdrop-blur-sm"><I size={22} /></span>
                 <div className="absolute inset-x-6 bottom-6">
                   <h3 className="text-lg font-semibold !text-white">{g.title}</h3>
-                  <p className="mt-1 text-sm text-slate-300">{g.body}</p>
+                  <p className="mt-1 text-sm text-zinc-300">{g.body}</p>
                 </div>
               </div>
             </Reveal>
@@ -167,8 +167,8 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           {t.explore.features.map((a, i) => { const I = FEAT_ICONS[i]; return (
             <Reveal key={a.title} delay={i * 100}>
               <article className="flex gap-4">
-                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand-ink"><I size={22} /></span>
-                <div><h3 className="font-semibold">{a.title}</h3><p className="mt-1 text-sm leading-relaxed text-slate-600">{a.body}</p></div>
+                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand/10 text-brand-ink"><I size={22} /></span>
+                <div><h3 className="font-semibold">{a.title}</h3><p className="mt-1 text-sm leading-relaxed text-zinc-300">{a.body}</p></div>
               </article>
             </Reveal>
           )})}
@@ -180,9 +180,9 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           {t.infra.items.map((a, i) => { const I = INFRA_ICONS[i]; return (
             <Reveal key={a.title} delay={i * 90}>
               <article className="lift glass spot icon-spin h-full rounded-2xl p-6">
-                <div className="flex items-center justify-between"><span className="grid size-11 place-items-center rounded-xl bg-brand text-ink"><I size={20} /></span><span className="text-3xl font-black text-slate-200" dir="ltr">0{i + 1}</span></div>
+                <div className="flex items-center justify-between"><span className="grid size-11 place-items-center rounded-xl bg-brand text-ink"><I size={20} /></span><span className="text-3xl font-black text-zinc-200" dir="ltr">0{i + 1}</span></div>
                 <h3 className="mt-4 font-semibold">{a.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{a.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">{a.body}</p>
               </article>
             </Reveal>
           )})}
@@ -193,7 +193,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4" dir="ltr">
           {[1, 2, 3, 4].map((n, i) => (
             <Reveal key={n} delay={i * 100} from="zoom">
-              <div className="lift overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+              <div className="lift overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 shadow-lg">
                 <Image src={`/images/chat-${n}.webp`} alt={`${t.customers.alt} ${n}`} width={569} height={1011} className="h-auto w-full" />
               </div>
             </Reveal>
@@ -204,12 +204,12 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <Section tone="soft" eyebrow={t.compare.eyebrow} title={t.compare.title}>
         <Reveal>
           <div className="glass mx-auto max-w-4xl overflow-hidden rounded-2xl">
-            <div className="grid grid-cols-3 bg-slate-50 text-sm font-semibold"><span className="p-4" /><span className="p-4 text-slate-500">{t.compare.cable}</span><span className="p-4 text-brand-ink">{t.compare.us}</span></div>
+            <div className="grid grid-cols-3 bg-zinc-950 text-sm font-semibold"><span className="p-4" /><span className="p-4 text-zinc-400">{t.compare.cable}</span><span className="p-4 text-brand-ink">{t.compare.us}</span></div>
             {t.compare.rows.map(([k, a, b]) => (
-              <div key={k} className="grid grid-cols-3 border-t border-slate-100 text-sm transition-colors hover:bg-brand-soft/40">
-                <span className="p-4 font-medium text-ink">{k}</span>
-                <span className="flex gap-2 p-4 text-slate-500"><XIcon size={16} className="mt-0.5 shrink-0 text-red-400" />{a}</span>
-                <span className="flex gap-2 p-4 text-slate-700"><Check size={16} className="mt-0.5 shrink-0 text-emerald-500" />{b}</span>
+              <div key={k} className="grid grid-cols-3 border-t border-zinc-800 text-sm transition-colors hover:bg-brand/5">
+                <span className="p-4 font-medium text-zinc-50">{k}</span>
+                <span className="flex gap-2 p-4 text-zinc-400"><XIcon size={16} className="mt-0.5 shrink-0 text-red-400" />{a}</span>
+                <span className="flex gap-2 p-4 text-zinc-200"><Check size={16} className="mt-0.5 shrink-0 text-emerald-500" />{b}</span>
               </div>
             ))}
           </div>

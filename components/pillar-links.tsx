@@ -13,7 +13,7 @@ export function PillarLinks({ title = 'Explore our IPTV guides', exclude, t }: {
         {items.map((i) => (
           <Link key={i.href} href={i.href} className="card-hover glass group flex flex-col rounded-2xl p-6">
             <h3 className="text-lg font-semibold">{i.label}</h3>
-            <p className="mt-2 text-sm text-slate-600">{i.blurb}</p>
+            <p className="mt-2 text-sm text-zinc-300">{i.blurb}</p>
             <span className="mt-auto flex items-center gap-1 pt-4 text-sm font-semibold text-brand-ink">{t ? t.readGuide : 'Read the guide'} <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180" /></span>
           </Link>
         ))}

@@ -15,7 +15,7 @@ export function PlansGrid({ t }: { t: Dict['plans'] }) {
       <div className="mb-6"><CurrencySwitcher tone="dark" note={t.currencyNote} asOf={t.asOf} /></div>
       <div role="tablist" className="mx-auto mb-12 flex w-fit max-w-full flex-wrap justify-center rounded-lg border border-white/15 bg-white/10 p-1">
         {tabs.map(([k, l]) => (
-          <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`press rounded-md px-4 py-2 text-sm font-semibold transition-all duration-300 sm:px-6 ${tab === k ? 'bg-white text-ink' : 'text-white/80 hover:text-white'}`}>{l}</button>
+          <button key={k} role="tab" aria-selected={tab === k} onClick={() => setTab(k)} className={`press rounded-md px-4 py-2 text-sm font-semibold transition-all duration-300 sm:px-6 ${tab === k ? 'bg-zinc-900 text-zinc-50' : 'text-white/80 hover:text-white'}`}>{l}</button>
         ))}
       </div>
       <div key={tab} className="fade-up-stagger grid gap-6 pt-3 sm:grid-cols-2 lg:grid-cols-3">
