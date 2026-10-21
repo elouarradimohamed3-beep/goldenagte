@@ -9,12 +9,13 @@
   --color-ink: #0a0a0a;
   --color-navy: #1c1c1c;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), Georgia, serif;
 }
 
 html { scroll-behavior: smooth; }
 body { background: #0a0a0a; color: #d4d4d8; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.025em; color: #fafafa; font-weight: 700; }
+h1, h2 { font-family: var(--font-display); letter-spacing: -0.01em; color: #fafafa; font-weight: 500; }
+h3 { font-family: var(--font-sans); letter-spacing: -0.01em; color: #fafafa; font-weight: 600; }
 section[id] { scroll-margin-top: 90px; }
 
 /* cards */
@@ -90,3 +91,15 @@ section[id] { scroll-margin-top: 90px; }
 html { color-scheme: dark; }
 select, input, textarea { color: #fafafa; }
 option { background: #18181b; color: #fafafa; }
+
+/* Luxury: calm motion. Attention effects are neutralised site-wide. */
+.pulse-ring { animation: none !important; }
+.btn-shine::after { display: none; }
+.wiggle, .icon-spin:hover svg { animation: none !important; }
+.underline-draw::after { display: none; }
+.lift:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -28px rgba(0, 0, 0, .9); }
+.eyebrow { display: inline-flex; align-items: center; gap: .75rem; font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; color: var(--color-brand); font-weight: 500; }
+.eyebrow::before, .eyebrow::after { content: ""; height: 1px; width: 2rem; background: linear-gradient(90deg, transparent, var(--color-brand)); }
+.eyebrow::after { background: linear-gradient(90deg, var(--color-brand), transparent); }
+@media (max-width: 640px) { .eyebrow { letter-spacing: .18em; font-size: .66rem; gap: .5rem; } .eyebrow::before, .eyebrow::after { display: none; } }
+.hairline { border-color: rgba(201, 162, 39, .18); }

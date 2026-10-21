@@ -1,40 +1,40 @@
+import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Check } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Counter } from './counter'
-import { DeviceMockup } from './device-mockup'
 import { TrialButton } from './trial-button'
 import { rich } from '@/lib/i18n/rich'
 import type { Dict } from '@/lib/i18n/en'
 
 export function Hero({ t, home = '/' }: { t: Pick<Dict, 'hero' | 'stats'>; home?: string }) {
   const { hero, stats } = t
-  const link = (href: string, text: string) => <Link href={href} className="font-semibold text-brand-ink hover:underline">{text}</Link>
+  const link = (href: string, text: string) => <Link href={href} className="text-zinc-50 underline decoration-brand/60 underline-offset-4 transition-colors hover:text-brand">{text}</Link>
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-zinc-950 to-[#0a0a0a] px-4 pt-32 pb-16 sm:pt-40">
-      <div className="bg-dots absolute inset-0 -z-10" />
-      <div className="orb absolute -top-24 start-[8%] -z-10 size-96 rounded-full bg-amber-200/30 blur-[100px]" />
-      <div className="orb absolute top-40 end-[4%] -z-10 size-96 rounded-full bg-zinc-500/20 blur-[110px]" style={{ animationDelay: '-8s' }} />
-      <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-[1.05fr_1fr]">
-        <div className="fade-up-stagger">
-          <p className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900 px-3.5 py-1.5 text-xs font-semibold text-zinc-300">{hero.badge}</p>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">{hero.h1}</h1>
-          <p className="mt-6 max-w-xl text-lg text-zinc-300">{rich(hero.p, { sub: link('/iptv-subscription', hero.sub), prem: link('/iptv-premium', hero.prem), usa: link('/iptv-usa', hero.usa) })}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={`${home === '/' ? '' : home}/#plans`.replace('//', '/')} className="btn-shine pulse-ring press group inline-flex items-center gap-2 rounded-lg bg-brand px-7 py-3.5 font-semibold text-ink transition-colors hover:bg-brand-dark">{hero.subscribe} <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" /></Link>
-            <TrialButton label={hero.trial} className="press rounded-lg border border-zinc-700 bg-zinc-900 px-7 py-3.5 font-semibold text-zinc-50 transition-colors hover:border-brand hover:text-brand-ink" />
+    <section className="relative isolate overflow-hidden bg-black">
+      <Image src="/images/family-living-room.webp" alt="" fill priority sizes="100vw" className="-z-20 object-cover object-[70%_center] opacity-55" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/85 to-black/20 rtl:bg-gradient-to-l" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+
+      <div className="mx-auto max-w-6xl px-4 pt-40 pb-20 sm:pt-48 sm:pb-28">
+        <div className="fade-up-stagger max-w-2xl">
+          <p className="eyebrow">{hero.badge}</p>
+          <h1 className="mt-7 text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.25rem]">{hero.h1}</h1>
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-zinc-300">{rich(hero.p, { sub: link('/iptv-subscription', hero.sub), prem: link('/iptv-premium', hero.prem), usa: link('/iptv-usa', hero.usa) })}</p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link href={`${home === '/' ? '' : home}/#plans`.replace('//', '/')} className="press group inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 font-semibold text-ink transition-colors hover:bg-[#d8b33a]">{hero.subscribe} <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" /></Link>
+            <TrialButton label={hero.trial} className="press rounded-full border border-white/25 px-8 py-4 font-medium text-zinc-100 transition-colors hover:border-brand hover:text-brand" />
           </div>
-          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-300">
-            {hero.checks.map((c) => <li key={c} className="flex items-center gap-2"><Check size={16} className="text-brand-ink" />{c}</li>)}
+          <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-2 text-sm text-zinc-400">
+            {hero.checks.map((c) => <li key={c} className="flex items-center gap-2.5"><span className="size-1.5 rounded-full bg-brand" />{c}</li>)}
           </ul>
         </div>
-        <div className="pop-in pb-10" dir="ltr" style={{ animationDelay: '.3s' }}><DeviceMockup /></div>
       </div>
 
-      <dl className="mx-auto mt-20 grid max-w-6xl grid-cols-2 divide-zinc-800 rounded-2xl border border-zinc-800 bg-zinc-900 lg:grid-cols-4 lg:divide-x rtl:lg:divide-x-reverse">
-        {stats.map((s) => (
-          <div key={s.label} className="lift p-6 text-center">
-            <dt className="text-3xl font-bold text-zinc-50 sm:text-4xl" dir="ltr"><Counter to={s.to} suffix={s.suffix} /></dt>
-            <dd className="mt-1 text-sm text-zinc-400">{s.label}</dd>
+      <dl className="mx-auto grid max-w-6xl grid-cols-2 border-t hairline lg:grid-cols-4">
+        {stats.map((s, i) => (
+          <div key={s.label} className={`px-4 py-8 text-center ${i ? 'lg:border-s hairline' : ''}`}>
+            <dt className="font-display text-4xl text-zinc-50 sm:text-5xl" dir="ltr"><Counter to={s.to} suffix={s.suffix} /></dt>
+            <dd className="mt-2 text-xs tracking-[.2em] text-zinc-500 uppercase">{s.label}</dd>
           </div>
         ))}
       </dl>

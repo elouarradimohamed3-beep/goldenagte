@@ -48,20 +48,15 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <JsonLd data={ld} />
       <Hero t={t} home={home} />
 
-      <div className="marquee relative overflow-hidden border-y border-zinc-800 bg-zinc-900 py-4 [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]" aria-hidden dir="ltr">
-        <div className="marquee-track flex w-max gap-3 whitespace-nowrap">
-          {[...t.genres.items, ...t.genres.items, ...t.genres.items, ...t.genres.items].map((g, k) => <span key={k} className="rounded-full border border-zinc-800 bg-zinc-950 px-5 py-2 text-sm font-medium text-zinc-300">{g.title}</span>)}
-        </div>
-      </div>
 
       <PricingSection t={t.plans} />
 
-      <section className="px-4 pt-20 pb-4">
-        <Reveal className="mx-auto max-w-4xl">
-          <p className="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-brand-ink">{t.devices.eyebrow}</p>
-          <div className="lift overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900" dir="ltr">
-            <Image src="/images/devices-lineup.webp" alt={t.devices.alt} width={1340} height={315} className="mx-auto h-auto w-full" />
-          </div>
+      <section className="border-y hairline bg-[#0d0d0d] px-4 py-10">
+        <Reveal className="mx-auto max-w-5xl text-center">
+          <p className="eyebrow">{t.devices.eyebrow}</p>
+          <p className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm tracking-[.14em] text-zinc-400 uppercase" dir="ltr">
+            {['Smart TV', 'Fire TV', 'Android TV', 'iPhone · iPad', 'Android', 'Windows · Mac', 'MAG'].map((d, i) => <span key={d} className="flex items-center gap-6">{i > 0 && <span className="size-1 rounded-full bg-brand/60" />}{d}</span>)}
+          </p>
         </Reveal>
       </section>
 
@@ -108,7 +103,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       </Section>
 
       <section className="relative isolate overflow-hidden">
-        <Image src="/images/family-living-room.webp" alt={t.band.alt} width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />
+        <Image src="/images/band-stadium.webp" alt={t.band.alt} width={1408} height={768} className="absolute inset-0 -z-10 size-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/60 to-transparent rtl:bg-gradient-to-l" />
         <Reveal className="mx-auto max-w-6xl px-4 py-28 sm:py-36">
           <h2 className="max-w-xl text-3xl font-bold !text-white sm:text-5xl">{t.band.title}</h2>

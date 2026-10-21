@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { Menu, Tv, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import { Logo } from './logo'
 import { waLink } from '@/lib/site'
 import { CurrencySwitcher } from './currency-switcher'
 import { LangSwitcher } from './lang-switcher'
@@ -25,19 +26,16 @@ export function Header() {
     return () => window.removeEventListener('scroll', on)
   }, [])
   return (
-    <header dir={isRtl(lang) ? 'rtl' : 'ltr'} className={`fixed inset-x-0 top-0 z-50 border-b bg-zinc-950/90 backdrop-blur transition-shadow ${scrolled || open ? 'border-zinc-800 shadow-sm' : 'border-transparent'}`}>
+    <header dir={isRtl(lang) ? 'rtl' : 'ltr'} className={`fixed inset-x-0 top-0 z-50 border-b bg-black/80 backdrop-blur-xl transition-shadow ${scrolled || open ? 'border-brand/15' : 'border-transparent'}`}>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4">
-        <Link href="/" className="flex items-center gap-2.5 whitespace-nowrap text-base font-bold text-zinc-50 sm:text-lg">
-          <span className="grid size-9 shrink-0 place-items-center rounded-lg border border-brand/40 bg-ink text-brand"><Tv size={18} /></span>
-          Golden Gate <span className="text-brand-ink">IPTV</span>
-        </Link>
+        <Link href="/" aria-label="Golden Gate IPTV home"><Logo compact /></Link>
         <nav className="hidden items-center gap-6 whitespace-nowrap text-sm font-medium text-zinc-300 xl:flex">
-          {NAV.map(([l, h]) => <Link key={h} href={h} className="transition-colors hover:text-brand-ink">{l}</Link>)}
+          {NAV.map(([l, h]) => <Link key={h} href={h} className="transition-colors hover:text-brand">{l}</Link>)}
         </nav>
         <div className="flex items-center gap-2">
           <div className="hidden xl:block"><LangSwitcher /></div>
           <div className="hidden 2xl:block"><CurrencySwitcher /></div>
-          <a href={waLink('want buy 1 Day')} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-brand-dark sm:px-5">{ui.tryNow}</a>
+          <a href={waLink('want buy 1 Day')} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-full border border-brand/70 px-4 py-2 text-sm sm:px-5 font-medium tracking-wide text-brand transition-colors hover:bg-brand hover:text-ink">{ui.tryNow}</a>
           <button aria-label={ui.menu} className="grid size-10 place-items-center rounded-lg text-zinc-50 xl:hidden" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
         </div>
       </div>

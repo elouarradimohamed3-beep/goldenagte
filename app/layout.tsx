@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SITE } from '@/lib/site'
 import { FOCUS } from '@/lib/seo'
-import { Inter, Noto_Sans_Arabic } from 'next/font/google'
+import { Inter, Noto_Sans_Arabic, Noto_Serif_Display } from 'next/font/google'
 import { LangRedirect } from '@/components/lang-redirect'
 import { OfferPopup } from '@/components/offer-popup'
 import { GoogleAnalytics } from '@/components/google-analytics'
@@ -15,6 +15,7 @@ import { CurrencyProvider } from '@/components/currency-provider'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin', 'latin-ext', 'greek'], variable: '--font-inter', display: 'swap' })
+const serif = Noto_Serif_Display({ subsets: ['latin', 'latin-ext', 'greek'], weight: ['500', '600'], variable: '--font-serif', display: 'swap' })
 const arabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-arabic', display: 'swap' })
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export const viewport: Viewport = { themeColor: '#0b1b3a', width: 'device-width'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${arabic.variable}`}>
+    <html lang="en" className={`${inter.variable} ${serif.variable} ${arabic.variable}`}>
       <body className="antialiased">
         <CurrencyProvider>
         <LangRedirect />
