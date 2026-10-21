@@ -11,9 +11,17 @@ export function Effects() {
       bar.style.setProperty('--p', String(max > 0 ? window.scrollY / max : 0))
       setTop(window.scrollY > 800)
     }
+    const onMove = (e: PointerEvent) => {
+      const el = (e.target as HTMLElement | null)?.closest?.('.spot') as HTMLElement | null
+      if (!el) return
+      const r = el.getBoundingClientRect()
+      el.style.setProperty('--mx', `${e.clientX - r.left}px`)
+      el.style.setProperty('--my', `${e.clientY - r.top}px`)
+    }
     onScroll()
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.addEventListener('pointermove', onMove, { passive: true })
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => { window.removeEventListener('scroll', onScroll) }
+    return () => { window.removeEventListener('scroll', onScroll); document.removeEventListener('pointermove', onMove) }
   }, [])
   return (
     <>

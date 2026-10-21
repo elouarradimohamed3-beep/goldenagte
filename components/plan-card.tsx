@@ -15,7 +15,7 @@ export function PlanCard({ plan, t }: { plan: Plan; t: Dict['plans']; index?: nu
   const label = isPremium ? t.premium[plan.connections - 1] : t.durations[MONTH_INDEX[plan.months ?? 1]]
   const per = plan.months === 0 ? t.oneDay : plan.months === 1 ? t.billed : plan.months && plan.months > 1 ? null : t.fullYear
   return (
-    <div className={`relative flex h-full flex-col rounded-2xl bg-zinc-900 p-7 text-zinc-300 shadow-sm transition-shadow hover:shadow-xl lift ${hot ? 'pulse-ring ring-2 ring-brand' : 'ring-1 ring-zinc-800'}`}>
+    <div className={`relative flex h-full flex-col rounded-2xl bg-zinc-900 p-7 text-zinc-300 shadow-sm transition-shadow hover:shadow-xl lift ${hot ? 'neon-border' : 'ring-1 ring-zinc-800'} spot`}>
       {plan.badge && <span className={`absolute -top-3 start-7 rounded-full px-3 py-1 text-xs font-semibold text-white ${hot ? 'bg-brand' : 'bg-ink'}`}>{plan.badge === 'World Cup' ? t.worldCup : t.popular}</span>}
       <h3 className="text-lg font-semibold text-zinc-50">{label}</h3>
       <div className="mt-4 text-zinc-50" dir="ltr"><Price usd={plan.price} /></div>

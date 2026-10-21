@@ -113,3 +113,30 @@ option { background: #18181b; color: #fafafa; }
 .eyebrow::before { content: ""; width: .45rem; height: .45rem; border-radius: 999px; background: #22d3ee; box-shadow: 0 0 12px #22d3ee; }
 .hairline { border-color: #29253f; }
 .bg-grid-neon { background-image: linear-gradient(rgb(255 255 255 / .04) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / .04) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at 40% 30%, #000 20%, transparent 70%); }
+
+/* ---------- Full motion layer ---------- */
+@keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes guide { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+@keyframes live { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgb(239 68 68 / .7); } 50% { opacity: .6; box-shadow: 0 0 0 5px rgb(239 68 68 / 0); } }
+@keyframes spin-angle { to { --angle: 360deg; } }
+@keyframes blur-in { from { opacity: 0; filter: blur(10px); transform: translateY(18px); } to { opacity: 1; filter: blur(0); transform: none; } }
+@keyframes sheen { from { background-position: -200% 0; } to { background-position: 200% 0; } }
+@property --angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.guide-scroll { animation: guide 16s linear infinite; }
+.live-dot { animation: live 1.6s ease-in-out infinite; }
+.progress { height: 3px; background: linear-gradient(90deg, #e11d48, #c026d3, #22d3ee); box-shadow: 0 0 12px rgb(192 38 211 / .7); }
+.reveal { filter: blur(6px); transition-property: opacity, transform, filter; }
+.reveal.in { filter: none; }
+/* cursor spotlight on cards */
+.spot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(22rem circle at var(--mx, 50%) var(--my, 50%), rgb(192 38 211 / .16), transparent 45%); }
+.spot:hover::after { opacity: 1; }
+/* animated gradient border for featured cards */
+.neon-border { position: relative; }
+.neon-border::before { content: ""; position: absolute; inset: -1.5px; border-radius: inherit; padding: 1.5px; pointer-events: none; background: conic-gradient(from var(--angle), #e11d48, #c026d3, #7c3aed, #22d3ee, #e11d48); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: spin-angle 5s linear infinite; }
+/* section heading entrance */
+.reveal.in h2 { animation: blur-in .9s cubic-bezier(.2,.8,.2,1) both; }
+/* animated gradient text */
+.text-gradient-neon { background-size: 200% auto; animation: sheen 6s linear infinite; background-image: linear-gradient(90deg, #fb7185, #e879f9, #a78bfa, #22d3ee, #fb7185); }
+/* step connector */
+.step-line { position: absolute; top: 28px; inset-inline: 16%; height: 2px; background: linear-gradient(90deg, #e11d48, #c026d3, #22d3ee); background-size: 200% 100%; animation: sheen 4s linear infinite; opacity: .5; }
+@media (prefers-reduced-motion: reduce) { .guide-scroll, .live-dot, .neon-border::before, .text-gradient-neon, .step-line { animation: none !important; } .reveal { filter: none; } }

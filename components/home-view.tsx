@@ -54,9 +54,11 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
       <section className="border-y hairline bg-[#0d0d0d] px-4 py-10">
         <Reveal className="mx-auto max-w-5xl text-center">
           <p className="eyebrow">{t.devices.eyebrow}</p>
-          <p className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm tracking-[.14em] text-zinc-400 uppercase" dir="ltr">
-            {['Smart TV', 'Fire TV', 'Android TV', 'iPhone · iPad', 'Android', 'Windows · Mac', 'MAG'].map((d, i) => <span key={d} className="flex items-center gap-6">{i > 0 && <span className="size-1 rounded-full bg-brand/60" />}{d}</span>)}
-          </p>
+          <div className="marquee relative mt-6 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]" dir="ltr">
+            <div className="marquee-track flex w-max gap-3">
+              {[0, 1, 2, 3].flatMap((r) => ['Smart TV', 'Fire TV Stick', 'Android TV', 'iPhone', 'iPad', 'Android', 'Windows', 'Mac', 'MAG box', 'Smart TV box'].map((d) => <span key={`${r}-${d}`} className="whitespace-nowrap rounded-full border border-zinc-800 bg-zinc-900 px-5 py-2 text-sm font-medium text-zinc-300">{d}</span>))}
+            </div>
+          </div>
         </Reveal>
       </section>
 
@@ -114,13 +116,14 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
 
       <Section eyebrow={t.steps.eyebrow} title={t.steps.title}>
         <div className="relative grid gap-8 md:grid-cols-3">
+          <div className="step-line hidden md:block" />
           {t.steps.items.map((st, i) => (
             <Reveal key={st.title} delay={i * 140} from="zoom">
               <div className="lift group relative h-full rounded-2xl border border-zinc-800 bg-zinc-900 p-4 pb-7 text-center">
                 <div className="overflow-hidden rounded-xl">
                   <Image src={`/images/${STEP_IMAGES[i]}.webp`} alt="" width={1408} height={768} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <span className="pulse-ring relative mx-auto -mt-7 grid size-14 place-items-center rounded-full border-4 border-white bg-ink text-xl font-bold text-white">{i + 1}</span>
+                <span className="pulse-ring relative mx-auto -mt-7 grid size-14 place-items-center rounded-full border-4 border-[#12101d] bg-brand text-xl font-bold text-white">{i + 1}</span>
                 <h3 className="mt-5 text-lg font-semibold">{st.title}</h3>
                 <p className="mx-auto mt-2 max-w-xs text-sm text-zinc-300">{st.body}</p>
               </div>
