@@ -11,7 +11,7 @@ function isCta(children: React.ReactNode) {
 
 export function Markdown({ children, fallbackAlt = '' }: { children: string; fallbackAlt?: string }) {
   return (
-    <div className="prose prose-slate prose-lg max-w-none prose-headings:scroll-mt-24 prose-headings:text-ink prose-a:text-brand prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-sm prose-strong:text-ink">
+    <div className="prose prose-slate prose-lg max-w-none prose-headings:scroll-mt-24 prose-headings:text-ink prose-a:text-brand-ink prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-sm prose-strong:text-ink">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}
@@ -23,7 +23,7 @@ export function Markdown({ children, fallbackAlt = '' }: { children: string; fal
           ),
           table: ({ children }) => <div className="my-6 overflow-x-auto rounded-xl border border-slate-200"><table className="!my-0 w-full">{children}</table></div>,
           h4: ({ children }) => isCta(children)
-            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-white [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
+            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-ink [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
             : <h4>{children}</h4>,
         }}
       >

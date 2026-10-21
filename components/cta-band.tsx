@@ -14,7 +14,7 @@ export function CtaBand({ t = en.cta, home = '' }: { t?: Dict['cta']; home?: str
           <h2 className="text-3xl font-bold !text-white sm:text-4xl">{t.title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-slate-300">{t.body}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href={`${home}/#plans`} className="btn-shine pulse-ring press rounded-lg bg-brand px-7 py-3 font-semibold text-white transition-colors hover:bg-brand-dark">{t.seePlans}</Link>
+            <Link href={`${home}/#plans`} className="btn-shine pulse-ring press rounded-lg bg-brand px-7 py-3 font-semibold text-ink transition-colors hover:bg-brand-dark">{t.seePlans}</Link>
             <Link href="/contact" className="rounded-lg border border-white/25 px-7 py-3 font-semibold text-white transition-colors hover:bg-white/10">{t.support}</Link>
           </div>
         </div>

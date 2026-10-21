@@ -12,7 +12,7 @@ export function Toc({ body }: { body: string }) {
     <nav aria-label="Table of contents" className="rounded-xl border border-slate-200 bg-slate-50 p-5">
       <p className="text-sm font-semibold text-ink">In this guide</p>
       <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm text-slate-600 marker:text-slate-400">
-        {hs.map((h) => <li key={h.id}><a href={`#${h.id}`} className="transition-colors hover:text-brand">{h.text}</a></li>)}
+        {hs.map((h) => <li key={h.id}><a href={`#${h.id}`} className="transition-colors hover:text-brand-ink">{h.text}</a></li>)}
       </ol>
     </nav>
   )

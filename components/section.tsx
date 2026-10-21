@@ -5,7 +5,7 @@ export function Section({ title, eyebrow, intro, children, id, tone = 'white' }:
     <section id={id} className={`py-20 sm:py-24 ${tone === 'soft' ? 'border-y border-slate-200 bg-slate-50' : ''}`}>
       <div className="mx-auto max-w-6xl px-4">
         <Reveal className="mx-auto mb-12 max-w-2xl text-center">
-          {eyebrow && <p className="mb-3 text-xs font-semibold uppercase tracking-[.18em] text-brand">{eyebrow}</p>}
+          {eyebrow && <p className="mb-3 text-xs font-semibold uppercase tracking-[.18em] text-brand-ink">{eyebrow}</p>}
           <h2 className="text-3xl font-bold sm:text-4xl"><span className="underline-draw">{title}</span></h2>
           {intro && <p className="mt-4 text-slate-600">{intro}</p>}
         </Reveal>

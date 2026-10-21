@@ -14,7 +14,7 @@ export function FaqList({ items = FAQ }: { items?: { q: string; a: string }[] })
           <Reveal key={f.q}>
             <div className={`rounded-xl border transition-colors ${on ? 'border-brand/40 bg-white shadow-sm' : 'border-slate-200 bg-white'}`}>
               <button onClick={() => setOpen(on ? null : i)} aria-expanded={on} className="flex w-full items-center justify-between gap-4 p-5 text-left font-semibold">
-                {f.q}<Plus className={`shrink-0 text-brand transition-transform duration-300 ${on ? 'rotate-45' : ''}`} />
+                {f.q}<Plus className={`shrink-0 text-brand-ink transition-transform duration-300 ${on ? 'rotate-45' : ''}`} />
               </button>
               <div className={`grid transition-all duration-300 ${on ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
                 <div className="overflow-hidden"><p className="px-5 pb-5 text-slate-600">{f.a}</p></div>

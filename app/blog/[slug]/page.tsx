@@ -50,7 +50,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
     <article className="mx-auto max-w-3xl px-4 pt-28 pb-16">
       <JsonLd data={ld} />
       <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: post.title, href: `/blog/${post.slug}` }]} />
-      <Link href={hub} className="inline-block rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">{hubLabel}</Link>
+      <Link href={hub} className="inline-block rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand-ink">{hubLabel}</Link>
       <h1 className="mt-3 text-3xl leading-tight font-bold sm:text-4xl">{post.title}</h1>
       <p className="mt-3 text-sm text-slate-500">Updated {new Date(post.date).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })} · {post.readMinutes} min read · By the {SITE.name} team</p>
       <div className="mt-6"><Toc body={post.body} /></div>
@@ -66,7 +66,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
         <h2 className="text-2xl font-bold !text-white">Ready to try an IPTV subscription?</h2>
         <p className="mt-2 text-slate-300">Plans from $20 a month with a 7-day refund.</p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <Link href="/#plans" className="rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark">See plans</Link>
+          <Link href="/#plans" className="rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition-colors hover:bg-brand-dark">See plans</Link>
           <a href={waLink(`Hi! I read "${post.title}" and have a question`)} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/25 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">Ask on WhatsApp</a>
         </div>
       </div>
@@ -75,15 +75,15 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
         <section className="mt-14">
           <h2 className="text-xl font-bold">More {hubLabel.toLowerCase()} guides</h2>
           <ul className="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
-            {related.map((r) => <li key={r.slug}><Link href={`/blog/${r.slug}`} className="block px-5 py-4 font-medium text-ink transition-colors hover:bg-slate-50 hover:text-brand">{r.title}</Link></li>)}
+            {related.map((r) => <li key={r.slug}><Link href={`/blog/${r.slug}`} className="block px-5 py-4 font-medium text-ink transition-colors hover:bg-slate-50 hover:text-brand-ink">{r.title}</Link></li>)}
           </ul>
-          <p className="mt-4 text-sm"><Link href={hub} className="font-semibold text-brand">See all {total} {hubLabel.toLowerCase()} guides →</Link></p>
+          <p className="mt-4 text-sm"><Link href={hub} className="font-semibold text-brand-ink">See all {total} {hubLabel.toLowerCase()} guides →</Link></p>
         </section>
       )}
 
       <nav aria-label="IPTV guides" className="mt-10 flex flex-wrap gap-2 text-sm">
-        <Link href="/" className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand">IPTV service</Link>
-        {PILLARS.map((p) => <Link key={p.slug} href={`/${p.slug}`} className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand">{p.label}</Link>)}
+        <Link href="/" className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand-ink">IPTV service</Link>
+        {PILLARS.map((p) => <Link key={p.slug} href={`/${p.slug}`} className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand-ink">{p.label}</Link>)}
       </nav>
     </article>
   )

@@ -83,9 +83,9 @@ export function OfferPopup() {
         <div className="p-7">
           <p className="text-slate-600">{t.body.replace('{m}', moneyDecimal(plan.price / 12, currency)).replace('{full}', money(monthly.price * 12, currency))}</p>
           <p className="mt-4 flex items-start gap-2 text-sm text-slate-500"><Check size={16} className="mt-0.5 shrink-0 text-emerald-500" />{t.note}</p>
-          <a href={waLink(order)} target="_blank" rel="noopener noreferrer" onClick={dismiss} className="btn-shine pulse-ring press mt-6 block rounded-xl bg-brand py-3.5 text-center font-semibold text-white transition-colors hover:bg-brand-dark">{t.cta}</a>
+          <a href={waLink(order)} target="_blank" rel="noopener noreferrer" onClick={dismiss} className="pulse-ring press mt-6 block rounded-xl bg-brand py-3.5 text-center font-semibold text-ink transition-colors hover:bg-brand-dark">{t.cta}</a>
           <div className="mt-3 flex items-center justify-between text-sm">
-            <a href={`${homePath(lang) === '/' ? '' : homePath(lang)}/#plans`} onClick={dismiss} className="font-semibold text-brand hover:underline">{t.all}</a>
+            <a href={`${homePath(lang) === '/' ? '' : homePath(lang)}/#plans`} onClick={dismiss} className="font-semibold text-brand-ink hover:underline">{t.all}</a>
             <button onClick={dismiss} className="text-slate-500 hover:text-ink">{t.later}</button>
           </div>
         </div>

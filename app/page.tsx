@@ -28,12 +28,12 @@ export default function Home() {
               <p className="text-xs text-slate-500">{p.readMinutes} min read</p>
               <h3 className="mt-2 text-lg font-semibold">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{p.description}</p>
-              <span className="mt-auto flex items-center gap-1 pt-5 text-sm font-semibold text-brand">Read article <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
+              <span className="mt-auto flex items-center gap-1 pt-5 text-sm font-semibold text-brand-ink">Read article <ArrowRight size={16} className="transition group-hover:translate-x-1" /></span>
             </Link>
           </Reveal>
         ))}
       </div>
-      <p className="mt-8 text-center text-sm"><Link href="/blog/topic/service" className="font-semibold text-brand hover:underline">See all IPTV service guides</Link> · <Link href="/blog/topic/subscription" className="font-semibold text-brand hover:underline">IPTV subscription guides</Link> · <Link href="/blog/topic/usa" className="font-semibold text-brand hover:underline">IPTV USA guides</Link> · <Link href="/blog/topic/premium" className="font-semibold text-brand hover:underline">Premium IPTV guides</Link></p>
+      <p className="mt-8 text-center text-sm"><Link href="/blog/topic/service" className="font-semibold text-brand-ink hover:underline">See all IPTV service guides</Link> · <Link href="/blog/topic/subscription" className="font-semibold text-brand-ink hover:underline">IPTV subscription guides</Link> · <Link href="/blog/topic/usa" className="font-semibold text-brand-ink hover:underline">IPTV USA guides</Link> · <Link href="/blog/topic/premium" className="font-semibold text-brand-ink hover:underline">Premium IPTV guides</Link></p>
     </Section>
   )
   return <HomeView lang="en" t={en} guides={guides} />

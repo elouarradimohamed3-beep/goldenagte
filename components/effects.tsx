@@ -19,7 +19,7 @@ export function Effects() {
     <>
       <div className="progress" />
       <button aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`fixed bottom-5 left-5 z-50 grid size-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-md transition-all duration-300 hover:text-brand ${top ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'}`}><ArrowUp size={20} /></button>
+        className={`fixed bottom-5 left-5 z-50 grid size-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-md transition-all duration-300 hover:text-brand-ink ${top ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'}`}><ArrowUp size={20} /></button>
     </>
   )
 }

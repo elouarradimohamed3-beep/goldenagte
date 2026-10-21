@@ -40,7 +40,7 @@ export default async function Topic({ params }: { params: Promise<{ cluster: str
       <div className="mx-auto max-w-4xl px-4 pt-28 pb-12">
         <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Blog', href: '/blog' }, { name: label, href: `/blog/topic/${k}` }]} />
         <h1 className="text-3xl font-bold sm:text-4xl">{label} guides and articles</h1>
-        <p className="mt-3 text-slate-600">{INTRO[k]} Start with our complete <Link href={clusterHref(k)} className="font-semibold text-brand hover:underline">{label.toLowerCase()} guide</Link>.</p>
+        <p className="mt-3 text-slate-600">{INTRO[k]} Start with our complete <Link href={clusterHref(k)} className="font-semibold text-brand-ink hover:underline">{label.toLowerCase()} guide</Link>.</p>
         <ul className="mt-8 divide-y divide-slate-200 rounded-xl border border-slate-200">
           {posts.map((p) => (
             <li key={p.slug}>
@@ -52,7 +52,7 @@ export default async function Topic({ params }: { params: Promise<{ cluster: str
           ))}
         </ul>
         <nav aria-label="Topics" className="mt-8 flex flex-wrap gap-2 text-sm">
-          {KEYS.filter((x) => x !== k).map((x) => <Link key={x} href={`/blog/topic/${x}`} className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand">{CLUSTER_LABEL[x]} guides</Link>)}
+          {KEYS.filter((x) => x !== k).map((x) => <Link key={x} href={`/blog/topic/${x}`} className="rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition-colors hover:border-brand hover:text-brand-ink">{CLUSTER_LABEL[x]} guides</Link>)}
         </nav>
       </div>
       <PillarLinks />

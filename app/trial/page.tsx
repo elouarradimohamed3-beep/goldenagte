@@ -37,9 +37,9 @@ export default function FreeTrial() {
           <ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">
             <li>Send your name and the device you will use (Smart TV, Fire TV Stick, phone or computer).</li>
             <li>We reply on WhatsApp with next steps and your test login.</li>
-            <li>Install a compatible player using our <Link href="/install" className="font-semibold text-brand hover:underline">installation guide</Link>.</li>
+            <li>Install a compatible player using our <Link href="/install" className="font-semibold text-brand-ink hover:underline">installation guide</Link>.</li>
             <li>Test live channels, the on-demand library and the TV guide on your own connection.</li>
-            <li>If you like it, choose an <Link href="/iptv-subscription" className="font-semibold text-brand hover:underline">IPTV subscription</Link> that fits. Every paid plan has a 7-day refund.</li>
+            <li>If you like it, choose an <Link href="/iptv-subscription" className="font-semibold text-brand-ink hover:underline">IPTV subscription</Link> that fits. Every paid plan has a 7-day refund.</li>
           </ol>
                   </section>
 

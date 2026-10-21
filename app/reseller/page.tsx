@@ -27,9 +27,9 @@ export default function Reseller() {
         <div className="bg-dots absolute inset-0 -z-10" />
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           <div>
-            <h1 className="text-4xl font-bold leading-[1.1] sm:text-6xl">Best IPTV reseller in the <span className="text-brand">USA, CA and UK</span></h1>
+            <h1 className="text-4xl font-bold leading-[1.1] sm:text-6xl">Best IPTV reseller in the <span className="text-brand-ink">USA, CA and UK</span></h1>
             <p className="mt-6 max-w-xl text-lg text-slate-600">Become an IPTV reseller today. Earn real profit with a turnkey solution: premium content, strong margins and no technical hassle. Join resellers building a business with us.</p>
-            <a href={START} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">Start your IPTV business</a>
+            <a href={START} target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-ink shadow-sm transition-colors hover:bg-brand-dark">Start your IPTV business</a>
           </div>
           <Reveal from="right"><Image src="/images/reseller-partners.webp" alt="Two business partners shaking hands over a laptop showing a sales dashboard" width={1408} height={768} priority className="mx-auto w-full max-w-xl rounded-2xl object-cover shadow-2xl" /></Reveal>
         </div>
@@ -38,7 +38,7 @@ export default function Reseller() {
       <section id="packages" className="bg-ink py-24">
         <div className="mx-auto max-w-6xl px-4">
           <Reveal className="mx-auto mb-12 max-w-2xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[.18em] text-sky-300">Credit packages</p>
+            <p className="text-xs font-semibold uppercase tracking-[.18em] text-amber-300">Credit packages</p>
             <h2 className="mt-3 text-3xl font-bold !text-white sm:text-4xl">Choose your reseller package</h2>
             <p className="mt-4 text-slate-300">Buy credits in bulk and sell subscriptions at the price you choose.</p>
             <div className="mt-6"><CurrencySwitcher tone="dark" note /></div>
@@ -47,15 +47,15 @@ export default function Reseller() {
             {RESELLER_PACKAGES.map((p, i) => (
               <Reveal key={p.credits} delay={i * 80} className="h-full">
                 <div className={`relative flex h-full flex-col rounded-2xl bg-white p-7 text-slate-600 shadow-sm transition-shadow hover:shadow-xl ${i === 1 ? 'ring-2 ring-brand' : 'ring-1 ring-slate-200'}`}>
-                  {i === 1 && <span className="absolute -top-3 left-7 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">Most popular</span>}
+                  {i === 1 && <span className="absolute -top-3 left-7 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-ink">Most popular</span>}
                   <h3 className="text-lg font-semibold text-ink">{p.credits} credits</h3>
                   <div className="mt-4 text-ink"><Price usd={p.price} /></div>
                   <p className="mt-1"><OtherCurrencies usd={p.price} /></p>
                   <hr className="my-6 border-slate-200" />
                   <ul className="mb-8 flex-1 space-y-3 text-sm">
-                    {RESELLER_INCLUDES.map((x) => <li key={x} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{x}</li>)}
+                    {RESELLER_INCLUDES.map((x) => <li key={x} className="flex gap-2.5"><Check size={16} className="mt-0.5 shrink-0 text-brand-ink" />{x}</li>)}
                   </ul>
-                  <OrderLink order={`${SITE.host} - Reseller ${p.credits} Credits - ${p.price} USD`} usd={p.price} className={`rounded-lg py-3 text-center font-semibold transition-colors ${i === 1 ? 'bg-brand text-white hover:bg-brand-dark' : 'border border-brand text-brand hover:bg-brand hover:text-white'}`}>Subscribe now</OrderLink>
+                  <OrderLink order={`${SITE.host} - Reseller ${p.credits} Credits - ${p.price} USD`} usd={p.price} className={`rounded-lg py-3 text-center font-semibold transition-colors ${i === 1 ? 'bg-brand text-ink hover:bg-brand-dark' : 'border border-brand text-brand-ink hover:bg-brand hover:text-ink'}`}>Subscribe now</OrderLink>
                 </div>
               </Reveal>
             ))}
@@ -68,7 +68,7 @@ export default function Reseller() {
           {RESELLER_WHY.map((w, i) => { const I = WHY_ICONS[i]; return (
             <Reveal key={w.title} delay={i * 100}>
               <div className="lift glass spot group h-full rounded-2xl p-7">
-                <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white"><I size={22} /></span>
+                <span className="grid size-12 place-items-center rounded-2xl bg-brand-soft text-brand-ink transition group-hover:bg-brand group-hover:text-ink"><I size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{w.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{w.body}</p>
               </div>
@@ -89,7 +89,7 @@ export default function Reseller() {
                 </div>
               </Reveal>
             ))}
-            <a href={START} target="_blank" rel="noopener noreferrer" className="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">Get started now</a>
+            <a href={START} target="_blank" rel="noopener noreferrer" className="inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-ink shadow-sm transition-colors hover:bg-brand-dark">Get started now</a>
           </div>
         </div>
       </Section>

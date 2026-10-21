@@ -44,18 +44,18 @@ export function TrialOptions({ compact = false }: { compact?: boolean }) {
       </form>
 
       <div className="lift relative flex flex-col rounded-2xl border-2 border-brand bg-white p-6 shadow-sm">
-        <span className="absolute -top-3 start-6 rounded-full bg-brand px-3 py-1 text-xs font-bold text-white">{t.paidBadge}</span>
+        <span className="absolute -top-3 start-6 rounded-full bg-brand px-3 py-1 text-xs font-bold text-ink">{t.paidBadge}</span>
         <div className="flex items-center gap-3">
-          <span className="grid size-11 place-items-center rounded-xl bg-brand-soft text-brand"><Zap size={22} /></span>
+          <span className="grid size-11 place-items-center rounded-xl bg-brand-soft text-brand-ink"><Zap size={22} /></span>
           <h3 className="text-xl font-bold">{t.paidTitle}</h3>
         </div>
         <p className="mt-3 text-sm text-slate-600">{t.paidDesc}</p>
         <div className="mt-5 text-ink" dir="ltr"><Price usd={day.price} /></div>
         <p className="mt-1" dir="ltr"><OtherCurrencies usd={day.price} /></p>
         <ul className="mt-4 space-y-2 text-sm text-slate-600">
-          {UI[lang].popup.note.split(' · ').map((x) => <li key={x} className="flex gap-2"><Check size={16} className="mt-0.5 shrink-0 text-brand" />{x.charAt(0).toUpperCase() + x.slice(1)}</li>)}
+          {UI[lang].popup.note.split(' · ').map((x) => <li key={x} className="flex gap-2"><Check size={16} className="mt-0.5 shrink-0 text-brand-ink" />{x.charAt(0).toUpperCase() + x.slice(1)}</li>)}
         </ul>
-        <a href={waLink(dayOrder)} target="_blank" rel="noopener noreferrer" className="btn-shine press mt-auto block rounded-xl bg-brand py-3.5 pt-3.5 text-center font-semibold text-white transition-colors hover:bg-brand-dark">{t.buy}</a>
+        <a href={waLink(dayOrder)} target="_blank" rel="noopener noreferrer" className="btn-shine press mt-auto block rounded-xl bg-brand py-3.5 pt-3.5 text-center font-semibold text-ink transition-colors hover:bg-brand-dark">{t.buy}</a>
       </div>
     </div>
   )

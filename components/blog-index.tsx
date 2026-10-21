@@ -26,12 +26,12 @@ export function BlogIndex({ posts }: { posts: PostMeta[] }) {
       </div>
       <div className="mt-5 flex flex-wrap justify-center gap-2">
         {(['all', ...keys] as const).map((k) => (
-          <button key={k} onClick={() => { setCluster(k); setShown(PAGE) }} className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${cluster === k ? 'border-brand bg-brand text-white' : 'border-slate-200 bg-white text-slate-700 hover:border-brand hover:text-brand'}`}>
+          <button key={k} onClick={() => { setCluster(k); setShown(PAGE) }} className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${cluster === k ? 'border-brand bg-brand text-ink' : 'border-slate-200 bg-white text-slate-700 hover:border-brand hover:text-brand-ink'}`}>
             {k === 'all' ? 'All guides' : CLUSTER_LABEL[k]} <span className="opacity-60">({k === 'all' ? posts.length : posts.filter((p) => p.pillar === k).length})</span>
           </button>
         ))}
       </div>
-      {cluster !== 'all' && <p className="mt-3 text-center text-sm"><Link href={clusterHref(cluster)} className="font-semibold text-brand">Read the complete {CLUSTER_LABEL[cluster]} guide →</Link></p>}
+      {cluster !== 'all' && <p className="mt-3 text-center text-sm"><Link href={clusterHref(cluster)} className="font-semibold text-brand-ink">Read the complete {CLUSTER_LABEL[cluster]} guide →</Link></p>}
       <p className="mt-4 text-center text-sm text-slate-500">{list.length} {list.length === 1 ? 'article' : 'articles'}</p>
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.slice(0, shown).map((p) => (
@@ -41,13 +41,13 @@ export function BlogIndex({ posts }: { posts: PostMeta[] }) {
               <p className="text-xs text-slate-500">{new Date(p.date).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' })} · {p.readMinutes} min read</p>
               <h2 className="mt-2 text-lg leading-snug font-semibold">{p.title}</h2>
               <p className="mt-2 line-clamp-3 text-sm text-slate-600">{p.description}</p>
-              <span className="mt-auto flex items-center gap-1 pt-4 text-sm font-semibold text-brand">Read article <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></span>
+              <span className="mt-auto flex items-center gap-1 pt-4 text-sm font-semibold text-brand-ink">Read article <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" /></span>
             </div>
           </Link>
         ))}
       </div>
       {shown < list.length && (
-        <div className="mt-10 text-center"><button onClick={() => setShown(shown + PAGE)} className="rounded-lg border border-brand px-8 py-3 font-semibold text-brand transition-colors hover:bg-brand hover:text-white">Load more articles</button></div>
+        <div className="mt-10 text-center"><button onClick={() => setShown(shown + PAGE)} className="rounded-lg border border-brand px-8 py-3 font-semibold text-brand-ink transition-colors hover:bg-brand hover:text-ink">Load more articles</button></div>
       )}
       {list.length === 0 && <p className="mt-12 text-center text-slate-500">No articles match your search.</p>}
     </>
