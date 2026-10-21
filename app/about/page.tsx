@@ -24,11 +24,11 @@ const PLANS = [
 export default function About() {
   return (
     <>
-      <section className="bg-gradient-to-b from-[#17140a] to-[#0a0a0a] px-4 pt-36 pb-16 text-center">
+      <section className="bg-gradient-to-b from-[#1b1830] to-[#0a0a0a] px-4 pt-36 pb-16 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand-ink">About us</p>
         <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-bold sm:text-5xl">A trusted IPTV provider</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-zinc-300">Golden Gate IPTV delivers premium live TV and on-demand streaming to viewers in the USA and worldwide. We combine reliable technology, a wide channel and movie selection and friendly support, so watching is simple.</p>
-        <Link href="/#plans" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-ink shadow-sm transition-colors hover:bg-brand-dark">See pricing</Link>
+        <Link href="/#plans" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">See pricing</Link>
       </section>
       <div className="mx-auto -mt-4 max-w-5xl px-4">
         <Image src="/images/about-family.webp" alt="Three children laughing together while watching a cartoon on a TV in their playroom" width={1408} height={768} priority className="lift w-full rounded-2xl object-cover shadow-xl" />
@@ -39,7 +39,7 @@ export default function About() {
           {PLANS.map(({ Icon, title, body }, i) => (
             <Reveal key={title} delay={(i % 3) * 90}>
               <div className="lift glass spot group h-full rounded-2xl p-7">
-                <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-ink transition group-hover:bg-brand group-hover:text-ink"><Icon size={22} /></span>
+                <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-ink transition group-hover:bg-brand group-hover:text-white"><Icon size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-300">{body}</p>
               </div>

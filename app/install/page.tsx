@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function Install() {
   return (
     <>
-      <section className="bg-gradient-to-b from-[#17140a] to-[#0a0a0a] px-4 pt-36 pb-12 text-center">
+      <section className="bg-gradient-to-b from-[#1b1830] to-[#0a0a0a] px-4 pt-36 pb-12 text-center">
         <h1 className="text-4xl font-bold sm:text-5xl">How to set up IPTV on your device</h1>
         <p className="mx-auto mt-4 max-w-2xl text-zinc-300">Pick your device and follow the steps. Stuck? Message us on WhatsApp and we will help you install it.</p>
         <Image src="/images/install-devices.webp" alt="A remote, streaming stick, phone, tablet and laptop all showing the same streaming app" width={1408} height={768} priority className="mx-auto mt-8 w-full max-w-3xl rounded-2xl shadow-xl" />

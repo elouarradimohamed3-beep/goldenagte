@@ -93,7 +93,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           {t.why.items.map((f, i) => { const I = WHY_ICONS[i]; return (
             <Reveal key={f.title} delay={i * 80}>
               <div className="lift glass spot group icon-spin h-full rounded-2xl p-7">
-                <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-ink transition group-hover:bg-brand group-hover:text-ink"><I size={22} /></span>
+                <span className="grid size-12 place-items-center rounded-2xl bg-brand/10 text-brand-ink transition group-hover:bg-brand group-hover:text-white"><I size={22} /></span>
                 <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-300">{f.body}</p>
               </div>
@@ -108,7 +108,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
         <Reveal className="mx-auto max-w-6xl px-4 py-28 sm:py-36">
           <h2 className="max-w-xl text-3xl font-bold !text-white sm:text-5xl">{t.band.title}</h2>
           <p className="mt-4 max-w-lg text-lg text-white/80">{t.band.body}</p>
-          <Link href={plansHref} className="mt-8 inline-flex items-center gap-2 btn-shine press rounded-lg bg-brand px-8 py-3.5 font-semibold text-ink shadow-xl transition hover:scale-105">{t.band.cta} <ArrowRight size={18} className="rtl:rotate-180" /></Link>
+          <Link href={plansHref} className="mt-8 inline-flex items-center gap-2 btn-shine press rounded-lg bg-brand px-8 py-3.5 font-semibold text-white shadow-xl transition hover:scale-105">{t.band.cta} <ArrowRight size={18} className="rtl:rotate-180" /></Link>
         </Reveal>
       </section>
 
@@ -145,7 +145,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
                     <I className="absolute -end-3 -bottom-3 size-28 text-white/[.06]" strokeWidth={1.2} />
                   </>
                 )}
-                <span className="relative grid size-11 place-items-center rounded-lg bg-white/15 text-amber-200 backdrop-blur-sm"><I size={22} /></span>
+                <span className="relative grid size-11 place-items-center rounded-lg bg-white/15 text-accent backdrop-blur-sm"><I size={22} /></span>
                 <div className="absolute inset-x-6 bottom-6">
                   <h3 className="text-lg font-semibold !text-white">{g.title}</h3>
                   <p className="mt-1 text-sm text-zinc-300">{g.body}</p>
@@ -175,7 +175,7 @@ export function HomeView({ lang, t, guides }: { lang: Lang; t: Dict; guides?: Re
           {t.infra.items.map((a, i) => { const I = INFRA_ICONS[i]; return (
             <Reveal key={a.title} delay={i * 90}>
               <article className="lift glass spot icon-spin h-full rounded-2xl p-6">
-                <div className="flex items-center justify-between"><span className="grid size-11 place-items-center rounded-xl bg-brand text-ink"><I size={20} /></span><span className="text-3xl font-black text-zinc-200" dir="ltr">0{i + 1}</span></div>
+                <div className="flex items-center justify-between"><span className="grid size-11 place-items-center rounded-xl bg-brand text-white"><I size={20} /></span><span className="text-3xl font-black text-zinc-200" dir="ltr">0{i + 1}</span></div>
                 <h3 className="mt-4 font-semibold">{a.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-300">{a.body}</p>
               </article>

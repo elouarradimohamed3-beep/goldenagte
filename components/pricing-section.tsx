@@ -8,7 +8,7 @@ export function PricingSection({ as: H = 'h2', id = 'plans', t = en.plans }: { a
     <section id={id} className="bg-ink pt-28 pb-24">
       <div className="mx-auto max-w-6xl px-4">
         <Reveal className="mx-auto mb-10 max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[.18em] text-amber-300">{t.eyebrow}</p>
+          <p className="text-xs font-semibold uppercase tracking-[.18em] text-accent">{t.eyebrow}</p>
           <H className="mt-3 text-3xl font-bold !text-white sm:text-4xl">{t.title}</H>
           <p className="mt-4 text-zinc-300">{t.intro}</p>
         </Reveal>

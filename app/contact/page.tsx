@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-    <section className="bg-gradient-to-b from-[#17140a] to-[#0a0a0a] px-4 pt-36 pb-20">
+    <section className="bg-gradient-to-b from-[#1b1830] to-[#0a0a0a] px-4 pt-36 pb-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div>
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl">IPTV support, available 24/7</h1>

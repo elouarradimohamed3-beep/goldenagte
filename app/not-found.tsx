@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="text-brand-ink text-8xl font-bold">404</p>
       <h1 className="mt-4 text-3xl font-bold">This channel is off the air</h1>
       <p className="mt-3 text-zinc-400">The page you are looking for does not exist or has moved.</p>
-      <Link href="/" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-ink">Back to home</Link>
+      <Link href="/" className="mt-8 inline-block rounded-lg bg-brand px-8 py-3.5 font-semibold text-white">Back to home</Link>
     </div>
   )
 }

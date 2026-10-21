@@ -23,10 +23,10 @@ export function Markdown({ children, fallbackAlt = '' }: { children: string; fal
           ),
           table: ({ children }) => <div className="my-6 overflow-x-auto rounded-xl border border-zinc-800"><table className="!my-0 w-full">{children}</table></div>,
           p: ({ children }) => isCta(children) && /subscribe now/i.test(String((Array.isArray(children) ? children[0] : children as { props?: { children?: unknown } })?.props?.children ?? ''))
-            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-ink [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
+            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-white [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
             : <p>{children}</p>,
           h4: ({ children }) => isCta(children)
-            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-ink [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
+            ? <div className="my-8 text-center not-prose"><span className="inline-block [&_a]:inline-block [&_a]:rounded-lg [&_a]:bg-brand [&_a]:px-7 [&_a]:py-3 [&_a]:text-sm [&_a]:font-semibold [&_a]:tracking-wide [&_a]:text-white [&_a]:no-underline hover:[&_a]:bg-brand-dark">{children}</span></div>
             : <h4>{children}</h4>,
         }}
       >

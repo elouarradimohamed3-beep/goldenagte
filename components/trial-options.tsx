@@ -44,7 +44,7 @@ export function TrialOptions({ compact = false }: { compact?: boolean }) {
       </form>
 
       <div className="lift relative flex flex-col rounded-2xl border-2 border-brand bg-zinc-900 p-6 shadow-sm">
-        <span className="absolute -top-3 start-6 rounded-full bg-brand px-3 py-1 text-xs font-bold text-ink">{t.paidBadge}</span>
+        <span className="absolute -top-3 start-6 rounded-full bg-brand px-3 py-1 text-xs font-bold text-white">{t.paidBadge}</span>
         <div className="flex items-center gap-3">
           <span className="grid size-11 place-items-center rounded-xl bg-brand/10 text-brand-ink"><Zap size={22} /></span>
           <h3 className="text-xl font-bold">{t.paidTitle}</h3>
@@ -55,7 +55,7 @@ export function TrialOptions({ compact = false }: { compact?: boolean }) {
         <ul className="mt-4 space-y-2 text-sm text-zinc-300">
           {UI[lang].popup.note.split(' · ').map((x) => <li key={x} className="flex gap-2"><Check size={16} className="mt-0.5 shrink-0 text-brand-ink" />{x.charAt(0).toUpperCase() + x.slice(1)}</li>)}
         </ul>
-        <a href={waLink(dayOrder)} target="_blank" rel="noopener noreferrer" className="btn-shine press mt-auto block rounded-xl bg-brand py-3.5 pt-3.5 text-center font-semibold text-ink transition-colors hover:bg-brand-dark">{t.buy}</a>
+        <a href={waLink(dayOrder)} target="_blank" rel="noopener noreferrer" className="btn-shine press mt-auto block rounded-xl bg-brand py-3.5 pt-3.5 text-center font-semibold text-white transition-colors hover:bg-brand-dark">{t.buy}</a>
       </div>
     </div>
   )

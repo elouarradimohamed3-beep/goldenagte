@@ -26,7 +26,7 @@ export function BlogIndex({ posts }: { posts: PostMeta[] }) {
       </div>
       <div className="mt-5 flex flex-wrap justify-center gap-2">
         {(['all', ...keys] as const).map((k) => (
-          <button key={k} onClick={() => { setCluster(k); setShown(PAGE) }} className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${cluster === k ? 'border-brand bg-brand text-ink' : 'border-zinc-800 bg-zinc-900 text-zinc-200 hover:border-brand hover:text-brand-ink'}`}>
+          <button key={k} onClick={() => { setCluster(k); setShown(PAGE) }} className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${cluster === k ? 'border-brand bg-brand text-white' : 'border-zinc-800 bg-zinc-900 text-zinc-200 hover:border-brand hover:text-brand-ink'}`}>
             {k === 'all' ? 'All guides' : CLUSTER_LABEL[k]} <span className="opacity-60">({k === 'all' ? posts.length : posts.filter((p) => p.pillar === k).length})</span>
           </button>
         ))}
@@ -47,7 +47,7 @@ export function BlogIndex({ posts }: { posts: PostMeta[] }) {
         ))}
       </div>
       {shown < list.length && (
-        <div className="mt-10 text-center"><button onClick={() => setShown(shown + PAGE)} className="rounded-lg border border-brand px-8 py-3 font-semibold text-brand-ink transition-colors hover:bg-brand hover:text-ink">Load more articles</button></div>
+        <div className="mt-10 text-center"><button onClick={() => setShown(shown + PAGE)} className="rounded-lg border border-brand px-8 py-3 font-semibold text-brand-ink transition-colors hover:bg-brand hover:text-white">Load more articles</button></div>
       )}
       {list.length === 0 && <p className="mt-12 text-center text-zinc-400">No articles match your search.</p>}
     </>

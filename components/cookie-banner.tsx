@@ -27,7 +27,7 @@ export function CookieBanner() {
       <p className="text-zinc-300">{ui.text} <Link href="/cookie-policy" className="text-brand-ink underline">{ui.policy}</Link>.</p>
       <div className="flex shrink-0 gap-2">
         <button onClick={() => choose(false)} className="rounded-lg border border-zinc-700 px-4 py-2 font-semibold text-zinc-200 transition-colors hover:border-zinc-500">{ui.no}</button>
-        <button onClick={() => choose(true)} className="rounded-lg bg-brand px-5 py-2 font-semibold text-ink transition-colors hover:bg-brand-dark">{ui.ok}</button>
+        <button onClick={() => choose(true)} className="rounded-lg bg-brand px-5 py-2 font-semibold text-white transition-colors hover:bg-brand-dark">{ui.ok}</button>
       </div>
     </div>
   )

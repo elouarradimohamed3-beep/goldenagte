@@ -66,7 +66,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
         <h2 className="text-2xl font-bold !text-white">Ready to try an IPTV subscription?</h2>
         <p className="mt-2 text-zinc-300">Plans from $20 a month with a 7-day refund.</p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
-          <Link href="/#plans" className="rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition-colors hover:bg-brand-dark">See plans</Link>
+          <Link href="/#plans" className="rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark">See plans</Link>
           <a href={waLink(`Hi! I read "${post.title}" and have a question`)} target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/25 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">Ask on WhatsApp</a>
         </div>
       </div>

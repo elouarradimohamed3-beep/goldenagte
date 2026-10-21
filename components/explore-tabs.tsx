@@ -20,7 +20,7 @@ export function ExploreTabs({ t: dict, plansHref = '#plans' }: { t: Dict['explor
         <div>
           <h3 className="text-3xl font-bold">{a.title}</h3>
           <div className="mt-5 space-y-4 text-zinc-300">{a.body.map((p) => <p key={p}>{p}</p>)}</div>
-          <a href={plansHref} className="mt-6 inline-block rounded-lg bg-brand px-6 py-3 font-semibold text-ink transition-colors hover:bg-brand-dark">{dict.signUp}</a>
+          <a href={plansHref} className="mt-6 inline-block rounded-lg bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark">{dict.signUp}</a>
         </div>
         <div className="relative overflow-hidden rounded-2xl border border-zinc-800 shadow-sm">
           <Image src={PHOTOS[t]} alt={dict.alts[t]} width={1408} height={768} className="aspect-[4/3] w-full object-cover" />
